@@ -1,0 +1,20 @@
+[
+  {
+    "id": "S001",
+    "contrat_id": "C001",
+    "montant_declare": 32000,
+    "date": "2026-07-01",
+    "statut": "en_cours",
+    "gestionnaire_traitant_id": "G123",
+    "agence_id": "AG01"
+  },
+  {
+    "id": "S003",
+    "contrat_id": "C002",
+    "montant_declare": 5000,
+    "date": "2026-06-15",
+    "statut": "cloture",
+    "gestionnaire_traitant_id": "G123",
+    "agence_id": "AG01"
+  }
+]

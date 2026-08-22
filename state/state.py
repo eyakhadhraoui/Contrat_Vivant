@@ -1,0 +1,35 @@
+from typing import TypedDict, Optional, List
+
+class ContratVivantState(TypedDict):
+    token: str
+    gestionnaire_id: Optional[str]
+    gestionnaire_nom: Optional[str]
+    gestionnaire_prenom: Optional[str]
+    gestionnaire_role: Optional[str]
+    gestionnaire_agence: Optional[str]
+    contrat_id: str
+    contrat_data: Optional[dict]
+    sinistres_data: Optional[List[dict]]
+    event_type: Optional[str]
+    anomalies: Optional[List[dict]]
+    risk_analysis: Optional[dict]
+    alert_card: Optional[dict]
+    missing_data: Optional[list]
+    confidence: Optional[str]
+    top_factors: Optional[list]
+    urgency_level: Optional[str]
+    urgency_score: Optional[float]
+    urgency_breakdown: Optional[list]
+    dominant_rule: Optional[str]
+    alert: Optional[dict]
+    recommendation: Optional[str]
+    recommendations_list: Optional[list]
+    routed_to: Optional[list]
+    routing_alerte: Optional[bool]
+    notified: Optional[bool]
+    validation_status: Optional[str]
+    modification_type: Optional[str]
+    resume_dossier: Optional[str]
+    gestionnaires_a_notifier: Optional[List[dict]]
+    agent_metadata: Optional[dict]
+

@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+
+# dotenv
+.env
+
+# IDE
+.idea/
+.vscode/
+
+# Data / indexes
+rag/faiss_index/
+*.pkl
+
+# Logs and runtime
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

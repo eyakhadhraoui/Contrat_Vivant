@@ -1,0 +1,38 @@
+[
+  {
+    "id": "C001",
+    "client": "Ahmed Ben Salah",
+    "garantie_max": 50000,
+    "statut": "actif",
+    "date_derniere_modif": "2026-05-10",
+    "gestionnaire_createur_id": "G456",
+    "agence_id": "AG01"
+  },
+  {
+    "id": "C002",
+    "client": "Sarra Trabelsi",
+    "garantie_max": 20000,
+    "statut": "actif",
+    "date_derniere_modif": "2026-06-01",
+    "gestionnaire_createur_id": "G456",
+    "agence_id": "AG01"
+  },
+  {
+    "id": "CSTR00004",
+    "client": "Eya Khadhraoui",
+    "garantie_max": 50000.0,
+    "statut": "actif",
+    "date_derniere_modif": "2026-08-06",
+    "gestionnaire_createur_id": "G123",
+    "agence_id": "AG01"
+  },
+  {
+    "id": "4444444444",
+    "client": "Eya khadhraoui",
+    "garantie_max": 444444444.0,
+    "statut": "actif",
+    "date_derniere_modif": "2026-08-06",
+    "gestionnaire_createur_id": "G123",
+    "agence_id": "AG01"
+  }
+]

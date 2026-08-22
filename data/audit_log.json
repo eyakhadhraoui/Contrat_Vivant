@@ -1,0 +1,5231 @@
+[
+  {
+    "timestamp": "2026-08-22 12:41:02",
+    "step": "analyse_dossier_ia",
+    "data": {
+      "action": "Analyse IA exécutée sur contrat CSTR78199",
+      "contrat_id": "CSTR78199",
+      "status": "OK"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:41:01",
+    "step": "history_update",
+    "data": {
+      "status": "historique mis à jour"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:41:01",
+    "step": "human_validation",
+    "data": {
+      "status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:41:01",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G123"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:41:00",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "standard",
+      "role": "sinistres",
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:41:00",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "event_type": "sinistre",
+      "raison": "evenement de type sinistre : routage vers gestionnaires sinistres avec dossier en cours",
+      "gestionnaires_ids": [
+        "G123"
+      ],
+      "gestionnaires_noms": [
+        "EYA KHADHRAOUI"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:40:59",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 20.8
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:40:59",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 20.8,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:40:59",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:40:50",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "sinistre",
+      "urgency_score": 20.8,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 1,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:40:50",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:40:50",
+    "step": "classify_event",
+    "data": {
+      "event_type": "sinistre",
+      "justification": "Un sinistre isole a traiter",
+      "risk_score": 20.8,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:40:49",
+    "step": "cross_analysis",
+    "data": {
+      "score": 20.8,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 1,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:40:49",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR78199",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:40:48",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "CSIN55979"
+      ],
+      "acces_verifie_pour_role": "sinistres"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:40:48",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G123",
+      "role": "sinistres"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-22 12:37:16",
+    "step": "analyse_dossier_ia",
+    "data": {
+      "action": "Analyse IA exécutée sur contrat CSTR78199",
+      "contrat_id": "CSTR78199",
+      "status": "OK"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:37:16",
+    "step": "history_update",
+    "data": {
+      "status": "historique mis à jour"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:37:16",
+    "step": "human_validation",
+    "data": {
+      "status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:37:15",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G123"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:37:15",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "standard",
+      "role": "sinistres",
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:37:15",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "event_type": "sinistre",
+      "raison": "evenement de type sinistre : routage vers gestionnaires sinistres avec dossier en cours",
+      "gestionnaires_ids": [
+        "G123"
+      ],
+      "gestionnaires_noms": [
+        "EYA KHADHRAOUI"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:37:14",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 20.8
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:37:14",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 20.8,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:37:14",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:37:06",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "sinistre",
+      "urgency_score": 20.8,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 1,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:37:05",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:37:05",
+    "step": "classify_event",
+    "data": {
+      "event_type": "sinistre",
+      "justification": "Un sinistre isole a traiter",
+      "risk_score": 20.8,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:37:05",
+    "step": "cross_analysis",
+    "data": {
+      "score": 20.8,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 1,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:37:04",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR78199",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:37:04",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "CSIN55979"
+      ],
+      "acces_verifie_pour_role": "sinistres"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:37:03",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G123",
+      "role": "sinistres"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-22 12:33:55",
+    "step": "analyse_dossier_ia",
+    "data": {
+      "action": "Analyse IA exécutée sur contrat CSTR78199",
+      "contrat_id": "CSTR78199",
+      "status": "OK"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:54",
+    "step": "history_update",
+    "data": {
+      "status": "historique mis à jour"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:54",
+    "step": "human_validation",
+    "data": {
+      "status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:54",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G123"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:54",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "standard",
+      "role": "sinistres",
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:53",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "event_type": "sinistre",
+      "raison": "evenement de type sinistre : routage vers gestionnaires sinistres avec dossier en cours",
+      "gestionnaires_ids": [
+        "G123"
+      ],
+      "gestionnaires_noms": [
+        "EYA KHADHRAOUI"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:53",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 20.8
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:53",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 20.8,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:52",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:44",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "sinistre",
+      "urgency_score": 20.8,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 1,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:43",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:43",
+    "step": "classify_event",
+    "data": {
+      "event_type": "sinistre",
+      "justification": "Un sinistre isole a traiter",
+      "risk_score": 20.8,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:43",
+    "step": "cross_analysis",
+    "data": {
+      "score": 20.8,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 1,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:42",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR78199",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:42",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "CSIN55979"
+      ],
+      "acces_verifie_pour_role": "sinistres"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:41",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G123",
+      "role": "sinistres"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-22 12:33:28",
+    "step": "analyse_dossier_ia",
+    "data": {
+      "action": "Analyse IA exécutée sur contrat CSTR78199",
+      "contrat_id": "CSTR78199",
+      "status": "OK"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:27",
+    "step": "history_update",
+    "data": {
+      "status": "historique mis à jour"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:27",
+    "step": "human_validation",
+    "data": {
+      "status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:27",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G123"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:26",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "standard",
+      "role": "sinistres",
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:26",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "event_type": "sinistre",
+      "raison": "evenement de type sinistre : routage vers gestionnaires sinistres avec dossier en cours",
+      "gestionnaires_ids": [
+        "G123"
+      ],
+      "gestionnaires_noms": [
+        "EYA KHADHRAOUI"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:26",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 20.8
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:25",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 20.8,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:25",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:17",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "sinistre",
+      "urgency_score": 20.8,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 1,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:16",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:16",
+    "step": "classify_event",
+    "data": {
+      "event_type": "sinistre",
+      "justification": "Un sinistre isole a traiter",
+      "risk_score": 20.8,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:16",
+    "step": "cross_analysis",
+    "data": {
+      "score": 20.8,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 1,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:15",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR78199",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:15",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "CSIN55979"
+      ],
+      "acces_verifie_pour_role": "sinistres"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:33:14",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G123",
+      "role": "sinistres"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-22 12:28:47",
+    "step": "analyse_dossier_ia",
+    "data": {
+      "action": "Analyse IA exécutée sur contrat CSTR78199",
+      "contrat_id": "CSTR78199",
+      "status": "OK"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:28:47",
+    "step": "history_update",
+    "data": {
+      "status": "aucune mise à jour (en_attente_bon_gestionnaire)"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:28:46",
+    "step": "human_validation_bloquee",
+    "data": {
+      "raison": "role non autorise pour ce type d evenement"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:28:46",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G456"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:28:46",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "contrat",
+      "role": null,
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:28:46",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "event_type": "contrat",
+      "raison": "evenement de type contrat : routage vers le gestionnaire assurances createur",
+      "gestionnaires_ids": [
+        "G456"
+      ],
+      "gestionnaires_noms": [
+        "Sarra Khelifi"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:28:45",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 20.8
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:28:45",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 20.8,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:28:45",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:28:36",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "contrat",
+      "urgency_score": 20.8,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 1,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:28:36",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:28:36",
+    "step": "classify_event",
+    "data": {
+      "event_type": "contrat",
+      "justification": "Evenement lie au contrat",
+      "risk_score": 20.8,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:28:36",
+    "step": "cross_analysis",
+    "data": {
+      "score": 20.8,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 1,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:28:35",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR78199",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:28:35",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "CSIN55979"
+      ],
+      "acces_verifie_pour_role": "assurances"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:58",
+    "step": "history_update",
+    "data": {
+      "status": "aucune mise à jour (en_attente_bon_gestionnaire)"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:58",
+    "step": "human_validation_bloquee",
+    "data": {
+      "raison": "role non autorise pour ce type d evenement"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:58",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G456"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:58",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "contrat",
+      "role": null,
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:57",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "event_type": "contrat",
+      "raison": "evenement de type contrat : routage vers le gestionnaire assurances createur",
+      "gestionnaires_ids": [
+        "G456"
+      ],
+      "gestionnaires_noms": [
+        "Sarra Khelifi"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:57",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 20.8
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:57",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 20.8,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:57",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:49",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:40",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "contrat",
+      "urgency_score": 20.8,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 1,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:40",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:40",
+    "step": "classify_event",
+    "data": {
+      "event_type": "contrat",
+      "justification": "Evenement lie au contrat",
+      "risk_score": 20.8,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:40",
+    "step": "cross_analysis",
+    "data": {
+      "score": 20.8,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 1,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:39",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR78199",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:39",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "CSIN55979"
+      ],
+      "acces_verifie_pour_role": "assurances"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:06",
+    "step": "history_update",
+    "data": {
+      "status": "aucune mise à jour (en_attente_bon_gestionnaire)"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:06",
+    "step": "human_validation_bloquee",
+    "data": {
+      "raison": "role non autorise pour ce type d evenement"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:06",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G456"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:06",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "contrat",
+      "role": null,
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:06",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "event_type": "contrat",
+      "raison": "evenement de type contrat : routage vers le gestionnaire assurances createur",
+      "gestionnaires_ids": [
+        "G456"
+      ],
+      "gestionnaires_noms": [
+        "Sarra Khelifi"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:05",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 20.8
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:05",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 20.8,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:20:05",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:19:56",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:19:48",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "contrat",
+      "urgency_score": 20.8,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 1,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:19:48",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:19:48",
+    "step": "classify_event",
+    "data": {
+      "event_type": "contrat",
+      "justification": "Evenement lie au contrat",
+      "risk_score": 20.8,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:19:47",
+    "step": "cross_analysis",
+    "data": {
+      "score": 20.8,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 1,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:19:47",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR78199",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:19:47",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "CSIN55979"
+      ],
+      "acces_verifie_pour_role": "assurances"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:08:30",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "validate",
+      "actor": "G123",
+      "comment": ""
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-22 12:08:23",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "validate",
+      "actor": "G123",
+      "comment": ""
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-22 12:08:01",
+    "step": "analyse_dossier_ia",
+    "data": {
+      "action": "Analyse IA exécutée sur contrat CSTR78199",
+      "contrat_id": "CSTR78199",
+      "status": "OK"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:08:01",
+    "step": "history_update",
+    "data": {
+      "status": "historique mis à jour"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:08:01",
+    "step": "human_validation",
+    "data": {
+      "status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:08:01",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G123"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:08:01",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "standard",
+      "role": "sinistres",
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:08:00",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "event_type": "sinistre",
+      "raison": "evenement de type sinistre : routage vers gestionnaires sinistres avec dossier en cours",
+      "gestionnaires_ids": [
+        "G123"
+      ],
+      "gestionnaires_noms": [
+        "EYA KHADHRAOUI"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:08:00",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 20.8
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:08:00",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 20.8,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:08:00",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:07:51",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "sinistre",
+      "urgency_score": 20.8,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 1,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:07:51",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:07:51",
+    "step": "classify_event",
+    "data": {
+      "event_type": "sinistre",
+      "justification": "Un sinistre isole a traiter",
+      "risk_score": 20.8,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:07:51",
+    "step": "cross_analysis",
+    "data": {
+      "score": 20.8,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 1,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:07:50",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR78199",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:07:50",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "CSIN55979"
+      ],
+      "acces_verifie_pour_role": "sinistres"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:07:50",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G123",
+      "role": "sinistres"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-22 12:04:44",
+    "step": "ingestion_document_rag",
+    "data": {
+      "action": "Document 'Attestation_Contrat_CSTR78199 (1).pdf' ingéré dans la base RAG par eya.khadhraoui",
+      "actor": "eya.khadhraoui",
+      "filename": "Attestation_Contrat_CSTR78199 (1).pdf",
+      "chunks": 1,
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-22 12:03:46",
+    "step": "analyse_dossier_ia",
+    "data": {
+      "action": "Analyse IA exécutée sur contrat CSTR78199",
+      "contrat_id": "CSTR78199",
+      "status": "OK"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:46",
+    "step": "history_update",
+    "data": {
+      "status": "historique mis à jour"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:46",
+    "step": "human_validation",
+    "data": {
+      "status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:46",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G123"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:45",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "standard",
+      "role": "sinistres",
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:45",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "event_type": "sinistre",
+      "raison": "evenement de type sinistre : routage vers gestionnaires sinistres avec dossier en cours",
+      "gestionnaires_ids": [
+        "G123"
+      ],
+      "gestionnaires_noms": [
+        "EYA KHADHRAOUI"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:45",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 20.8
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:45",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 20.8,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:45",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:36",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "sinistre",
+      "urgency_score": 20.8,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 1,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:36",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:36",
+    "step": "classify_event",
+    "data": {
+      "event_type": "sinistre",
+      "justification": "Un sinistre isole a traiter",
+      "risk_score": 20.8,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:36",
+    "step": "cross_analysis",
+    "data": {
+      "score": 20.8,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 1,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:35",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR78199",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:35",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "CSIN55979"
+      ],
+      "acces_verifie_pour_role": "sinistres"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:35",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G123",
+      "role": "sinistres"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-22 12:03:10",
+    "step": "analyse_dossier_ia",
+    "data": {
+      "action": "Analyse IA exécutée sur contrat CSTR78199",
+      "contrat_id": "CSTR78199",
+      "status": "OK"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:10",
+    "step": "history_update",
+    "data": {
+      "status": "historique mis à jour"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:10",
+    "step": "human_validation",
+    "data": {
+      "status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:10",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G123"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:09",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "standard",
+      "role": "sinistres",
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:09",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "event_type": "sinistre",
+      "raison": "evenement de type sinistre : routage vers gestionnaires sinistres avec dossier en cours",
+      "gestionnaires_ids": [
+        "G123"
+      ],
+      "gestionnaires_noms": [
+        "EYA KHADHRAOUI"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:09",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 20.8
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:09",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 20.8,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:08",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:00",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "sinistre",
+      "urgency_score": 20.8,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 1,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:00",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:03:00",
+    "step": "classify_event",
+    "data": {
+      "event_type": "sinistre",
+      "justification": "Un sinistre isole a traiter",
+      "risk_score": 20.8,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:02:59",
+    "step": "cross_analysis",
+    "data": {
+      "score": 20.8,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 1,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:02:58",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR78199",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:02:58",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "CSIN55979"
+      ],
+      "acces_verifie_pour_role": "sinistres"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 12:02:58",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G123",
+      "role": "sinistres"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-22 11:58:42",
+    "step": "analyse_dossier_ia",
+    "data": {
+      "action": "Analyse IA exécutée sur contrat CSTR78199",
+      "contrat_id": "CSTR78199",
+      "status": "OK"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:58:42",
+    "step": "history_update",
+    "data": {
+      "status": "historique mis à jour"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:58:41",
+    "step": "human_validation",
+    "data": {
+      "status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:58:41",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G123"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:58:41",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "standard",
+      "role": "sinistres",
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:58:41",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "event_type": "sinistre",
+      "raison": "evenement de type sinistre : routage vers gestionnaires sinistres avec dossier en cours",
+      "gestionnaires_ids": [
+        "G123"
+      ],
+      "gestionnaires_noms": [
+        "EYA KHADHRAOUI"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:58:41",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 20.8
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:58:40",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 20.8,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:58:40",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:58:32",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "sinistre",
+      "urgency_score": 20.8,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 1,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:58:32",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:58:31",
+    "step": "classify_event",
+    "data": {
+      "event_type": "sinistre",
+      "justification": "Un sinistre isole a traiter",
+      "risk_score": 20.8,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:58:31",
+    "step": "cross_analysis",
+    "data": {
+      "score": 20.8,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 1,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:58:31",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR78199",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:58:31",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "CSIN55979"
+      ],
+      "acces_verifie_pour_role": "sinistres"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:58:30",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G123",
+      "role": "sinistres"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-22 11:58:22",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G123",
+      "role": "sinistres"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-22 11:48:27",
+    "step": "ingestion_document_rag",
+    "data": {
+      "action": "Document 'Attestation_Contrat_CSTR78199 (2).pdf' ingéré dans la base RAG par sarra.khelifi",
+      "actor": "sarra.khelifi",
+      "filename": "Attestation_Contrat_CSTR78199 (2).pdf",
+      "chunks": 1,
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-22 11:43:52",
+    "step": "modification_contrat",
+    "data": {
+      "action": "Contrat CSTR00001 modifié par G456",
+      "actor": "G456",
+      "gestionnaire_id": "G456",
+      "agence_id": "AG01",
+      "contrat_id": "CSTR00001",
+      "updates": {
+        "garantie_max": 60000
+      },
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-22 11:43:52",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "contrat",
+      "role": "assurances",
+      "destinataires": [
+        "G123"
+      ],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:48",
+    "step": "supervisor_workflow_completed",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "urgency_level": "moyen",
+      "validation_status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:48",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "risque",
+      "urgency_score": 75,
+      "urgency_level": "eleve",
+      "dominant_rule": "CAP_EXCEEDED",
+      "nb_anomalies": 1,
+      "confidence": "haute"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:47",
+    "step": "history_update",
+    "data": {
+      "status": "historique mis à jour"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:47",
+    "step": "human_validation",
+    "data": {
+      "status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:47",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G456"
+      ],
+      "routing_alerte": false,
+      "notified_count": 1,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:47",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "contrat",
+      "role": "assurances",
+      "destinataires": [
+        "G123"
+      ],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:43",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "event_type": "contrat",
+      "raison": "evenement de type contrat : routage vers le gestionnaire assurances createur",
+      "gestionnaires_ids": [
+        "G456"
+      ],
+      "gestionnaires_noms": [
+        "Sarra Khelifi"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:42",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 19.3
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:42",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 19.3,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:42",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:42",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "contrat",
+      "urgency_score": 19.3,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 0,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:42",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:42",
+    "step": "classify_event",
+    "data": {
+      "event_type": "contrat",
+      "justification": "Evenement lie au contrat",
+      "risk_score": 19.3,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:41",
+    "step": "cross_analysis",
+    "data": {
+      "score": 19.3,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 0,
+      "nb_anomalies_llm": 0,
+      "llm_error": null,
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:41",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR00001",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:41",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "S001"
+      ],
+      "acces_verifie_pour_role": "assurances"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:40",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR00001",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:40",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "S001"
+      ],
+      "acces_verifie_pour_role": "assurances"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:40",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "GEST01"
+      ],
+      "routing_alerte": false,
+      "notified_count": 1,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-22 11:43:40",
+    "step": "modification_contrat",
+    "data": {
+      "action": "Contrat CSTR00001 modifié par G456",
+      "actor": "G456",
+      "gestionnaire_id": "G456",
+      "agence_id": "AG01",
+      "contrat_id": "CSTR00001",
+      "updates": {
+        "garantie_max": 60000
+      },
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-22 11:43:39",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "contrat",
+      "role": "assurances",
+      "destinataires": [
+        "G123"
+      ],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:09",
+    "step": "supervisor_workflow_completed",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "urgency_level": "moyen",
+      "validation_status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:09",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "risque",
+      "urgency_score": 75,
+      "urgency_level": "eleve",
+      "dominant_rule": "CAP_EXCEEDED",
+      "nb_anomalies": 1,
+      "confidence": "haute"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:09",
+    "step": "history_update",
+    "data": {
+      "status": "historique mis à jour"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:09",
+    "step": "human_validation",
+    "data": {
+      "status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:09",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G456"
+      ],
+      "routing_alerte": false,
+      "notified_count": 1,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:09",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "contrat",
+      "role": "assurances",
+      "destinataires": [
+        "G123"
+      ],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:07",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "event_type": "contrat",
+      "raison": "evenement de type contrat : routage vers le gestionnaire assurances createur",
+      "gestionnaires_ids": [
+        "G456"
+      ],
+      "gestionnaires_noms": [
+        "Sarra Khelifi"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:06",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 19.3
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:06",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 19.3,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:06",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:06",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "contrat",
+      "urgency_score": 19.3,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 0,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:06",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:06",
+    "step": "classify_event",
+    "data": {
+      "event_type": "contrat",
+      "justification": "Evenement lie au contrat",
+      "risk_score": 19.3,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:06",
+    "step": "cross_analysis",
+    "data": {
+      "score": 19.3,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 0,
+      "nb_anomalies_llm": 0,
+      "llm_error": null,
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:05",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR00001",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:05",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "S001"
+      ],
+      "acces_verifie_pour_role": "assurances"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:05",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR00001",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:05",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "S001"
+      ],
+      "acces_verifie_pour_role": "assurances"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:05",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "GEST01"
+      ],
+      "routing_alerte": false,
+      "notified_count": 1,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:09:05",
+    "step": "modification_contrat",
+    "data": {
+      "action": "Contrat CSTR00001 modifié par G456",
+      "actor": "G456",
+      "gestionnaire_id": "G456",
+      "agence_id": "AG01",
+      "contrat_id": "CSTR00001",
+      "updates": {
+        "garantie_max": 60000
+      },
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-19 11:09:04",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "contrat",
+      "role": "assurances",
+      "destinataires": [
+        "G123"
+      ],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:04:32",
+    "step": "analyse_dossier_ia",
+    "data": {
+      "action": "Analyse IA exécutée sur contrat CSTR78199",
+      "contrat_id": "CSTR78199",
+      "status": "OK"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:04:31",
+    "step": "history_update",
+    "data": {
+      "status": "aucune mise à jour (en_attente_bon_gestionnaire)"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:04:31",
+    "step": "human_validation_bloquee",
+    "data": {
+      "raison": "role non autorise pour ce type d evenement"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:04:31",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G123"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:04:31",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "standard",
+      "role": "assurances",
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:04:30",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "event_type": "sinistre",
+      "raison": "evenement de type sinistre : routage vers gestionnaires sinistres avec dossier en cours",
+      "gestionnaires_ids": [
+        "G123"
+      ],
+      "gestionnaires_noms": [
+        "EYA KHADHRAOUI"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:04:30",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 20.8
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:04:30",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 20.8,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:04:30",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:03:49",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "sinistre",
+      "urgency_score": 20.8,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 1,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:03:49",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:03:49",
+    "step": "classify_event",
+    "data": {
+      "event_type": "sinistre",
+      "justification": "Un sinistre isole a traiter",
+      "risk_score": 20.8,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:03:48",
+    "step": "cross_analysis",
+    "data": {
+      "score": 20.8,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 1,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:03:48",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR78199",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:03:48",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "CSIN55979"
+      ],
+      "acces_verifie_pour_role": "assurances"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 11:03:47",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G456",
+      "role": "assurances"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-19 09:30:36",
+    "step": "export_pdf_contrat",
+    "data": {
+      "action": "Export PDF du contrat CSTR78199 par eya.khadhraoui",
+      "actor": "eya.khadhraoui",
+      "contrat_id": "CSTR78199",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-19 09:17:59",
+    "step": "analyse_dossier_ia",
+    "data": {
+      "action": "Analyse IA exécutée sur contrat CSTR78199",
+      "contrat_id": "CSTR78199",
+      "status": "OK"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 09:17:59",
+    "step": "history_update",
+    "data": {
+      "status": "historique mis à jour"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 09:17:59",
+    "step": "human_validation",
+    "data": {
+      "status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 09:17:59",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G123"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 09:17:58",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "standard",
+      "role": "sinistres",
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 09:17:58",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "event_type": "sinistre",
+      "raison": "evenement de type sinistre : routage vers gestionnaires sinistres avec dossier en cours",
+      "gestionnaires_ids": [
+        "G123"
+      ],
+      "gestionnaires_noms": [
+        "EYA KHADHRAOUI"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 09:17:58",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 20.8
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 09:17:58",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 20.8,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 09:17:58",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 09:17:39",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "sinistre",
+      "urgency_score": 20.8,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 1,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 09:17:39",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 09:17:38",
+    "step": "classify_event",
+    "data": {
+      "event_type": "sinistre",
+      "justification": "Un sinistre isole a traiter",
+      "risk_score": 20.8,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 09:17:38",
+    "step": "cross_analysis",
+    "data": {
+      "score": 20.8,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 1,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 09:17:38",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR78199",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 09:17:38",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "CSIN55979"
+      ],
+      "acces_verifie_pour_role": "sinistres"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-19 09:17:37",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G123",
+      "role": "sinistres"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-19 09:17:21",
+    "step": "ajout_sinistre",
+    "data": {
+      "action": "Sinistre CSIN55979 (Auto - Carambolage) déclaré sur contrat CSTR78199 par eya.khadhraoui",
+      "actor": "eya.khadhraoui",
+      "gestionnaire_id": "G123",
+      "agence_id": "AG01",
+      "contrat_id": "CSTR78199",
+      "sinistre_id": "CSIN55979",
+      "type_sinistre": "Auto - Carambolage",
+      "montant_declare": 1500.0,
+      "statut": "en_cours",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-10 09:09:47",
+    "step": "export_pdf_contrat",
+    "data": {
+      "action": "Export PDF du contrat CSTR78199 par sarra.khelifi",
+      "actor": "sarra.khelifi",
+      "contrat_id": "CSTR78199",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-10 09:07:06",
+    "step": "modification_contrat",
+    "data": {
+      "action": "Contrat CSTR78199 modifié par sarra.khelifi",
+      "actor": "sarra.khelifi",
+      "gestionnaire_id": "G456",
+      "agence_id": "AG01",
+      "contrat_id": "CSTR78199",
+      "updates": {
+        "statut": "suspendu"
+      },
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-10 09:06:26",
+    "step": "analyse_dossier_ia",
+    "data": {
+      "action": "Analyse IA exécutée sur contrat CSTR78199",
+      "contrat_id": "CSTR78199",
+      "status": "OK"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-10 09:06:26",
+    "step": "history_update",
+    "data": {
+      "status": "historique mis à jour"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-10 09:06:26",
+    "step": "human_validation",
+    "data": {
+      "status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-10 09:06:26",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G456"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-10 09:06:26",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "standard",
+      "role": "assurances",
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-10 09:06:26",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "event_type": "contrat",
+      "raison": "evenement de type contrat : routage vers le gestionnaire assurances createur",
+      "gestionnaires_ids": [
+        "G456"
+      ],
+      "gestionnaires_noms": [
+        "Sarra Khelifi"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-10 09:06:26",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 14.0
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-10 09:06:25",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 14.0,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-10 09:06:25",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-10 09:06:08",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "contrat",
+      "urgency_score": 14.0,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 0,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-10 09:06:08",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 14.0,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-10 09:06:08",
+    "step": "classify_event",
+    "data": {
+      "event_type": "contrat",
+      "justification": "Dossier contrat sans sinistre actif",
+      "risk_score": 14.0,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-10 09:06:08",
+    "step": "cross_analysis",
+    "data": {
+      "score": 14.0,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 0,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-10 09:06:07",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR78199",
+      "nb_sinistres": 0,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-10 09:06:07",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "nb_sinistres": 0,
+      "sinistres_ids": [],
+      "acces_verifie_pour_role": "assurances"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-10 09:06:07",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G456",
+      "role": "assurances"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:32:38",
+    "step": "export_pdf_contrat",
+    "data": {
+      "action": "Export PDF du contrat CSTR78199 par eya.khadhraoui",
+      "actor": "eya.khadhraoui",
+      "contrat_id": "CSTR78199",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 19:21:10",
+    "step": "analyse_dossier_ia",
+    "data": {
+      "action": "Analyse IA exécutée sur contrat CSTR78199",
+      "contrat_id": "CSTR78199",
+      "status": "OK"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 19:21:10",
+    "step": "history_update",
+    "data": {
+      "status": "historique mis à jour"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 19:21:10",
+    "step": "human_validation",
+    "data": {
+      "status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 19:21:10",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G456"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 19:21:10",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "standard",
+      "role": "assurances",
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 19:21:09",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "event_type": "contrat",
+      "raison": "evenement de type contrat : routage vers le gestionnaire assurances createur",
+      "gestionnaires_ids": [
+        "G456"
+      ],
+      "gestionnaires_noms": [
+        "Sarra Khelifi"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 19:21:09",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 14.0
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 19:21:09",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 14.0,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 19:21:09",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 19:20:52",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "contrat",
+      "urgency_score": 14.0,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 0,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 19:20:52",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 14.0,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 19:20:52",
+    "step": "classify_event",
+    "data": {
+      "event_type": "contrat",
+      "justification": "Dossier contrat sans sinistre actif",
+      "risk_score": 14.0,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 19:20:52",
+    "step": "cross_analysis",
+    "data": {
+      "score": 14.0,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 0,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 19:20:52",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR78199",
+      "nb_sinistres": 0,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 19:20:51",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "nb_sinistres": 0,
+      "sinistres_ids": [],
+      "acces_verifie_pour_role": "assurances"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 19:20:51",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G456",
+      "role": "assurances"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:18:53",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G456",
+      "role": "assurances"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:18:39",
+    "step": "ajout_contrat",
+    "data": {
+      "action": "Contrat CSTR78199 (auto) souscrit par sarra.khelifi",
+      "actor": "sarra.khelifi",
+      "gestionnaire_id": "G456",
+      "agence_id": "AG01",
+      "contrat_id": "CSTR78199",
+      "type_contrat": "auto",
+      "client_id": "CL11",
+      "garantie_max": 100000.0,
+      "statut": "actif",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:15:29",
+    "step": "suppression_contrat",
+    "data": {
+      "action": "Contrat CSTR00001 supprimé par le gestionnaire Sarra Khelifi",
+      "actor": "Sarra Khelifi",
+      "contrat_id": "CSTR00001",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:15:11",
+    "step": "suppression_sinistre",
+    "data": {
+      "action": "Sinistre S999 supprimé par le gestionnaire EYA KHADHRAOUI",
+      "actor": "EYA KHADHRAOUI",
+      "sinistre_id": "S999",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 19:15:06",
+    "step": "suppression_sinistre",
+    "data": {
+      "action": "Sinistre S002 supprimé par le gestionnaire EYA KHADHRAOUI",
+      "actor": "EYA KHADHRAOUI",
+      "sinistre_id": "S002",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 19:15:02",
+    "step": "suppression_sinistre",
+    "data": {
+      "action": "Sinistre CSIN98016 supprimé par le gestionnaire EYA KHADHRAOUI",
+      "actor": "EYA KHADHRAOUI",
+      "sinistre_id": "CSIN98016",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 19:14:56",
+    "step": "suppression_sinistre",
+    "data": {
+      "action": "Sinistre CSIN29750 supprimé par le gestionnaire EYA KHADHRAOUI",
+      "actor": "EYA KHADHRAOUI",
+      "sinistre_id": "CSIN29750",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 19:14:52",
+    "step": "suppression_sinistre",
+    "data": {
+      "action": "Sinistre CSIN25338 supprimé par le gestionnaire EYA KHADHRAOUI",
+      "actor": "EYA KHADHRAOUI",
+      "sinistre_id": "CSIN25338",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 19:14:48",
+    "step": "suppression_sinistre",
+    "data": {
+      "action": "Sinistre CSIN22002 supprimé par le gestionnaire EYA KHADHRAOUI",
+      "actor": "EYA KHADHRAOUI",
+      "sinistre_id": "CSIN22002",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 19:14:43",
+    "step": "suppression_sinistre",
+    "data": {
+      "action": "Sinistre CSIN00008 supprimé par le gestionnaire EYA KHADHRAOUI",
+      "actor": "EYA KHADHRAOUI",
+      "sinistre_id": "CSIN00008",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 19:14:18",
+    "step": "suppression_contrat",
+    "data": {
+      "action": "Contrat CSTR00003 supprimé par le gestionnaire Sarra Khelifi",
+      "actor": "Sarra Khelifi",
+      "contrat_id": "CSTR00003",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:14:12",
+    "step": "suppression_contrat",
+    "data": {
+      "action": "Contrat CSTR27213 supprimé par le gestionnaire Sarra Khelifi",
+      "actor": "Sarra Khelifi",
+      "contrat_id": "CSTR27213",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:14:08",
+    "step": "suppression_contrat",
+    "data": {
+      "action": "Contrat CSTR27375 supprimé par le gestionnaire Sarra Khelifi",
+      "actor": "Sarra Khelifi",
+      "contrat_id": "CSTR27375",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:14:02",
+    "step": "suppression_contrat",
+    "data": {
+      "action": "Contrat CSTR73194 supprimé par le gestionnaire Sarra Khelifi",
+      "actor": "Sarra Khelifi",
+      "contrat_id": "CSTR73194",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:13:22",
+    "step": "suppression_contrat",
+    "data": {
+      "action": "Contrat CSTR00002 supprimé par le gestionnaire Sarra Khelifi",
+      "actor": "Sarra Khelifi",
+      "contrat_id": "CSTR00002",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:12:47",
+    "step": "suppression_contrat",
+    "data": {
+      "action": "Contrat CSTR00002 supprimé par le gestionnaire Sarra Khelifi",
+      "actor": "Sarra Khelifi",
+      "contrat_id": "CSTR00002",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:10:03",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "pas_maintenant",
+      "actor": "G456",
+      "comment": ""
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:10:00",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "pas_maintenant",
+      "actor": "G456",
+      "comment": ""
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:09:59",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "pas_maintenant",
+      "actor": "G456",
+      "comment": ""
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:09:58",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "pas_maintenant",
+      "actor": "G456",
+      "comment": ""
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:09:56",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "pas_maintenant",
+      "actor": "G456",
+      "comment": ""
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:09:54",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "pas_maintenant",
+      "actor": "G456",
+      "comment": ""
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:02:01",
+    "step": "ingestion_document_rag",
+    "data": {
+      "action": "Document 'Attestation_Contrat_5FFFFFFFFFFF.pdf' ingéré dans la base RAG par sarra.khelifi",
+      "actor": "sarra.khelifi",
+      "filename": "Attestation_Contrat_5FFFFFFFFFFF.pdf",
+      "chunks": 3,
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 19:01:51",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "validate",
+      "actor": "G456",
+      "comment": ""
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:59:24",
+    "step": "export_pdf_sinistre",
+    "data": {
+      "action": "Export PDF du sinistre CSIN00008 par sarra.khelifi",
+      "actor": "sarra.khelifi",
+      "sinistre_id": "CSIN00008",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:59:11",
+    "step": "export_pdf_contrat",
+    "data": {
+      "action": "Export PDF du contrat CSTR00001 par sarra.khelifi",
+      "actor": "sarra.khelifi",
+      "contrat_id": "CSTR00001",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:59:02",
+    "step": "suppression_contrat",
+    "data": {
+      "action": "Contrat CSTR00003 supprimé par le gestionnaire Sarra Khelifi",
+      "actor": "Sarra Khelifi",
+      "contrat_id": "CSTR00003",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:54:08",
+    "step": "modification_contrat",
+    "data": {
+      "action": "Contrat CSTR00001 modifié par sarra.khelifi",
+      "actor": "sarra.khelifi",
+      "gestionnaire_id": "G456",
+      "agence_id": "AG01",
+      "contrat_id": "CSTR00001",
+      "updates": {
+        "statut": "suspendu"
+      },
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:45:39",
+    "step": "export_pdf_contrat",
+    "data": {
+      "action": "Export PDF du contrat CSTR27375 par sarra.khelifi",
+      "actor": "sarra.khelifi",
+      "contrat_id": "CSTR27375",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:45:21",
+    "step": "export_pdf_contrat",
+    "data": {
+      "action": "Export PDF du contrat CSTR27213 par sarra.khelifi",
+      "actor": "sarra.khelifi",
+      "contrat_id": "CSTR27213",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:30:45",
+    "step": "suppression_contrat",
+    "data": {
+      "action": "Contrat CSTR27348 supprimé par le gestionnaire Sarra Khelifi",
+      "actor": "Sarra Khelifi",
+      "contrat_id": "CSTR27348",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:30:34",
+    "step": "ajout_contrat",
+    "data": {
+      "action": "Contrat CSTR27348 (auto) souscrit par sarra.khelifi",
+      "actor": "sarra.khelifi",
+      "gestionnaire_id": "G456",
+      "agence_id": "AG01",
+      "contrat_id": "CSTR27348",
+      "type_contrat": "auto",
+      "client_id": "CL01",
+      "garantie_max": 100000.0,
+      "statut": "actif",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:30:00",
+    "step": "ajout_client",
+    "data": {
+      "action": "Nouveau client CL11 (Souheil Khadhraoui) créé par sarra.khelifi",
+      "actor": "sarra.khelifi",
+      "gestionnaire_id": "G456",
+      "agence_id": "AG01",
+      "client_id": "CL11",
+      "nom": "Khadhraoui",
+      "prenom": "Souheil",
+      "email": "ayoutakoukou13@gmail.com",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:27:40",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "pas_maintenant",
+      "actor": "G456",
+      "comment": ""
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:27:38",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "pas_maintenant",
+      "actor": "G456",
+      "comment": ""
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:27:36",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "pas_maintenant",
+      "actor": "G456",
+      "comment": ""
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:27:35",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "pas_maintenant",
+      "actor": "G456",
+      "comment": ""
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:27:34",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "pas_maintenant",
+      "actor": "G456",
+      "comment": ""
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:27:33",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "pas_maintenant",
+      "actor": "G456",
+      "comment": ""
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:26:02",
+    "step": "analyse_dossier_ia",
+    "data": {
+      "action": "Analyse IA exécutée sur contrat CSTR00001",
+      "contrat_id": "CSTR00001",
+      "status": "OK"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 18:26:02",
+    "step": "history_update",
+    "data": {
+      "status": "aucune mise à jour (en_attente_bon_gestionnaire)"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 18:26:01",
+    "step": "human_validation_bloquee",
+    "data": {
+      "raison": "role non autorise pour ce type d evenement"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 18:26:01",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G123"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 18:26:01",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "standard",
+      "role": "assurances",
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 18:26:01",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "event_type": "risque",
+      "raison": "evenement de type risque : routage vers gestionnaires sinistres avec dossier en cours",
+      "gestionnaires_ids": [
+        "G123"
+      ],
+      "gestionnaires_noms": [
+        "Ahmed Trabelsi"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 18:26:00",
+    "step": "recommendation",
+    "data": {
+      "reco": "Signaux de risque eleves. Transmission au referent anti-fraude et controle renforce des pieces justificatives.",
+      "nb_cards": 4,
+      "urgency_level": "eleve",
+      "urgency_score": 63.9
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 18:26:00",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "eleve",
+      "score": 63.9,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 18:26:00",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 18:25:42",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "risque",
+      "urgency_score": 63.9,
+      "urgency_level": "eleve",
+      "dominant_rule": "montant_plafond",
+      "nb_anomalies": 4,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 18:25:41",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "eleve",
+      "urgency_score": 63.9,
+      "confidence": "moyenne",
+      "dominant_rule": "montant_plafond"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 18:25:41",
+    "step": "classify_event",
+    "data": {
+      "event_type": "risque",
+      "justification": "Score de risque 63.9/100 (eleve) — dossier a traiter en priorite",
+      "risk_score": 63.9,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 18:25:41",
+    "step": "cross_analysis",
+    "data": {
+      "score": 63.9,
+      "urgency_level": "eleve",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 4,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 18:25:41",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR00001",
+      "nb_sinistres": 2,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 18:25:41",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "nb_sinistres": 2,
+      "sinistres_ids": [
+        "CSIN00008",
+        "S999"
+      ],
+      "acces_verifie_pour_role": "assurances"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 18:25:40",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G456",
+      "role": "assurances"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:24:40",
+    "step": "ajout_contrat",
+    "data": {
+      "action": "Contrat CSTR73194 (vie) souscrit par sarra.khelifi",
+      "actor": "sarra.khelifi",
+      "gestionnaire_id": "G456",
+      "agence_id": "AG01",
+      "contrat_id": "CSTR73194",
+      "type_contrat": "vie",
+      "client_id": "CL02",
+      "garantie_max": 100000.0,
+      "statut": "actif",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:24:21",
+    "step": "suppression_contrat",
+    "data": {
+      "action": "Contrat CSTR92252 supprimé par le gestionnaire Sarra Khelifi",
+      "actor": "Sarra Khelifi",
+      "contrat_id": "CSTR92252",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:24:18",
+    "step": "suppression_contrat",
+    "data": {
+      "action": "Contrat CSTR71674 supprimé par le gestionnaire Sarra Khelifi",
+      "actor": "Sarra Khelifi",
+      "contrat_id": "CSTR71674",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:24:14",
+    "step": "suppression_contrat",
+    "data": {
+      "action": "Contrat CSTR78264 supprimé par le gestionnaire Sarra Khelifi",
+      "actor": "Sarra Khelifi",
+      "contrat_id": "CSTR78264",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:24:09",
+    "step": "suppression_contrat",
+    "data": {
+      "action": "Contrat CSTR69976 supprimé par le gestionnaire Sarra Khelifi",
+      "actor": "Sarra Khelifi",
+      "contrat_id": "CSTR69976",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:24:02",
+    "step": "suppression_contrat",
+    "data": {
+      "action": "Contrat CSTR47480 supprimé par le gestionnaire Sarra Khelifi",
+      "actor": "Sarra Khelifi",
+      "contrat_id": "CSTR47480",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:23:54",
+    "step": "suppression_contrat",
+    "data": {
+      "action": "Contrat CSTR00001 supprimé par le gestionnaire Sarra Khelifi",
+      "actor": "Sarra Khelifi",
+      "contrat_id": "CSTR00001",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:23:49",
+    "step": "suppression_contrat",
+    "data": {
+      "action": "Contrat 5FFFFFFFFFFF supprimé par le gestionnaire Sarra Khelifi",
+      "actor": "Sarra Khelifi",
+      "contrat_id": "5FFFFFFFFFFF",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 18:23:22",
+    "step": "ajout_contrat",
+    "data": {
+      "action": "Contrat CSTR27375 (habitation) souscrit par sarra.khelifi",
+      "actor": "sarra.khelifi",
+      "gestionnaire_id": "G456",
+      "agence_id": "AG01",
+      "contrat_id": "CSTR27375",
+      "type_contrat": "habitation",
+      "client_id": "CL03",
+      "garantie_max": 100000.0,
+      "statut": "actif",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 15:09:19",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "validate",
+      "actor": "G123",
+      "comment": ""
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 15:09:05",
+    "step": "analyse_dossier_ia",
+    "data": {
+      "action": "Analyse IA exécutée sur contrat 5FFFFFFFFFFF",
+      "contrat_id": "5FFFFFFFFFFF",
+      "status": "OK"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:09:05",
+    "step": "history_update",
+    "data": {
+      "status": "aucune mise à jour (en_attente_bon_gestionnaire)"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:09:04",
+    "step": "human_validation_bloquee",
+    "data": {
+      "raison": "role non autorise pour ce type d evenement"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:09:04",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G456"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:09:04",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "standard",
+      "role": "sinistres",
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:09:04",
+    "step": "routing",
+    "data": {
+      "contrat_id": "5FFFFFFFFFFF",
+      "event_type": "contrat",
+      "raison": "evenement de type contrat : routage vers le gestionnaire assurances createur",
+      "gestionnaires_ids": [
+        "G456"
+      ],
+      "gestionnaires_noms": [
+        "Sarra Khelifi"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:09:04",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 14.0
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:09:04",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 14.0,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:09:03",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "5FFFFFFFFFFF",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:08:46",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "contrat",
+      "urgency_score": 14.0,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 0,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:08:46",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 14.0,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:08:46",
+    "step": "classify_event",
+    "data": {
+      "event_type": "contrat",
+      "justification": "Dossier contrat sans sinistre actif",
+      "risk_score": 14.0,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:08:46",
+    "step": "cross_analysis",
+    "data": {
+      "score": 14.0,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 0,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:08:45",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "5FFFFFFFFFFF",
+      "nb_sinistres": 0,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:08:45",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "5FFFFFFFFFFF",
+      "client": "Sonia Ben Ayed",
+      "nb_sinistres": 0,
+      "sinistres_ids": [],
+      "acces_verifie_pour_role": "sinistres"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:08:45",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G123",
+      "role": "sinistres"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 15:08:03",
+    "step": "analyse_dossier_ia",
+    "data": {
+      "action": "Analyse IA exécutée sur contrat CSTR00001",
+      "contrat_id": "CSTR00001",
+      "status": "OK"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:08:03",
+    "step": "history_update",
+    "data": {
+      "status": "historique mis à jour"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:08:03",
+    "step": "human_validation",
+    "data": {
+      "status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:08:03",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G123"
+      ],
+      "routing_alerte": false,
+      "notified_count": 0,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:08:02",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "standard",
+      "role": "sinistres",
+      "destinataires": [],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:08:02",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "event_type": "risque",
+      "raison": "evenement de type risque : routage vers gestionnaires sinistres avec dossier en cours",
+      "gestionnaires_ids": [
+        "G123"
+      ],
+      "gestionnaires_noms": [
+        "Ahmed Trabelsi"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:08:02",
+    "step": "recommendation",
+    "data": {
+      "reco": "Signaux de risque eleves. Transmission au referent anti-fraude et controle renforce des pieces justificatives.",
+      "nb_cards": 4,
+      "urgency_level": "eleve",
+      "urgency_score": 63.9
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:08:02",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "eleve",
+      "score": 63.9,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:08:02",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:07:43",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "risque",
+      "urgency_score": 63.9,
+      "urgency_level": "eleve",
+      "dominant_rule": "montant_plafond",
+      "nb_anomalies": 4,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:07:43",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "eleve",
+      "urgency_score": 63.9,
+      "confidence": "moyenne",
+      "dominant_rule": "montant_plafond"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:07:43",
+    "step": "classify_event",
+    "data": {
+      "event_type": "risque",
+      "justification": "Score de risque 63.9/100 (eleve) — dossier a traiter en priorite",
+      "risk_score": 63.9,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:07:43",
+    "step": "cross_analysis",
+    "data": {
+      "score": 63.9,
+      "urgency_level": "eleve",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 4,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:07:42",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR00001",
+      "nb_sinistres": 2,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:07:42",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "nb_sinistres": 2,
+      "sinistres_ids": [
+        "CSIN00008",
+        "S999"
+      ],
+      "acces_verifie_pour_role": "sinistres"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 15:07:42",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G123",
+      "role": "sinistres"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 14:55:36",
+    "step": "alert_validation_request",
+    "data": {
+      "action": "validate",
+      "actor": "G123",
+      "comment": ""
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 14:52:09",
+    "step": "export_pdf_sinistre",
+    "data": {
+      "action": "Export PDF du sinistre CSIN00008 par eya.khadhraoui",
+      "actor": "eya.khadhraoui",
+      "sinistre_id": "CSIN00008",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 13:31:17",
+    "step": "suppression_sinistre",
+    "data": {
+      "action": "Sinistre CSIN00006 supprimé par le gestionnaire Ahmed Trabelsi",
+      "actor": "Ahmed Trabelsi",
+      "sinistre_id": "CSIN00006",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 13:29:40",
+    "step": "suppression_sinistre",
+    "data": {
+      "action": "Sinistre CSIN00005 supprimé par le gestionnaire Ahmed Trabelsi",
+      "actor": "Ahmed Trabelsi",
+      "sinistre_id": "CSIN00005",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 13:29:31",
+    "step": "suppression_sinistre",
+    "data": {
+      "action": "Sinistre CSIN00003 supprimé par le gestionnaire Ahmed Trabelsi",
+      "actor": "Ahmed Trabelsi",
+      "sinistre_id": "CSIN00003",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 13:29:28",
+    "step": "suppression_sinistre",
+    "data": {
+      "action": "Sinistre CSIN00004 supprimé par le gestionnaire Ahmed Trabelsi",
+      "actor": "Ahmed Trabelsi",
+      "sinistre_id": "CSIN00004",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 13:29:26",
+    "step": "suppression_sinistre",
+    "data": {
+      "action": "Sinistre CSIN00001 supprimé par le gestionnaire Ahmed Trabelsi",
+      "actor": "Ahmed Trabelsi",
+      "sinistre_id": "CSIN00001",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 12:51:33",
+    "step": "supervisor_workflow_completed",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "urgency_level": "moyen",
+      "validation_status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:32",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "risque",
+      "urgency_score": 75,
+      "urgency_level": "eleve",
+      "dominant_rule": "CAP_EXCEEDED",
+      "nb_anomalies": 1,
+      "confidence": "haute"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:32",
+    "step": "history_update",
+    "data": {
+      "status": "historique mis à jour"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:32",
+    "step": "human_validation",
+    "data": {
+      "status": "en_attente_validation"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:32",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G456"
+      ],
+      "routing_alerte": false,
+      "notified_count": 1,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:32",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "contrat",
+      "role": "assurances",
+      "destinataires": [
+        "G123"
+      ],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:30",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "event_type": "contrat",
+      "raison": "evenement de type contrat : routage vers le gestionnaire assurances createur",
+      "gestionnaires_ids": [
+        "G456"
+      ],
+      "gestionnaires_noms": [
+        "Sarra Khelifi"
+      ]
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:29",
+    "step": "recommendation",
+    "data": {
+      "reco": "Revue planifiee a 90 jours. Aucune action immediate requise.",
+      "nb_cards": 4,
+      "urgency_level": "faible",
+      "urgency_score": 19.3
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:29",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "faible",
+      "score": 19.3,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:29",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "llm_error": null
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:29",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "contrat",
+      "urgency_score": 19.3,
+      "urgency_level": "faible",
+      "dominant_rule": "anciennete",
+      "nb_anomalies": 0,
+      "confidence": "moyenne"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:29",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "moyenne",
+      "dominant_rule": "anciennete"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:29",
+    "step": "classify_event",
+    "data": {
+      "event_type": "contrat",
+      "justification": "Evenement lie au contrat",
+      "risk_score": 19.3,
+      "source": "risk_based"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:29",
+    "step": "cross_analysis",
+    "data": {
+      "score": 19.3,
+      "urgency_level": "faible",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 0,
+      "nb_anomalies_llm": 0,
+      "llm_error": null,
+      "source": "risk_analyzer+llm"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:29",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR00001",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:29",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "S001"
+      ],
+      "acces_verifie_pour_role": "assurances"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:29",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR00001",
+      "nb_sinistres": 1,
+      "confidence": "haute",
+      "missing_data": []
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:29",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "nb_sinistres": 1,
+      "sinistres_ids": [
+        "S001"
+      ],
+      "acces_verifie_pour_role": "assurances"
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:28",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "GEST01"
+      ],
+      "routing_alerte": false,
+      "notified_count": 1,
+      "has_summary": true
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:28",
+    "step": "modification_contrat",
+    "data": {
+      "action": "Contrat CSTR00001 modifié par G456",
+      "actor": "G456",
+      "gestionnaire_id": "G456",
+      "agence_id": "AG01",
+      "contrat_id": "CSTR00001",
+      "updates": {
+        "garantie_max": 60000
+      },
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-09 12:51:28",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "contrat",
+      "role": "assurances",
+      "destinataires": [
+        "G123"
+      ],
+      "analysis_triggered": false
+    },
+    "gestionnaire_id": null
+  },
+  {
+    "timestamp": "2026-08-09 12:51:27",
+    "step": "ajout_sinistre",
+    "data": {
+      "action": "Sinistre S999 (Auto - Carambolage) déclaré sur contrat CSTR00001 par G123",
+      "actor": "G123",
+      "gestionnaire_id": "G123",
+      "agence_id": "AG01",
+      "contrat_id": "CSTR00001",
+      "sinistre_id": "S999",
+      "type_sinistre": "Auto - Carambolage",
+      "montant_declare": 10000.0,
+      "statut": "en_cours",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 12:50:35",
+    "step": "suppression_sinistre",
+    "data": {
+      "action": "Sinistre CSIN00002 supprimé par le gestionnaire Ahmed Trabelsi",
+      "actor": "Ahmed Trabelsi",
+      "sinistre_id": "CSIN00002",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 12:16:56",
+    "step": "ingestion_document_rag",
+    "data": {
+      "action": "Document 'procedures_assurance_rag.pdf' ingéré dans la base RAG par eya.khadhraoui",
+      "actor": "eya.khadhraoui",
+      "filename": "procedures_assurance_rag.pdf",
+      "chunks": 9,
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 12:13:36",
+    "step": "export_pdf_contrat",
+    "data": {
+      "action": "Export PDF du contrat 5FFFFFFFFFFF par eya.khadhraoui",
+      "actor": "eya.khadhraoui",
+      "contrat_id": "5FFFFFFFFFFF",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 12:13:18",
+    "step": "export_pdf_sinistre",
+    "data": {
+      "action": "Export PDF du sinistre CSIN00001 par eya.khadhraoui",
+      "actor": "eya.khadhraoui",
+      "sinistre_id": "CSIN00001",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G123"
+  },
+  {
+    "timestamp": "2026-08-09 12:11:16",
+    "step": "export_pdf_contrat",
+    "data": {
+      "action": "Export PDF du contrat CSTR00001 par sarra.khelifi",
+      "actor": "sarra.khelifi",
+      "contrat_id": "CSTR00001",
+      "status": "OK"
+    },
+    "gestionnaire_id": "G456"
+  },
+  {
+    "timestamp": "2026-08-08T14:23:06.512143",
+    "step": "recommendation",
+    "data": {
+      "reco": "Signaux de risque eleves. Transmission au referent anti-fraude et controle renforce des pieces justificatives.",
+      "nb_cards": 4,
+      "urgency_level": "eleve",
+      "urgency_score": 72.3
+    }
+  },
+  {
+    "timestamp": "2026-08-08T14:23:06.731037",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR00003",
+      "event_type": "risque",
+      "raison": "evenement de type risque : routage vers gestionnaires sinistres avec dossier en cours",
+      "gestionnaires_ids": [
+        "G789",
+        "G123"
+      ],
+      "gestionnaires_noms": [
+        "Karim Bouazizi",
+        "Ahmed Trabelsi"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-08-08T14:23:17.976162",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "contrat",
+      "role": "assurances",
+      "destinataires": [
+        "G789",
+        "G123"
+      ],
+      "analysis_triggered": false
+    }
+  },
+  {
+    "timestamp": "2026-08-08T14:23:17.976162",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G789",
+        "G123"
+      ],
+      "routing_alerte": false,
+      "notified_count": 2,
+      "has_summary": true
+    }
+  },
+  {
+    "timestamp": "2026-08-08T14:23:17.976162",
+    "step": "human_validation_bloquee",
+    "data": {
+      "raison": "role non autorise pour ce type d evenement"
+    }
+  },
+  {
+    "timestamp": "2026-08-08T14:23:17.992657",
+    "step": "history_update",
+    "data": {
+      "status": "aucune mise à jour (en_attente_bon_gestionnaire)"
+    }
+  },
+  {
+    "timestamp": "2026-08-08T14:23:18.921036",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "contrat",
+      "role": "assurances",
+      "destinataires": [
+        "G789",
+        "G123"
+      ],
+      "analysis_triggered": false
+    }
+  },
+  {
+    "timestamp": "2026-08-08T14:23:18.925465",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G789",
+        "G123"
+      ],
+      "routing_alerte": false,
+      "notified_count": 2,
+      "has_summary": true
+    }
+  },
+  {
+    "timestamp": "2026-08-08T14:23:18.930618",
+    "step": "human_validation_bloquee",
+    "data": {
+      "raison": "role non autorise pour ce type d evenement"
+    }
+  },
+  {
+    "timestamp": "2026-08-08T14:23:18.936163",
+    "step": "history_update",
+    "data": {
+      "status": "aucune mise à jour (en_attente_bon_gestionnaire)"
+    }
+  },
+  {
+    "timestamp": "2026-08-08T15:26:31.790362",
+    "step": "authenticate",
+    "data": {
+      "gestionnaire_id": "G791",
+      "role": "assurances"
+    }
+  },
+  {
+    "timestamp": "2026-08-08T15:26:32.076657",
+    "step": "collect_data",
+    "data": {
+      "contrat_id": "CSTR00003",
+      "client": "Jalva Maromi",
+      "nb_sinistres": 9,
+      "sinistres_ids": [
+        "CSIN00003",
+        "CSIN00006",
+        "CSIN36778",
+        "CSIN41204",
+        "CSIN81358",
+        "CSIN86856",
+        "CSIN87468",
+        "CSIN87593",
+        "S009"
+      ],
+      "acces_verifie_pour_role": "assurances"
+    }
+  },
+  {
+    "timestamp": "2026-08-08T15:26:32.089026",
+    "step": "collector_agent_executed",
+    "data": {
+      "agent": "CollectorAgent",
+      "status": "success",
+      "contrat_id": "CSTR00003",
+      "nb_sinistres": 9,
+      "confidence": "haute",
+      "missing_data": []
+    }
+  },
+  {
+    "timestamp": "2026-08-08T15:26:32.639942",
+    "step": "cross_analysis",
+    "data": {
+      "score": 72.3,
+      "urgency_level": "eleve",
+      "confidence": "moyenne",
+      "nb_anomalies_regles": 3,
+      "nb_anomalies_llm": 0,
+      "llm_error": "Object of type Decimal is not JSON serializable",
+      "source": "risk_analyzer+llm"
+    }
+  },
+  {
+    "timestamp": "2026-08-08T15:26:32.639942",
+    "step": "classify_event",
+    "data": {
+      "event_type": "risque",
+      "justification": "Score de risque 72.3/100 (eleve) — dossier a traiter en priorite",
+      "risk_score": 72.3,
+      "source": "risk_based"
+    }
+  },
+  {
+    "timestamp": "2026-08-08T15:26:32.652441",
+    "step": "urgency",
+    "data": {
+      "urgency_level": "eleve",
+      "urgency_score": 72.3,
+      "confidence": "moyenne",
+      "dominant_rule": "recurrence"
+    }
+  },
+  {
+    "timestamp": "2026-08-08T15:26:32.654458",
+    "step": "risk_agent_executed",
+    "data": {
+      "agent": "RiskAnalysisAgent",
+      "status": "success",
+      "event_type": "risque",
+      "urgency_score": 72.3,
+      "urgency_level": "eleve",
+      "dominant_rule": "recurrence",
+      "nb_anomalies": 3,
+      "confidence": "moyenne"
+    }
+  },
+  {
+    "timestamp": "2026-08-08T15:26:48.934977",
+    "step": "summarize_dossier",
+    "data": {
+      "contrat_id": "CSTR00003",
+      "llm_error": null
+    }
+  },
+  {
+    "timestamp": "2026-08-08T15:26:48.965944",
+    "step": "alert_built",
+    "data": {
+      "urgency_level": "eleve",
+      "score": 72.3,
+      "confidence": "moyenne"
+    }
+  },
+  {
+    "timestamp": "2026-08-08T15:26:48.975259",
+    "step": "recommendation",
+    "data": {
+      "reco": "Signaux de risque eleves. Transmission au referent anti-fraude et controle renforce des pieces justificatives.",
+      "nb_cards": 4,
+      "urgency_level": "eleve",
+      "urgency_score": 72.3
+    }
+  },
+  {
+    "timestamp": "2026-08-08T15:26:49.125488",
+    "step": "routing",
+    "data": {
+      "contrat_id": "CSTR00003",
+      "event_type": "risque",
+      "raison": "evenement de type risque : routage vers gestionnaires sinistres avec dossier en cours",
+      "gestionnaires_ids": [
+        "G789",
+        "G123"
+      ],
+      "gestionnaires_noms": [
+        "Karim Bouazizi",
+        "Ahmed Trabelsi"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-08-08T15:26:56.232340",
+    "step": "cross_notify",
+    "data": {
+      "modification_type": "contrat",
+      "role": "assurances",
+      "destinataires": [
+        "G789",
+        "G123"
+      ],
+      "analysis_triggered": false
+    }
+  },
+  {
+    "timestamp": "2026-08-08T15:26:56.243938",
+    "step": "alert_agent_executed",
+    "data": {
+      "agent": "AlertNotificationAgent",
+      "status": "success",
+      "routed_to": [
+        "G789",
+        "G123"
+      ],
+      "routing_alerte": false,
+      "notified_count": 2,
+      "has_summary": true
+    }
+  },
+  {
+    "timestamp": "2026-08-08T15:26:56.249824",
+    "step": "human_validation_bloquee",
+    "data": {
+      "raison": "role non autorise pour ce type d evenement"
+    }
+  },
+  {
+    "timestamp": "2026-08-08T15:26:56.259706",
+    "step": "history_update",
+    "data": {
+      "status": "aucune mise à jour (en_attente_bon_gestionnaire)"
+    }
+  }
+]

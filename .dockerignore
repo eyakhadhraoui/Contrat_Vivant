@@ -1,0 +1,35 @@
+# Git
+.git
+.gitignore
+.github
+.gitlab-ci.yml
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+node_modules/
+dist/
+
+# Logs & temporaires
+*.log
+logs/
+scratch/
+.idea/
+.vscode/
+.DS_Store
+
+# Données sensibles locales
+.env
+.env.local

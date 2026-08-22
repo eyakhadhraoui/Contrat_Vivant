@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connexion - Contrat Vivant</title>
+  <!-- Google Fonts: Newsreader & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body class="login-body">
+  <div class="login-wrapper">
+    <div class="login-card-container">
+      
+      <!-- Panneau Gauche: Design Sombre & Présentation Métier -->
+      <div class="login-left-panel">
+        <div class="left-header">
+          <div class="brand-title">
+            <span class="brand-contrat">Contrat</span>
+            <span class="brand-vivant">Vivant</span>
+          </div>
+          <p class="brand-subtitle">PLATEFORME DE GESTION CONTRACTUELLE</p>
+        </div>
+
+        <div class="left-hero">
+          <h1 class="hero-headline">
+            Un contrat qui <span class="accent-italic">évolue</span><br />avec chaque décision.
+          </h1>
+          <p class="hero-quote">
+            « Contrat vivant » relie vos équipes, vos clauses et vos clients dans un seul flux, mis à jour en continu.
+          </p>
+        </div>
+
+        <div class="left-graphic-section">
+          <div class="ecg-graphic-row">
+            <svg class="ecg-svg" viewBox="0 0 160 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 25 L40 25 L48 10 L56 40 L64 5 L72 35 L80 25 L160 25" stroke="#e54838" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="ecg-bars">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+          <p class="graphic-caption">CHAQUE SIGNAL DEVIENT UNE CLAUSE À JOUR — EN TEMPS RÉEL</p>
+        </div>
+
+        <div class="left-stats-footer">
+          <div class="stat-item">
+            <span class="stat-value">2 400+</span>
+            <span class="stat-label">CONTRATS SUIVIS</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">98,2%</span>
+            <span class="stat-label">ALERTES TRAITÉES &lt;24H</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">12</span>
+            <span class="stat-label">AGENCES CONNECTÉES</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panneau Droit: Formulaire de Connexion -->
+      <div class="login-right-panel">
+        <div class="login-form-header">
+          <div class="icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <div class="header-text">
+            <h2>Connexion gestionnaire</h2>
+            <p>Accès réservé aux comptes autorisés</p>
+          </div>
+        </div>
+
+        <form id="login-form" class="auth-form">
+          <div class="form-field">
+            <label for="login-username">Nom d'utilisateur</label>
+            <input id="login-username" class="custom-input" type="text" placeholder="sarra.khelifi" value="sarra.khelifi" autocomplete="username" required />
+          </div>
+
+          <div class="form-field">
+            <label for="login-password">Mot de passe</label>
+            <input id="login-password" class="custom-input" type="password" placeholder="••••••••••" autocomplete="current-password" required />
+          </div>
+
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox" checked />
+              <span>Se souvenir de moi</span>
+            </label>
+            <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+          </div>
+
+          <button type="submit" class="submit-btn">Se connecter</button>
+
+          <p class="form-error-msg" id="login-error"></p>
+
+          <div class="security-footer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>Connexion chiffrée — conforme aux normes de sécurité</span>
+          </div>
+
+          <div class="security-footer" style="margin-top: 8px;">
+            <span>Pas encore de compte ? <a href="/signup" class="forgot-password" style="text-decoration: underline;">S'inscrire</a></span>
+          </div>
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById('login-form');
+    const loginError = document.getElementById('login-error');
+
+    loginForm.addEventListener('submit', async event => {
+      event.preventDefault();
+      loginError.innerText = '';
+
+      const username = document.getElementById('login-username').value.trim();
+      const password = document.getElementById('login-password').value.trim();
+
+      if (!username || !password) {
+        loginError.innerText = 'Veuillez renseigner votre identifiant et mot de passe.';
+        return;
+      }
+
+      try {
+        const response = await fetch('/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password })
+        });
+
+        if (!response.ok) {
+          const data = await response.json();
+          loginError.innerText = data.detail || 'Échec de la connexion.';
+          return;
+        }
+
+        const data = await response.json();
+        const parseJwt = (token) => {
+          try {
+            const base64Url = token.split('.')[1];
+            const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+            const jsonPayload = decodeURIComponent(atob(base64).split('').map(c => '%'+('00'+c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+            return JSON.parse(jsonPayload);
+          } catch (err) {
+            return {};
+          }
+        };
+        const payload = parseJwt(data.token);
+        localStorage.setItem('authToken', data.token);
+        localStorage.setItem('authUser', JSON.stringify({ username, role: payload.role || 'assurances', agence_id: payload.agence_id || null }));
+        window.location.href = '/app';
+      } catch (err) {
+        loginError.innerText = 'Impossible de contacter le serveur. Réessayez.';
+      }
+    });
+  </script>
+
+</body>
+</html>

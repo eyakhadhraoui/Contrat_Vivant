@@ -1,0 +1,3722 @@
+[
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "moyen",
+      "anomalies": [
+        {
+          "rule": "sinistres_repetes",
+          "message": "2 sinistres déclarés en moins de 30 jours",
+          "severity": "moyen"
+        },
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 71 jours sur un contrat actif",
+          "severity": "faible"
+        }
+      ]
+    },
+    "validation_status": "ajuste"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "moyen",
+      "anomalies": [
+        {
+          "rule": "sinistres_repetes",
+          "message": "2 sinistres déclarés en moins de 30 jours",
+          "severity": "moyen"
+        },
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 71 jours sur un contrat actif",
+          "severity": "faible"
+        }
+      ]
+    },
+    "validation_status": "valide",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "moyen",
+      "anomalies": [
+        {
+          "rule": "sinistres_repetes",
+          "message": "2 sinistres déclarés en moins de 30 jours",
+          "severity": "moyen"
+        },
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 71 jours sur un contrat actif",
+          "severity": "faible"
+        }
+      ]
+    },
+    "validation_status": "valide",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "moyen",
+      "anomalies": [
+        {
+          "rule": "sinistres_repetes",
+          "message": "2 sinistres déclarés en moins de 30 jours",
+          "severity": "moyen"
+        },
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 74 jours sur un contrat actif",
+          "severity": "faible"
+        }
+      ],
+      "explication_llm": "Le client Ahmed Ben Salah présente un cumul de sinistres de 47 000 DT (soit 94 % de sa garantie maximale de 50 000 DT) déclarés en moins de 30 jours, associé à un retard de paiement de 74 jours sur ce contrat actif.\n\n**Recommandation :** Suspendre temporairement le règlement des sinistres, exiger la régularisation immédiate des primes impayées et mandater une expertise pour vérifier la légitimité de ces déclarations rapprochées avant d'atteindre le plafond du contrat."
+    },
+    "validation_status": "valide",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "moyen",
+      "anomalies": [
+        {
+          "rule": "sinistres_repetes",
+          "message": "2 sinistres déclarés en moins de 30 jours",
+          "severity": "moyen"
+        },
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 74 jours sur un contrat actif",
+          "severity": "faible"
+        }
+      ],
+      "explication_llm": "**Problème :** Le dossier de M. Ahmed Ben Salah présente une forte hausse de sinistralité avec 47 000 DT déclarés en moins de 30 jours (consommant 94 % du plafond de 50 000 DT), combinée à une absence de mise à jour du contrat depuis 74 jours.\n\n**Recommandation :** Suspendre le paiement des indemnités, mandater un expert pour vérifier la réalité et la régularité des deux sinistres rapprochés, et relancer le client pour régulariser la situation administrative du contrat."
+    },
+    "validation_status": "valide",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "moyen",
+      "anomalies": [
+        {
+          "rule": "sinistres_repetes",
+          "message": "2 sinistres déclarés en moins de 30 jours",
+          "severity": "moyen"
+        },
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 74 jours sur un contrat actif",
+          "severity": "faible"
+        }
+      ],
+      "explication_llm": "**Problème :** Le client Ahmed Ben Salah cumule deux sinistres très rapprochés (< 30 jours) totalisant 47 000 DT (soit 94 % du plafond de 50 000 DT), combiné à une absence de mise à jour financière depuis 74 jours sur son contrat actif.\n\n**Recommandation :** Suspendre temporairement le versement des indemnités, mandater une expertise pour contrôler la légitimité des sinistres et relancer le client pour régulariser la situation administrative du contrat."
+    },
+    "validation_status": "valide",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "moyen",
+      "anomalies": [
+        {
+          "rule": "sinistres_repetes",
+          "message": "2 sinistres déclarés en moins de 30 jours",
+          "severity": "moyen"
+        },
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 74 jours sur un contrat actif",
+          "severity": "faible"
+        }
+      ],
+      "explication_llm": "**Problème détecté :** Le client Ahmed Ben Salah a déclaré 47 000 DT de sinistres (32 000 + 15 000 DT), atteignant 94 % du plafond de garantie (50 000 DT) avec 2 déclarations en moins de 30 jours, sur un contrat actif sans mise à jour depuis 74 jours.\n\n**Action recommandée :** Suspendre le paiement du second sinistre, diligenter une expertise pour vérifier la réalité des dommages et régulariser le suivi comptable/administratif du contrat avant toute validation."
+    },
+    "validation_status": "valide",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "C002",
+    "alert": {
+      "contrat_id": "C002",
+      "client": "Sarra Trabelsi",
+      "event_type": "sinistre",
+      "urgency_level": "faible",
+      "anomalies": [
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 52 jours sur un contrat actif",
+          "severity": "faible"
+        }
+      ],
+      "explication_llm": "Une anomalie de retard de paiement (sévérité faible) a été détectée : aucune mise à jour n'a été enregistrée depuis 52 jours sur le contrat actif de Mme Sarra Trabelsi, qui compte 5 000 DT de sinistres déclarés (sur 20 000 DT garantis).\n\n**Action recommandée :** Contactez la cliente pour faire un point sur le règlement de ses cotisations et vérifiez l'état de son compte avec le service comptable avant de procéder au versement de nouvelles indemnités."
+    },
+    "validation_status": "valide",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "eleve",
+      "anomalies": [
+        {
+          "rule": "ecart_montant_garantie",
+          "message": "Le sinistre S001 déclare 32000 DT, soit 64% de la garantie maximale (50000 DT), ce qui dépasse le seuil d'alerte fixé entre 30% et 40%.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "sinistres_rapproches",
+          "message": "Les sinistres S001 (2026-07-01) et S002 (2026-07-10) ont été survenus à seulement 9 jours d'intervalle, ce qui est inférieur au seuil de 30 jours.",
+          "severity": "moyen"
+        },
+        {
+          "rule": "retard_mise_a_jour_contrat",
+          "message": "Le contrat actif n'a pas été modifié depuis le 2026-05-10, soit 75 jours d'inactivité par rapport à la date du jour (2026-07-24), dépassant la limite recommandée de 15 jours.",
+          "severity": "moyen"
+        },
+        {
+          "rule": "cumul_montants_proche_plafond",
+          "message": "Le total des sinistres déclarés en cours (47000 DT) consomme 94% de la garantie maximale du contrat (50000 DT) en l'espace de 10 jours.",
+          "severity": "eleve"
+        }
+      ],
+      "explication_llm": "**Problème détecté :** M. Ahmed Ben Salah a déclaré deux sinistres rapprochés (9 jours d'intervalle) pour un montant cumulé de 47 000 DT, consommant ainsi 94 % de sa garantie maximale (50 000 DT). Ce pic d'indemnisation critique s'accompagne d'un retard de mise à jour du contrat de 75 jours.\n\n**Recommandation :** Suspendre immédiatement le règlement des sinistres S001 et S002, mandater une expertise sur le terrain via le service anti-fraude pour vérifier la réalité des faits, et exiger la mise à jour du contrat avant toute reprise de gestion."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "eleve",
+      "anomalies": [
+        {
+          "rule": "retard_mise_a_jour_contrat",
+          "message": "Dernière modification du contrat le 2026-05-10, soit 75 jours d'inactivité au 2026-07-24, ce qui dépasse le seuil maximal de 15 jours pour un contrat actif.",
+          "severity": "moyen"
+        },
+        {
+          "rule": "ecart_montant_garantie",
+          "message": "Le sinistre S001 présente un montant déclaré de 32000 DT, représentant 64% de la garantie maximale (50000 DT), dépassant largement le seuil suspect de 30-40%.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "sinistres_rapproches",
+          "message": "Les sinistres S001 (2026-07-01) et S002 (2026-07-10) ont été déclarés à seulement 9 jours d'intervalle, ce qui est inférieur au seuil de 30 jours.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "cumul_sinistres_proche_plafond",
+          "message": "Le cumul des montants déclarés en cours (47000 DT) atteint 94% de la garantie maximale du contrat (50000 DT) sur une période de 10 jours.",
+          "severity": "eleve"
+        }
+      ],
+      "explication_llm": "**Problème détecté :** Deux sinistres rapprochés (32 000 DT et 15 000 DT en seulement 9 jours) ont été déclarés par M. Ahmed Ben Salah, atteignant 94 % de son plafond de garantie (50 000 DT), sur un contrat présentant un retard de mise à jour de 75 jours.\n\n**Recommandation d'action :** Suspendre immédiatement le règlement des sinistres S001 et S002, mandater un expert antifraude pour vérifier la matérialité des dégâts et exiger la mise à jour administrative du contrat."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "eleve",
+      "anomalies": [
+        {
+          "rule": "retard_mise_a_jour_contrat",
+          "message": "Le contrat actif n'a pas été mis à jour depuis 75 jours (dernière modification le 2026-05-10 par rapport au 2026-07-24), dépassant la limite recommandée de 15 jours.",
+          "severity": "moyen"
+        },
+        {
+          "rule": "sinistres_rapproches",
+          "message": "Les sinistres S001 et S002 sont survenus à seulement 9 jours d'intervalle (2026-07-01 et 2026-07-10), ce qui est inférieur au seuil de 30 jours.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "montant_sinistre_eleve",
+          "message": "Le sinistre S001 s'élève à 32 000 DT, représentant 64% de la garantie maximale (50 000 DT), dépassant le seuil d'alerte de 30-40%.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "cumul_sinistres_plafond",
+          "message": "Le montant total des sinistres en cours (47 000 DT) atteint 94% de la garantie maximale (50 000 DT) sur une période de 10 jours.",
+          "severity": "eleve"
+        }
+      ],
+      "explication_llm": "**Problème détecté :** Risque financier et opérationnel majeur dû au cumul de 47 000 DT de sinistres en seulement 10 jours (atteignant 94% du plafond de 50 000 DT), avec deux déclarations suspectes espacées de 9 jours et un contrat non mis à jour depuis 75 jours.\n\n**Recommandation d'action :**\n1. Suspendre immédiatement le versement des indemnités des sinistres S001 et S002.\n2. Mandater une enquête anti-fraude sur le rapprochement et les montants des déclarations.\n3. Exiger la régularisation administrative préalable du contrat de M. Ahmed Ben Salah."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "eleve",
+      "anomalies": [
+        {
+          "rule": "ecart_montant_garantie",
+          "message": "Le sinistre S001 d'un montant de 32 000 DT représente 64% de la garantie maximale (50 000 DT), ce qui dépasse le seuil alerte de 30-40%.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "sinistres_rapproches",
+          "message": "Les sinistres S001 (01/07/2026) et S002 (10/07/2026) sont survenus à seulement 9 jours d'intervalle, ce qui est inférieur au seuil de 30 jours.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "retard_mise_a_jour_contrat",
+          "message": "Le contrat actif n'a pas été modifié depuis le 10/05/2026, soit un délai de 75 jours sans mise à jour par rapport à la date du jour (24/07/2026), dépassant le seuil autorisé de 15 jours.",
+          "severity": "moyen"
+        },
+        {
+          "rule": "saturation_plafond_garantie",
+          "message": "Le cumul des montants déclarés (47 000 DT) atteint 94% de la garantie maximale du contrat (50 000 DT) en l'espace de 9 jours.",
+          "severity": "eleve"
+        }
+      ],
+      "explication_llm": "Le dossier de M. Ahmed Ben Salah présente un risque élevé : deux sinistres rapprochés de seulement 9 jours (S001 et S002) totalisent 47 000 DT, saturant 94 % de la garantie maximale (50 000 DT), sur un contrat non mis à jour depuis 75 jours.\n\n**Action recommandée :** Suspendre immédiatement le paiement des indemnités, mandater un expert pour enquêter sur la réalité des deux sinistres (suspicion de fraude) et exiger la mise à jour administrative du contrat avant toute décision."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "moyen",
+      "anomalies": [
+        {
+          "rule": "sinistres_repetes",
+          "message": "2 sinistres en 30 jours",
+          "severity": "moyen"
+        },
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 77 jours sur un contrat actif",
+          "severity": "faible"
+        }
+      ],
+      "explication_llm": "{\"event_type\": \"contrat\", \"justification\": \"Évaluation basée sur les règles d agence (Quota LLM temporairement atteint)\", \"anomalies\": []}"
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "eleve",
+      "anomalies": [
+        {
+          "rule": "sinistres_repetes",
+          "message": "2 sinistres en 30 jours",
+          "severity": "moyen"
+        },
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 78 jours sur un contrat actif",
+          "severity": "faible"
+        },
+        {
+          "rule": "montant_eleve_par_rapport_garantie",
+          "message": "Le sinistre S001 représente 32 000 DT, soit 64% de la garantie maximale (50 000 DT), dépassant le seuil d'alerte fixé entre 30% et 40%.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "sinistres_rapproches",
+          "message": "Les sinistres S001 (2026-07-01) et S002 (2026-07-10) ont été survenus à seulement 9 jours d'intervalle, ce qui est inférieur au seuil de 30 jours.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "retard_mise_a_jour_contrat",
+          "message": "Le contrat actif n'a pas été modifié depuis le 2026-05-10, soit 75 jours sans mise à jour au 2026-07-24 (seuil maximal : 15 jours).",
+          "severity": "moyen"
+        },
+        {
+          "rule": "cumul_proche_plafond_garantie",
+          "message": "Le montant total cumulé des sinistres déclarés en cours (47 000 DT) atteint 94% de la garantie maximale globale (50 000 DT) en moins de 10 jours.",
+          "severity": "eleve"
+        }
+      ],
+      "explication_llm": "Le dossier du client Ahmed Ben Salah présente une forte suspicion de fraude : deux sinistres rapprochés (9 jours d'intervalle) cumulent 47 000 DT, soit 94 % du plafond de garantie (50 000 DT), sur un contrat resté sans mise à jour depuis 75 jours.\n\n**Recommandations d'action :**\n1. Suspendre immédiatement le versement des indemnités pour les sinistres S001 et S002.\n2. Mandater une expertise anti-fraude sur le terrain pour vérifier la véracité des déclarations.\n3. Bloquer le contrat jusqu'à la régularisation et la mise à jour des informations de l'assuré."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "eleve",
+      "anomalies": [
+        {
+          "rule": "sinistres_repetes",
+          "message": "2 sinistres en 30 jours",
+          "severity": "moyen"
+        },
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 78 jours sur un contrat actif",
+          "severity": "faible"
+        },
+        {
+          "rule": "montant_eleve_vs_garantie",
+          "message": "Le sinistre S001 a un montant déclaré de 32000 DT, représentant 64% de la garantie maximale (50000 DT), ce qui dépasse le seuil d'alerte de 30-40%.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "sinistres_rapproches",
+          "message": "Les sinistres S001 (01/07/2026) et S002 (10/07/2026) sont survenus à seulement 9 jours d'intervalle, soit moins que le seuil de 30 jours.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "retard_mise_a_jour_contrat",
+          "message": "Le contrat est actif mais n'a pas été modifié depuis le 10/05/2026, soit un retard de 75 jours (dépassant le seuil de 15 jours par rapport à la date du jour 24/07/2026).",
+          "severity": "moyen"
+        },
+        {
+          "rule": "cumul_montants_proche_plafond",
+          "message": "Le montant total cumulé des sinistres en cours (47000 DT) atteint 94% de la garantie maximale autorisée (50000 DT).",
+          "severity": "eleve"
+        }
+      ],
+      "explication_llm": "**Problème détecté :** M. Ahmed Ben Salah a déclaré deux sinistres très rapprochés (9 jours d'intervalle) totalisant 47 000 DT, soit 94 % de sa garantie maximale (50 000 DT), sur un contrat actif présentant un retard de mise à jour administrative de 75 jours.\n\n**Recommandation :** Suspendre immédiatement le règlement des sinistres S001 et S002, mandater une expertise sur le terrain pour vérifier la réalité des événements et procéder à la régularisation du dossier contractuel."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "eleve",
+      "anomalies": [
+        {
+          "rule": "sinistres_repetes",
+          "message": "2 sinistres en 30 jours",
+          "severity": "moyen"
+        },
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 78 jours sur un contrat actif",
+          "severity": "faible"
+        },
+        {
+          "rule": "retard_mise_a_jour_contrat",
+          "message": "Le contrat actif n'a pas été modifié depuis le 2026-05-10, soit 75 jours d'inactivité (seuil toléré: 15 jours).",
+          "severity": "moyen"
+        },
+        {
+          "rule": "ecart_montant_garantie",
+          "message": "Le sinistre S001 présente un montant déclaré de 32000 DT, soit 64% de la garantie maximale (50000 DT), dépassant le seuil suspect de 30-40%.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "sinistres_rapproches",
+          "message": "Les sinistres S001 (2026-07-01) et S002 (2026-07-10) surviennent à seulement 9 jours d'intervalle (seuil critique: moins de 30 jours).",
+          "severity": "eleve"
+        },
+        {
+          "rule": "cumul_montants_proche_plafond",
+          "message": "Le cumul des montants déclarés (47000 DT) consomme 94% de la garantie maximale du contrat (50000 DT) en un intervalle de 10 jours.",
+          "severity": "eleve"
+        }
+      ],
+      "explication_llm": "**Problème :** Le dossier d'Ahmed Ben Salah présente une forte suspicion de fraude : deux sinistres rapprochés de seulement 9 jours cumulent 47 000 DT, consommant 94% de la garantie maximale (50 000 DT), sur un contrat actif mais comportant des retards de paiement et d'actualisation.\n\n**Recommandation :** Suspendre immédiatement le règlement des sinistres S001 et S002, bloquer le dossier et le transmettre prioritairement à la cellule anti-fraude pour une expertise de terrain approfondie."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "eleve",
+      "anomalies": [
+        {
+          "rule": "sinistres_repetes",
+          "message": "2 sinistres en 30 jours",
+          "severity": "moyen"
+        },
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 78 jours sur un contrat actif",
+          "severity": "faible"
+        },
+        {
+          "rule": "montant_sinistre_eleve",
+          "message": "Le sinistre S001 représente 32 000 DT, soit 64% de la garantie maximale (50 000 DT), ce qui dépasse le seuil critique de 30-40%.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "sinistres_rapproches",
+          "message": "Les sinistres S001 et S002 ont été survenus à seulement 9 jours d'intervalle (01/07/2026 et 10/07/2026), ce qui est nettement inférieur au seuil de 30 jours.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "retard_mise_a_jour_contrat",
+          "message": "Le contrat actif n'a pas été modifié depuis 75 jours (dernière modification le 10/05/2026), dépassant largement le délai limite de 15 jours.",
+          "severity": "moyen"
+        },
+        {
+          "rule": "cumul_sinistres_proche_plafond",
+          "message": "Le cumul des montants déclarés en cours (47 000 DT sur 2 sinistres) atteint 94% de la garantie maximale autorisée (50 000 DT).",
+          "severity": "eleve"
+        }
+      ],
+      "explication_llm": "{\"event_type\": \"contrat\", \"justification\": \"Évaluation basée sur les règles d agence (Quota LLM temporairement atteint)\", \"anomalies\": []}"
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "Ahmed Ben Salah",
+    "alert": {
+      "contrat_id": "Ahmed Ben Salah",
+      "client": "Ahmed Ben Salah",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "anomalies": [
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 78 jours sur un contrat actif",
+          "severity": "faible"
+        }
+      ],
+      "explication_llm": "{\"event_type\": \"contrat\", \"justification\": \"Évaluation basée sur les règles d agence (Quota LLM temporairement atteint)\", \"anomalies\": []}"
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "Sarra Trabelsi",
+    "alert": {
+      "contrat_id": "Sarra Trabelsi",
+      "client": "Sarra Trabelsi",
+      "event_type": "contrat",
+      "urgency_level": "moyen",
+      "anomalies": [
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 56 jours sur un contrat actif",
+          "severity": "faible"
+        },
+        {
+          "rule": "retard_mise_a_jour_contrat",
+          "message": "Le contrat est actif mais n'a pas été modifié depuis 53 jours (dernière modification le 2026-06-01 par rapport à la date du jour 2026-07-24), dépassant ainsi le seuil autorisé de 15 jours.",
+          "severity": "moyen"
+        }
+      ],
+      "explication_llm": "Le contrat actif de Mme Sarra Trabelsi présente un retard administratif : il n'a pas été modifié depuis 53 jours (dépassant le seuil autorisé de 15 jours) et aucun suivi de paiement n'a été enregistré depuis 56 jours.\n\n**Recommandation :** Contacter la cliente pour faire un point sur le règlement de ses cotisations et régulariser les informations du contrat dans le système afin de lever les alertes."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "sarra",
+    "alert": {
+      "contrat_id": "sarra",
+      "client": "Sarra Trabelsi",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "anomalies": [
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 56 jours sur un contrat actif",
+          "severity": "faible"
+        }
+      ],
+      "explication_llm": "{\"event_type\": \"contrat\", \"justification\": \"Évaluation basée sur les règles d agence (Quota LLM temporairement atteint)\", \"anomalies\": []}"
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "sarra",
+    "alert": {
+      "contrat_id": "sarra",
+      "client": "Sarra Trabelsi",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "anomalies": [
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 56 jours sur un contrat actif",
+          "severity": "faible"
+        }
+      ],
+      "explication_llm": "{\"event_type\": \"contrat\", \"justification\": \"Évaluation basée sur les règles d agence (Quota LLM temporairement atteint)\", \"anomalies\": []}"
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "Ahmed",
+    "alert": {
+      "contrat_id": "Ahmed",
+      "client": "Ahmed Ben Salah",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "anomalies": [
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 78 jours sur un contrat actif",
+          "severity": "faible"
+        }
+      ],
+      "explication_llm": "{\"event_type\": \"contrat\", \"justification\": \"Évaluation basée sur les règles d agence (Quota LLM temporairement atteint)\", \"anomalies\": []}"
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "AHMED",
+    "alert": {
+      "contrat_id": "AHMED",
+      "client": "Ahmed Ben Salah",
+      "event_type": "contrat",
+      "urgency_level": "moyen",
+      "anomalies": [
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 78 jours sur un contrat actif",
+          "severity": "faible"
+        },
+        {
+          "rule": "retard_mise_a_jour_contrat",
+          "message": "Le contrat actif n'a pas subi de modification depuis 75 jours (dernière modification le 2026-05-10 pour une date du jour au 2026-07-24), dépassant le seuil critique de 15 jours.",
+          "severity": "moyen"
+        }
+      ],
+      "explication_llm": "**Problème détecté :** Deux anomalies affectent le contrat actif d'Ahmed Ben Salah (garantie max. 50 000 DT) : un léger retard de paiement (78 jours sans mise à jour) et, surtout, un retard critique de mise à jour du contrat de 75 jours, dépassant largement le seuil de 15 jours (dernière modification le 10/05/2026). \n\n**Recommandation d'action :** Contacter immédiatement le client pour régulariser la situation financière et procéder aux vérifications nécessaires pour mettre à jour les informations du contrat."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "eleve",
+      "anomalies": [
+        {
+          "rule": "sinistres_repetes",
+          "message": "2 sinistres en 30 jours",
+          "severity": "moyen"
+        },
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 79 jours sur un contrat actif",
+          "severity": "faible"
+        },
+        {
+          "rule": "montant_proche_garantie",
+          "message": "Le sinistre S001 présente un montant déclaré de 32000 DT, soit 64% de la garantie maximale (50000 DT), ce qui dépasse le seuil de suspicion de 40%.",
+          "severity": "moyen"
+        },
+        {
+          "rule": "sinistres_multiples_rapproches",
+          "message": "Deux sinistres (S001 et S002) ont été déclarés à 9 jours d'intervalle (2026-07-01 et 2026-07-10), soit bien en deçà du seuil de 30 jours.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "cumul_sinistres_depassement",
+          "message": "Le cumul des montants déclarés pour les sinistres S001 et S002 atteint 47000 DT (32000 + 15000), frôlant la garantie maximale de 50000 DT (94% du total) avec deux dossiers en cours.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "retard_maj_contrat",
+          "message": "Le contrat actif n'a pas été modifié depuis le 2026-05-10, soit 75 jours d'inactivité avant la survenance des sinistres, dépassant le seuil de 15 jours.",
+          "severity": "faible"
+        }
+      ],
+      "explication_llm": "**Problème :** Le dossier d'Ahmed Ben Salah présente un risque élevé de fraude avec deux sinistres rapprochés (9 jours d'intervalle) dont le cumul (47 000 DT) atteint 94 % de la garantie maximale, combiné à une inactivité du contrat. \n\n**Recommandation :** Bloquer le paiement des indemnités, mandater immédiatement un expert pour enquêter sur la réalité des deux sinistres et procéder à un audit complet du compte client."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "eleve",
+      "anomalies": [
+        {
+          "rule": "sinistres_repetes",
+          "message": "2 sinistres en 30 jours",
+          "severity": "moyen"
+        },
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 79 jours sur un contrat actif",
+          "severity": "faible"
+        },
+        {
+          "rule": "montant_proche_garantie",
+          "message": "Le sinistre S001 présente un montant déclaré de 32000 DT, soit 64% de la garantie maximale (50000 DT), ce qui dépasse le seuil de suspicion de 30-40%.",
+          "severity": "moyen"
+        },
+        {
+          "rule": "sinistres_multiples_rapproches",
+          "message": "Deux sinistres (S001 et S002) ont été déclarés à 9 jours d'intervalle (2026-07-01 et 2026-07-10), soit moins de 30 jours entre eux.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "cumul_depassement_garantie",
+          "message": "Le cumul des montants déclarés des sinistres S001 et S002 atteint 47000 DT (32000 + 15000), frôlant la garantie maximale de 50000 DT (94% du total).",
+          "severity": "eleve"
+        },
+        {
+          "rule": "retard_maj_contrat",
+          "message": "Le contrat actif n'a pas été modifié depuis le 2026-05-10, soit 75 jours de décalage par rapport à la date du jour (2026-07-24), dépassant le seuil de 15 jours.",
+          "severity": "faible"
+        }
+      ],
+      "explication_llm": "**Problème :** Le dossier d'Ahmed Ben Salah présente un risque élevé de fraude et de saturation des garanties, avec deux sinistres rapprochés (S001 et S002) totalisant 47 000 DT (94% du plafond de 50 000 DT), dont un premier sinistre représentant à lui seul 64% de la garantie.\n**Recommandation :** Bloquer temporairement le paiement des indemnités et mandater immédiatement un expert pour enquêter sur la réalité et le lien entre ces deux sinistres rapprochés avant toute validation."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Ahmed Ben Salah",
+      "event_type": "risque",
+      "urgency_level": "moyen",
+      "anomalies": [
+        {
+          "rule": "sinistres_repetes",
+          "message": "2 sinistres en 30 jours",
+          "severity": "moyen"
+        },
+        {
+          "rule": "retard_paiement",
+          "message": "Aucune mise à jour depuis 79 jours sur un contrat actif",
+          "severity": "faible"
+        }
+      ],
+      "explication_llm": "**Problème :** Deux sinistres rapprochés (32 000 DT et 15 000 DT) totalisant 47 000 DT, soit 94 % de la garantie maximale, combinés à un retard de mise à jour des données (79 jours).\n**Recommandation :** Bloquer temporairement les nouveaux paiements, mandater un expert pour auditer les dossiers récents et contacter le client pour clarifier sa situation administrative."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000,00 DT) dépasse largement la garantie maximale du contrat fixée à 150 000 000,00 DT, entraînant un dépassement net de 110 000 000,00 DT. \n\n**Recommandation d'action :** Bloquer immédiatement tout nouveau paiement, plafonner l'indemnisation totale au montant maximal de la garantie (150 000 000,00 DT) et notifier le client du dépassement des seuils contractuels."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000,00 DT) dépasse largement la garantie maximale du contrat de Sonia Ben Ayed (150 000 000,00 DT). Le ratio de sinistralité atteint ainsi 173 %, malgré l'absence d'anomalie formelle signalée par le moteur de règles.\n\n**Recommandation :** Bloquer immédiatement tout nouveau paiement, plafonner l'indemnisation totale au montant maximal de la garantie (150 000 000,00 DT) et mandater un gestionnaire pour une révision approfondie du dossier."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "Le cumul des trois sinistres déclarés s'élève à 260 000 000 DT, dépassant largement la garantie maximale du contrat fixée à 150 000 000 DT (soit un dépassement de 110 000 000 DT). Bien qu'aucune anomalie procédurale ne soit relevée, le plafond de garantie est atteint. Il est recommandé de bloquer tout versement au-delà du plafond contractuel de 150 000 000 DT et d'informer immédiatement le client de cette limite."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000,00 DT) dépasse largement la garantie maximale du contrat de Sonia Ben Ayed (150 000 000,00 DT), bien qu'aucune anomalie formelle n'ait été signalée par le moteur de règles. \n\n**Recommandation d'action :** Plafonner immédiatement le total des indemnisations au montant maximal de la garantie (150 000 000,00 DT) et notifier le client du dépassement du seuil contractuel."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** \nLe cumul des sinistres déclarés s'élève à 260 000 000,00 DT (120M + 100M + 40M), dépassant largement la garantie maximale du contrat fixée à 150 000 000,00 DT. Le plafond contractuel est donc dépassé de 110 000 000,00 DT, malgré l'absence d'anomalie formelle du moteur de règles.\n\n**Recommandation :** \nSuspendre immédiatement tout nouveau paiement, plafonner l'indemnisation globale au maximum de la garantie (150M DT) en appliquant la règle proportionnelle si nécessaire, et notifier le client du dépassement des seuils contractuels."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000,00 DT) dépasse largement la garantie maximale du contrat de Sonia Ben Ayed (150 000 000,00 DT). Le ratio de sinistralité atteint 173 %.\n\n**Recommandation :** Plafonner immédiatement le total des indemnisations au montant maximal de la garantie (150 000 000,00 DT) conformément aux termes du contrat, notifier le client du dépassement et clôturer l'instruction des dossiers en cours."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000 DT) dépasse la garantie maximale du contrat fixée à 150 000 000 DT, soit un dépassement de 110 000 000 DT, malgré l'absence d'anomalie formelle du moteur de règles.\n\n**Recommandation :** Bloquer immédiatement tout paiement excédant le plafond de 150 000 000 DT et mandater un gestionnaire pour notifier la cliente de l'épuisement de sa garantie."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000 DT) dépasse largement la garantie maximale du contrat (150 000 000 DT), bien qu'aucun rejet technique n'ait été émis par le moteur. \n\n**Recommandation :** Bloquer immédiatement les paiements en cours et mandater un gestionnaire pour plafonner les indemnisations au montant maximal de la garantie, puis contacter la cliente pour l'informer de ce dépassement."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "C001",
+    "alert": {
+      "contrat_id": "C001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** \nLe cumul des sinistres déclarés (260 000 000,00 DT) dépasse largement la garantie maximale du contrat de Sonia Ben Ayed (150 000 000,00 DT), bien qu'aucune anomalie technique n'ait été relevée par le moteur de règles.\n\n**Recommandation d'action :** \nPlafonner immédiatement le remboursement total au montant maximal de la garantie (150 000 000,00 DT) et notifier le client du dépassement des seuils contractuels."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000,00 DT) dépasse largement la garantie maximale du contrat (150 000 000,00 DT), générant un dépassement de 110 000 000,00 DT. \n\n**Recommandation :** Bloquer immédiatement le paiement des indemnités au-delà du plafond de 150 000 000,00 DT, notifier le client du dépassement de la garantie, et mandater le service juridique pour valider l'apurement du dossier."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le total des sinistres déclarés (260 000 000 DT) dépasse la garantie maximale du contrat (150 000 000 DT) de 110 000 000 DT. \n**Recommandation :** Bloquer les paiements en cours, appliquer le plafond contractuel de 150 000 000 DT pour limiter l'exposition financière, et notifier le client du dépassement des seuils de garantie."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000 DT) dépasse la garantie maximale du contrat (150 000 000 DT) de 110 000 000 DT, bien qu'aucune anomalie formelle n'ait été signalée par le moteur de règles. \n\n**Recommandation d'action :** Bloquer immédiatement les paiements en cours, plafonner l'indemnisation totale à hauteur de la garantie maximale (150 000 000 DT) et notifier le client du dépassement des seuils contractuels."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "Sonia ben ayed",
+    "alert": {
+      "contrat_id": "Sonia ben ayed",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés s'élève à 260 000 000 DT, dépassant largement la garantie maximale du contrat fixée à 150 000 000 DT (dépassement de 110 000 000 DT). Bien qu'aucune anomalie formelle ne soit signalée par le moteur de règles, le plafond de garantie est saturé.\n\n**Recommandation :** Bloquer immédiatement tout nouveau paiement au-delà du solde restant de la garantie (30 000 000 DT), notifier le client du dépassement des plafonds contractuels et transférer le dossier au service contentieux/souscription pour étude d'un éventuel avenant ou refus de prise en charge excédentaire."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "Sonia ben ayed",
+    "alert": {
+      "contrat_id": "Sonia ben ayed",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000,00 DT) dépasse largement la garantie maximale du contrat (150 000 000,00 DT), générant un dépassement net de 110 000 000,00 DT malgré l'absence d'anomalie formelle du moteur. \n\n**Recommandation d'action :** Plafonner immédiatement le total des indemnisations au montant de la garantie maximale (150 000 000,00 DT) et notifier le client du dépassement des termes du contrat."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** \nLe cumul des sinistres déclarés (260 000 000,00 DT) dépasse largement la garantie maximale du contrat de Sonia Ben Ayed (150 000 000,00 DT), soit un dépassement de 110 000 000,00 DT.\n\n**Recommandation d'action :** \nBloquer immédiatement tout paiement au-delà du plafond contractuel de 150 000 000,00 DT et saisir le service contentieux ou la souscription pour révision du dossier."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** \nLe cumul des sinistres déclarés (260 000 000,00 DT) dépasse largement la garantie maximale du contrat de Sonia Ben Ayed (150 000 000,00 DT), représentant un dépassement de 110 000 000,00 DT, bien qu'aucune anomalie formelle n'ait été signalée par le moteur de règles.\n\n**Recommandation d'action :** \nBloquer immédiatement tout paiement excédant le plafond contractuel, saisir le service juridique pour une révision des dossiers et contacter la cliente pour l'informer de la limite de prise en charge."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000,00 DT) dépasse la garantie maximale du contrat (150 000 000,00 DT) de 110 000 000,00 DT, malgré l'absence d'anomalie formelle du moteur de règles. \n\n**Recommandation :** Bloquer immédiatement tout nouveau paiement, plafonner l'indemnisation totale au montant maximal de la garantie (150 000 000,00 DT) et notifier le gestionnaire pour régularisation du dossier."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés s'élève à 260 000 000,0DT, dépassant largement la garantie maximale du contrat fixée à 150 000 000,0DT (soit un dépassement de 110 000 000,0DT). Bien qu'aucune anomalie procédurale n'ait été relevée par le moteur de règles, le plafond de garantie est saturé.\n\n**Recommandation :** Bloquer immédiatement tout nouveau remboursement pour ce client, notifier ce dernier du dépassement du plafond contractuel, et mandater un gestionnaire pour une révision approfondie du dossier avant toute indemnisation complémentaire."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** \nLe cumul des sinistres déclarés (260 000 000 DT) dépasse largement la garantie maximale du contrat (150 000 000 DT), générant un dépassement de 110 000 000 DT, bien qu'aucune anomalie procédurale n'ait été relevée par le moteur.\n\n**Recommandation :** \nBloquer immédiatement tout paiement au-delà du plafond de 150 000 000 DT, notifier le client du dépassement des seuils contractuels et saisir le service juridique ou de souscription pour une réévaluation du dossier."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** \nLe cumul des sinistres déclarés (260 000 000 DT) dépasse largement la garantie maximale autorisée du contrat (150 000 000 DT), soit un dépassement de 110 000 000 DT, malgré l'absence d'anomalie formelle du moteur de règles.\n\n**Recommandation :** \nSuspendre immédiatement tout remboursement supplémentaire, notifier le client du dépassement du plafond de garantie et missionner un gestionnaire pour une révision approfondie du dossier avant toute clôture."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000 DT) dépasse la garantie maximale du contrat fixée à 150 000 000 DT, soit un dépassement de 110 000 000 DT, malgré l'absence d'anomalie formelle du moteur de règles.\n\n**Recommandation :** Bloquer immédiatement tout paiement excédant le plafond de 150 000 000 DT, notifier le client du dépassement des garanties et mandater un expert pour auditer la répartition des indemnités."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000,00 DT) dépasse largement la garantie maximale du contrat de Sonia Ben Ayed (150 000 000,00 DT), bien qu'aucune anomalie formelle n'ait été signalée par le moteur de règles.\n\n**Recommandation :** Plafonner immédiatement le total des indemnisations au montant de la garantie maximale, soit 150 000 000,00 DT, et contacter la cliente pour l'informer du dépassement des seuils contractuels."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000 DT) dépasse la garantie maximale du contrat fixée à 150 000 000 DT, soit un dépassement de 110 000 000 DT, malgré l'absence d'anomalie formelle du moteur de règles.\n\n**Recommandation :** Bloquer immédiatement tout paiement excédant le plafond de 150 000 000 DT, notifier le client du dépassement des garanties et mandater un gestionnaire pour solder le dossier dans la limite contractuelle."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** \nLe cumul des sinistres déclarés s'élève à 260 000 000,0 DT (120M + 100M + 40M), dépassant largement la garantie maximale du contrat fixée à 150 000 000,0 DT de Sonia Ben Ayed, malgré l'absence d'anomalie formelle du moteur de règles.\n\n**Recommandation :** \nPlafonner immédiatement les indemnisations au montant maximal de la garantie (150 000 000,0 DT), notifier le client du dépassement des seuils contractuels et mandater un expert pour auditer la légitimité des dossiers en cours."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000 DT) dépasse la garantie maximale du contrat (150 000 000 DT) de 110 000 000 DT, bien qu'aucune anomalie formelle n'ait été signalée par le moteur de règles. \n\n**Recommandation :** Bloquer immédiatement tout paiement supplémentaire, plafonner les indemnisations au montant maximal de la garantie (150 000 000 DT) et notifier le client du dépassement des seuils contractuels."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "sonia",
+    "alert": {
+      "contrat_id": "sonia",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés s'élève à 260 000 000 DT, dépassant largement la garantie maximale du contrat fixée à 150 000 000 DT (soit un dépassement de 110 000 000 DT). \n\n**Recommandation :** Bloquer immédiatement tout paiement au-delà du plafond de 150 000 000 DT, notifier le client du dépassement des termes du contrat et mandater l'équipe juridique pour la gestion des recours ou de la non-indemnisation du reliquat."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000,00 DT) dépasse la garantie maximale du contrat (150 000 000,00 DT) de 110 000 000,00 DT, bien qu'aucune anomalie formelle n'ait été signalée par le moteur de règles.\n\n**Recommandation :** Bloquer immédiatement tout nouveau paiement, plafonner l'indemnisation totale au montant de la garantie maximale (150 000 000,00 DT) et notifier le client du dépassement des seuils contractuels."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "Sonia",
+    "alert": {
+      "contrat_id": "Sonia",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000 DT) dépasse la garantie maximale du contrat (150 000 000 DT) de 110 000 000 DT, malgré l'absence d'anomalie formelle du moteur de règles. \n\n**Recommandation :** Bloquer immédiatement les paiements en cours, plafonner l'indemnisation totale à la limite contractuelle de 150 000 000 DT et notifier le client du dépassement des seuils de garantie."
+    },
+    "validation_status": "escalade_aucun_gestionnaire",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000 DT) dépasse la garantie maximale du contrat fixée à 150 000 000 DT, représentant un dépassement de 110 000 000 DT. \n\n**Recommandation :** Bloquer immédiatement les paiements en cours, notifier le client du dépassement du plafond de garantie et mandater un gestionnaire pour régulariser le dossier en appliquant la limite contractuelle."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés s'élève à 260 000 000 DT (120M + 100M + 40M), dépassant largement la garantie maximale du contrat fixée à 150 000 000 DT. \n\n**Recommandation :** Bloquer immédiatement tout nouveau paiement, notifier le client du dépassement du plafond de garantie et mandater un gestionnaire pour clôturer les indemnisations au prorata ou selon les conditions contractuelles applicables."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés s'élève à 260 000 000,0 DT (120M + 100M + 40M), dépassant largement la garantie maximale du contrat fixée à 150 000 000,0 DT de Sonia Ben Ayed. Bien qu'aucune anomalie formelle ne soit signalée par le moteur de règles, le plafond contractuel est atteint et dépassé de 110 000 000,0 DT.\n\n**Recommandation :** Bloquer immédiatement tout nouveau paiement au-delà du solde restant de la garantie (30 000 000,0 DT), notifier le client du dépassement du plafond et mandater un gestionnaire pour une révision approfondie du dossier."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Le cumul des sinistres déclarés (260 000 000 DT) dépasse largement la garantie maximale du contrat de Sonia Ben Ayed (150 000 000 DT). Aucune anomalie technique n'a été signalée par le moteur de règles.\n\n**Recommandation :** Bloquer immédiatement les paiements en cours, plafonner le total des indemnisations au montant maximal de la garantie (150 000 000 DT) et contacter la cliente pour l'informer du dépassement des seuils contractuels."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** Aucun problème n'a été détecté. Le contrat de Sonia Ben Ayed est actif, les cumuls des sinistres déclarés (47 000 DT) sont largement inférieurs à la garantie maximale (150 000 000 DT), et le moteur de règles n'a relevé aucune anomalie. \n\n**Recommandation d'action :** Procéder au remboursement habituel des sinistres déclarés selon les termes du contrat et clôturer le dossier sans investigation supplémentaire."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "faible",
+      "anomalies": [],
+      "explication_llm": "**Problème détecté :** \nAucun problème ni anomalie n'a été détecté par le moteur de règles. Le contrat de Sonia Ben Ayed est actif et le total cumulé des sinistres déclarés (47 000 DT) est largement inférieur au plafond de la garantie maximale (150 000 000 DT).\n\n**Recommandation :** \nProcéder au remboursement des sinistres déclarés conformément aux conditions du contrat. Aucune vérification supplémentaire n'est requise."
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00002",
+    "alert": {
+      "contrat_id": "CSTR00002",
+      "client": "Amine Hammami",
+      "event_type": "risque",
+      "urgency_level": "eleve",
+      "urgency_score": 69.0,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 86.7,
+          "weight_pct": 25,
+          "contribution": 21.7,
+          "detail": "Montant cumule 130,008,500 DT vs plafond 120,000,009 DT (108%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 100.0,
+          "weight_pct": 20,
+          "contribution": 20.0,
+          "detail": "Sinistres rapproches (1 jours entre deux declarations) — signal fort."
+        },
+        {
+          "key": "recurrence",
+          "label": "Recurrence",
+          "subscore": 79.0,
+          "weight_pct": 20,
+          "contribution": 15.8,
+          "detail": "3 sinistres aux causes differentes — correlation moderee, malchance possible."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "montant_plafond",
+          "message": "Montant cumule 130,008,500 DT vs plafond 120,000,009 DT (108%).",
+          "severity": "eleve"
+        },
+        {
+          "rule": "delai",
+          "message": "Sinistres rapproches (1 jours entre deux declarations) — signal fort.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "recurrence",
+          "message": "3 sinistres aux causes differentes — correlation moderee, malchance possible.",
+          "severity": "moyen"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "escalader_anti_fraude",
+      "recommendation_label": "Escalader vers l'unite anti-fraude",
+      "explication_llm": "Dossier CSTR00002 — Amine Hammami\nScore de risque : 69.0/100 | Urgence : ELEVE | Confiance : moyenne\nSinistres analyses : 3\nFacteurs principaux :\n  1. Montant vs plafond (21.7 pts) — Montant cumule 130,008,500 DT vs plafond 120,000,009 DT (108%).\n  2. Delai inter-sinistres (20.0 pts) — Sinistres rapproches (1 jours entre deux declarations) — signal fort.\n  3. Recurrence (15.8 pts) — 3 sinistres aux causes differentes — correlation moderee, malchance possible.\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Escalader vers l'unite anti-fraude — Signaux de risque eleves. Transmission au referent anti-fraude et controle renforce des pieces justificatives.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 69.0,
+        "urgency_level": "eleve",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 86.7,
+            "weight_pct": 25,
+            "contribution": 21.7,
+            "detail": "Montant cumule 130,008,500 DT vs plafond 120,000,009 DT (108%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 100.0,
+            "weight_pct": 20,
+            "contribution": 20.0,
+            "detail": "Sinistres rapproches (1 jours entre deux declarations) — signal fort."
+          },
+          {
+            "key": "recurrence",
+            "label": "Recurrence",
+            "subscore": 79.0,
+            "weight_pct": 20,
+            "contribution": 15.8,
+            "detail": "3 sinistres aux causes differentes — correlation moderee, malchance possible."
+          }
+        ],
+        "recommendation": {
+          "action": "escalader_anti_fraude",
+          "label": "Escalader vers l'unite anti-fraude",
+          "detail": "Signaux de risque eleves. Transmission au referent anti-fraude et controle renforce des pieces justificatives."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "3 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "frequence_elevee"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00003",
+    "alert": {
+      "contrat_id": "CSTR00003",
+      "client": "Jalva Maromi",
+      "event_type": "risque",
+      "urgency_level": "moyen",
+      "urgency_score": 54.5,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "recurrence",
+          "label": "Recurrence",
+          "subscore": 79.0,
+          "weight_pct": 20,
+          "contribution": 15.8,
+          "detail": "3 sinistres aux causes differentes — correlation moderee, malchance possible."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 49.0,
+          "weight_pct": 25,
+          "contribution": 12.2,
+          "detail": "Montant cumule 49,000,000 DT vs plafond 80,000,000 DT (61%)."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 50.0,
+          "weight_pct": 20,
+          "contribution": 10.0,
+          "detail": "Patterns suspects : sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "recurrence",
+          "message": "3 sinistres aux causes differentes — correlation moderee, malchance possible.",
+          "severity": "moyen"
+        },
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "reviser_contrat",
+      "recommendation_label": "Reviser le contrat",
+      "explication_llm": "Dossier CSTR00003 — Jalva Maromi\nScore de risque : 54.5/100 | Urgence : MOYEN | Confiance : moyenne\nSinistres analyses : 3\nFacteurs principaux :\n  1. Recurrence (15.8 pts) — 3 sinistres aux causes differentes — correlation moderee, malchance possible.\n  2. Montant vs plafond (12.2 pts) — Montant cumule 49,000,000 DT vs plafond 80,000,000 DT (61%).\n  3. Patterns suspects (10.0 pts) — Patterns suspects : sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Reviser le contrat — Envisager revision contractuelle : franchise, surprime ou exclusion specifique. Documenter la decision gestionnaire.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 54.5,
+        "urgency_level": "moyen",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "recurrence",
+            "label": "Recurrence",
+            "subscore": 79.0,
+            "weight_pct": 20,
+            "contribution": 15.8,
+            "detail": "3 sinistres aux causes differentes — correlation moderee, malchance possible."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 49.0,
+            "weight_pct": 25,
+            "contribution": 12.2,
+            "detail": "Montant cumule 49,000,000 DT vs plafond 80,000,000 DT (61%)."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 50.0,
+            "weight_pct": 20,
+            "contribution": 10.0,
+            "detail": "Patterns suspects : sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation)."
+          }
+        ],
+        "recommendation": {
+          "action": "reviser_contrat",
+          "label": "Reviser le contrat",
+          "detail": "Envisager revision contractuelle : franchise, surprime ou exclusion specifique. Documenter la decision gestionnaire."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "3 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "sinistre_apres_avenant",
+          "frequence_elevee"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00005",
+    "alert": {
+      "contrat_id": "CSTR00005",
+      "client": "Karem Mansour",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 20.5,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 30.0,
+          "weight_pct": 20,
+          "contribution": 6.0,
+          "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00005 — Karem Mansour\nScore de risque : 20.5/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Patterns suspects (6.0 pts) — Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 20.5,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 30.0,
+            "weight_pct": 20,
+            "contribution": 6.0,
+            "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "sinistre_apres_avenant"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G456",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR29219",
+    "alert": {
+      "contrat_id": "CSTR29219",
+      "client": "Sonia Ben Ayed",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 14.0,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 10.0,
+          "weight_pct": 25,
+          "contribution": 2.5,
+          "detail": "Montants ou plafond indisponibles — score neutre."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR29219 — Sonia Ben Ayed\nScore de risque : 14.0/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 0\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\n  3. Montant vs plafond (2.5 pts) — Montants ou plafond indisponibles — score neutre.\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 14.0,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 10.0,
+            "weight_pct": 25,
+            "contribution": 2.5,
+            "detail": "Montants ou plafond indisponibles — score neutre."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "0 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G791",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "eleve",
+      "urgency_score": 63.9,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 100.0,
+          "weight_pct": 25,
+          "contribution": 25.0,
+          "detail": "Montant cumule 40,010,000 DT vs plafond 60,000 DT (66683%). Outlier portefeuille (moyenne 0.7 sinistres/contrat)."
+        },
+        {
+          "key": "recurrence",
+          "label": "Recurrence",
+          "subscore": 77.0,
+          "weight_pct": 20,
+          "contribution": 15.4,
+          "detail": "2 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 65.0,
+          "weight_pct": 20,
+          "contribution": 13.0,
+          "detail": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant — fraude a verifier (sans accusation)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "montant_plafond",
+          "message": "Montant cumule 40,010,000 DT vs plafond 60,000 DT (66683%). Outlier portefeuille (moyenne 0.7 sinistres/contrat).",
+          "severity": "eleve"
+        },
+        {
+          "rule": "recurrence",
+          "message": "2 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence.",
+          "severity": "moyen"
+        },
+        {
+          "rule": "pattern_suspect",
+          "message": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant — fraude a verifier (sans accusation).",
+          "severity": "moyen"
+        },
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "escalader_anti_fraude",
+      "recommendation_label": "Escalader vers l'unite anti-fraude",
+      "explication_llm": "Dossier CSTR00001 — Sonia Ben Ayed\nScore de risque : 63.9/100 | Urgence : ELEVE | Confiance : moyenne\nSinistres analyses : 2\nFacteurs principaux :\n  1. Montant vs plafond (25.0 pts) — Montant cumule 40,010,000 DT vs plafond 60,000 DT (66683%). Outlier portefeuille (moyenne 0.7 sinistres/contrat).\n  2. Recurrence (15.4 pts) — 2 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence.\n  3. Patterns suspects (13.0 pts) — Patterns suspects : circonstances_similaires, sinistre_apres_avenant — fraude a verifier (sans accusation).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Escalader vers l'unite anti-fraude — Signaux de risque eleves. Transmission au referent anti-fraude et controle renforce des pieces justificatives.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 63.9,
+        "urgency_level": "eleve",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 100.0,
+            "weight_pct": 25,
+            "contribution": 25.0,
+            "detail": "Montant cumule 40,010,000 DT vs plafond 60,000 DT (66683%). Outlier portefeuille (moyenne 0.7 sinistres/contrat)."
+          },
+          {
+            "key": "recurrence",
+            "label": "Recurrence",
+            "subscore": 77.0,
+            "weight_pct": 20,
+            "contribution": 15.4,
+            "detail": "2 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 65.0,
+            "weight_pct": 20,
+            "contribution": 13.0,
+            "detail": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant — fraude a verifier (sans accusation)."
+          }
+        ],
+        "recommendation": {
+          "action": "escalader_anti_fraude",
+          "label": "Escalader vers l'unite anti-fraude",
+          "detail": "Signaux de risque eleves. Transmission au referent anti-fraude et controle renforce des pieces justificatives."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "2 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "circonstances_similaires",
+          "sinistre_apres_avenant"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR78199",
+    "alert": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 14.0,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 10.0,
+          "weight_pct": 25,
+          "contribution": 2.5,
+          "detail": "Montants ou plafond indisponibles — score neutre."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR78199 — Souheil Khadhraoui\nScore de risque : 14.0/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 0\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\n  3. Montant vs plafond (2.5 pts) — Montants ou plafond indisponibles — score neutre.\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 14.0,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 10.0,
+            "weight_pct": 25,
+            "contribution": 2.5,
+            "detail": "Montants ou plafond indisponibles — score neutre."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "0 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G456",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR78199",
+    "alert": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 14.0,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 10.0,
+          "weight_pct": 25,
+          "contribution": 2.5,
+          "detail": "Montants ou plafond indisponibles — score neutre."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR78199 — Souheil Khadhraoui\nScore de risque : 14.0/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 0\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\n  3. Montant vs plafond (2.5 pts) — Montants ou plafond indisponibles — score neutre.\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 14.0,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 10.0,
+            "weight_pct": 25,
+            "contribution": 2.5,
+            "detail": "Montants ou plafond indisponibles — score neutre."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "0 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G456",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR78199",
+    "alert": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "event_type": "sinistre",
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 30.0,
+          "weight_pct": 20,
+          "contribution": 6.0,
+          "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR78199 — Souheil Khadhraoui\nScore de risque : 20.8/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Patterns suspects (6.0 pts) — Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 20.8,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 30.0,
+            "weight_pct": 20,
+            "contribution": 6.0,
+            "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "sinistre_apres_avenant"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR78199",
+    "alert": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "event_type": "sinistre",
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 30.0,
+          "weight_pct": 20,
+          "contribution": 6.0,
+          "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR78199 — Souheil Khadhraoui\nScore de risque : 20.8/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Patterns suspects (6.0 pts) — Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 20.8,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 30.0,
+            "weight_pct": 20,
+            "contribution": 6.0,
+            "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "sinistre_apres_avenant"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR78199",
+    "alert": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "event_type": "sinistre",
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 30.0,
+          "weight_pct": 20,
+          "contribution": 6.0,
+          "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR78199 — Souheil Khadhraoui\nScore de risque : 20.8/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Patterns suspects (6.0 pts) — Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 20.8,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 30.0,
+            "weight_pct": 20,
+            "contribution": 6.0,
+            "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "sinistre_apres_avenant"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR78199",
+    "alert": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "event_type": "sinistre",
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 30.0,
+          "weight_pct": 20,
+          "contribution": 6.0,
+          "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR78199 — Souheil Khadhraoui\nScore de risque : 20.8/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Patterns suspects (6.0 pts) — Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 20.8,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 30.0,
+            "weight_pct": 20,
+            "contribution": 6.0,
+            "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "sinistre_apres_avenant"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR78199",
+    "alert": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "event_type": "sinistre",
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 30.0,
+          "weight_pct": 20,
+          "contribution": 6.0,
+          "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR78199 — Souheil Khadhraoui\nScore de risque : 20.8/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Patterns suspects (6.0 pts) — Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 20.8,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 30.0,
+            "weight_pct": 20,
+            "contribution": 6.0,
+            "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "sinistre_apres_avenant"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR78199",
+    "alert": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "event_type": "sinistre",
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 30.0,
+          "weight_pct": 20,
+          "contribution": 6.0,
+          "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR78199 — Souheil Khadhraoui\nScore de risque : 20.8/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Patterns suspects (6.0 pts) — Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 20.8,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 30.0,
+            "weight_pct": 20,
+            "contribution": 6.0,
+            "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "sinistre_apres_avenant"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR78199",
+    "alert": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "event_type": "sinistre",
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 30.0,
+          "weight_pct": 20,
+          "contribution": 6.0,
+          "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR78199 — Souheil Khadhraoui\nScore de risque : 20.8/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Patterns suspects (6.0 pts) — Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 20.8,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 30.0,
+            "weight_pct": 20,
+            "contribution": 6.0,
+            "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "sinistre_apres_avenant"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR78199",
+    "alert": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "event_type": "sinistre",
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 30.0,
+          "weight_pct": 20,
+          "contribution": 6.0,
+          "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR78199 — Souheil Khadhraoui\nScore de risque : 20.8/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Patterns suspects (6.0 pts) — Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 20.8,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 30.0,
+            "weight_pct": 20,
+            "contribution": 6.0,
+            "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "sinistre_apres_avenant"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR78199",
+    "alert": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "event_type": "sinistre",
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 30.0,
+          "weight_pct": 20,
+          "contribution": 6.0,
+          "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR78199 — Souheil Khadhraoui\nScore de risque : 20.8/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Patterns suspects (6.0 pts) — Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 20.8,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 30.0,
+            "weight_pct": 20,
+            "contribution": 6.0,
+            "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "sinistre_apres_avenant"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  }
+]

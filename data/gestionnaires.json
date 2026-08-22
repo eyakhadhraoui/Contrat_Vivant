@@ -1,0 +1,42 @@
+[
+  {
+    "id": "G123",
+    "nom": "Trabelsi",
+    "prenom": "Ahmed",
+    "username": "ahmed.trabelsi",
+    "email": "eya.khadhraoui@esprit.tn",
+    "password_hash": "$2b$12$Ic1CJ70EcKmPoRCxfasgG.7ucBdO/OPsdYMN4S6blcWLly1XtEDR.",
+    "role": "sinistres",
+    "agence_id": "AG01"
+  },
+  {
+    "id": "G456",
+    "nom": "Khelifi",
+    "prenom": "Sarra",
+    "username": "sarra.khelifi",
+    "email": "eyakhadhraoui249@gmail.com",
+    "password_hash": "$2b$12$Ic1CJ70EcKmPoRCxfasgG.7ucBdO/OPsdYMN4S6blcWLly1XtEDR.",
+    "role": "assurances",
+    "agence_id": "AG01"
+  },
+  {
+    "id": "G789",
+    "nom": "Bouazizi",
+    "prenom": "Karim",
+    "username": "karim.bouazizi",
+    "email": "karim.test@example.com",
+    "password_hash": "$2b$12$Ic1CJ70EcKmPoRCxfasgG.7ucBdO/OPsdYMN4S6blcWLly1XtEDR.",
+    "role": "sinistres",
+    "agence_id": "AG02"
+  },
+  {
+    "id": "G321",
+    "nom": "Mansour",
+    "prenom": "Lina",
+    "username": "lina.mansour",
+    "email": "lina.test@example.com",
+    "password_hash": "$2b$12$Ic1CJ70EcKmPoRCxfasgG.7ucBdO/OPsdYMN4S6blcWLly1XtEDR.",
+    "role": "assurances",
+    "agence_id": "AG02"
+  }
+]

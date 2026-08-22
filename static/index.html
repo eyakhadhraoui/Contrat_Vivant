@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionnaire Assurances & Sinistres - Contrat Vivant</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+  <script>
+    if (!localStorage.getItem('authToken')) {
+      window.location.href = '/login';
+    }
+  </script>
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+    <div class="profile-header">
+      <div class="avatar-circle" id="profile-avatar">AT</div>
+      <div class="user-info">
+        <div class="user-name" id="profile-name">Ahmed Trabelsi</div>
+        <div class="user-role" id="profile-role">Gestionnaire Sinistres</div>
+      </div>
+    </div>
+    <button class="btn-logout" onclick="logoutAndRedirect()">Déconnexion</button>
+
+    <ul class="nav-menu">
+      <li class="nav-item active" onclick="switchTab('analyse', this)">
+        <span class="nav-icon">🔍</span>
+        Analyse de dossier
+      </li>
+      <li class="nav-item" onclick="switchTab('sinistres', this)">
+        <span class="nav-icon">📋</span>
+        Mes sinistres
+      </li>
+      <li class="nav-item" onclick="switchTab('contrats', this)">
+        <span class="nav-icon">📄</span>
+        Mes contrats
+      </li>
+      <li class="nav-item" id="nav-item-clients" onclick="switchTab('clients', this)">
+        <span class="nav-icon">👥</span>
+        Mes clients
+      </li>
+      <li class="nav-item" onclick="switchTab('historique', this)">
+        <span class="nav-icon">🕒</span>
+        Historique d'audit
+      </li>
+    </ul>
+
+
+  </aside>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="main-content">
+
+    <!-- PAGE 1: ANALYSE DE DOSSIER -->
+    <section id="page-analyse" class="page-view active">
+      <header class="page-header">
+        <div>
+          <h1 class="page-title">Analyse du dossier</h1>
+          <p class="page-subtitle">Controle des contrats et alertes en temps reel.</p>
+        </div>
+      </header>
+
+      <div class="search-container">
+        <input type="text" id="analyse-search-input" class="search-input"
+          placeholder="Entrez un nom de client (ex: Ahmed, Sarra) ou un contrat (ex: C001, C002)..." value="Ahmed">
+        <button class="btn-primary" onclick="runAnalyse()">Analyser</button>
+      </div>
+
+      <div class="analyse-grid">
+        <!-- Left Column: Recommandations -->
+        <div class="card-box">
+          <h2 class="card-box-title">Recommandations d'amelioration</h2>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon-box">🔍</div>
+              <div>
+                <div class="feature-title">Recherche avancee</div>
+                <div class="feature-desc">Barre de recherche dans les dossiers et filtres automatiques sur les
+                  sinistres.</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon-box">📊</div>
+              <div>
+                <div class="feature-title">Synthese et KPIs en temps reel</div>
+                <div class="feature-desc">Statut du contrat, plafonds de garantie et delais en direct.</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon-box">⚠️</div>
+              <div>
+                <div class="feature-title">Alertes d'anomalies et fraudes</div>
+                <div class="feature-desc">Detection d'anomalies de montants et frequence de sinistres.</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon-box">🕒</div>
+              <div>
+                <div class="feature-title">Historique d'audit</div>
+                <div class="feature-desc">Suivi chronologique complet des validations et notifications inter-services.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-box" id="ia-capabilities-panel" style="display:none;">
+          <h2 class="card-box-title">Moteur d'analyse IA</h2>
+          <ul class="ia-capabilities-list">
+            <li>✔ Cohérence des données</li>
+            <li>✔ Analyse financière</li>
+            <li>✔ Analyse comportementale</li>
+            <li>✔ Détection de fraude</li>
+            <li>✔ Analyse documentaire (OCR)</li>
+            <li>✔ Analyse des photos</li>
+            <li>✔ Comparaison historique (RAG)</li>
+            <li>✔ Explication IA (LLM)</li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Banner + Summary Card -->
+        <div>
+          <div class="alert-banner" id="analyse-alert-banner">
+            <div class="alert-banner-title" id="analyse-alert-title">Contrat #CSTR00001 - Analyse requise</div>
+            <div class="alert-banner-desc" id="analyse-alert-desc">Saisissez un nom de client ou contrat puis cliquez
+              sur Analyser.</div>
+          </div>
+
+          <div class="card-box">
+            <h2 class="card-box-title" id="analyse-summary-title">Synthese du dossier C001</h2>
+            <table class="summary-table">
+              <tr>
+                <td class="summary-label">Statut du client</td>
+                <td class="summary-val status-actif" id="summary-statut">Actif</td>
+              </tr>
+              <tr>
+                <td class="summary-label">Nombre de sinistres</td>
+                <td class="summary-val" id="summary-nb-sinistres">2</td>
+              </tr>
+              <tr>
+                <td class="summary-label">Taux d'alerte</td>
+                <td class="summary-val" id="summary-taux-alerte">0%</td>
+              </tr>
+              <tr>
+                <td class="summary-label">Nombre de documents</td>
+                <td class="summary-val" id="summary-nb-docs">3</td>
+              </tr>
+              <tr>
+                <td class="summary-label">Date du dernier sinistre</td>
+                <td class="summary-val" id="summary-date-dernier">2026-07-10</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="card-box" id="analysis-result-panel" style="display:none;">
+            <h2 class="card-box-title">Résumé d'analyse IA</h2>
+            <div class="analysis-result-grid">
+              <div class="analysis-result-metric">
+                <div class="analysis-result-label">Score d'urgence</div>
+                <div class="analysis-result-value" id="analysis-score">--</div>
+              </div>
+              <div class="analysis-result-metric">
+                <div class="analysis-result-label">Niveau d'urgence</div>
+                <div class="analysis-result-value" id="analysis-urgency-level">--</div>
+              </div>
+              <div class="analysis-result-metric">
+                <div class="analysis-result-label">Recommandation principale</div>
+                <div class="analysis-result-value" id="analysis-recommendation">--</div>
+              </div>
+            </div>
+            <div class="analysis-result-block">
+              <h3>Résumé généré par l'agent IA</h3>
+              <p id="analysis-resume">Aucune analyse n'a encore été réalisée.</p>
+            </div>
+            <div class="analysis-result-block">
+              <h3>Top facteurs de risque</h3>
+              <ul class="analysis-result-list" id="analysis-factors"></ul>
+            </div>
+            <div class="analysis-result-block">
+              <h3>Anomalies détectées</h3>
+              <ul class="analysis-result-list" id="analysis-anomalies"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: MES SINISTRES -->
+    <section id="page-sinistres" class="page-view">
+      <header class="page-header">
+        <div>
+          <h1 class="page-title">Mes sinistres</h1>
+          <p class="page-subtitle" id="sinistres-count-subtitle">20 dossiers au total</p>
+        </div>
+        <button class="btn-primary" id="btn-declarer-sinistre" onclick="openModal('modal-declarer-sinistre')">+ Declarer
+          un sinistre</button>
+      </header>
+
+
+      <!-- KPI Grid -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">En cours</div>
+          <div class="kpi-value" id="kpi-sinistres-encours">3</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">En traitement</div>
+          <div class="kpi-value" id="kpi-sinistres-traitement">1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Complete</div>
+          <div class="kpi-value" id="kpi-sinistres-complete">1</div>
+        </div>
+      </div>
+
+      <!-- Data Table -->
+      <div class="table-card">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>N° SINISTRE</th>
+              <th>CLIENT</th>
+              <th>TYPE DE SINISTRE</th>
+              <th>CONTRAT</th>
+              <th>MONTANT</th>
+              <th>DATE</th>
+              <th>STATUT</th>
+              <th>ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody id="sinistres-table-body">
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+
+    <!-- PAGE 3: MES CONTRATS -->
+    <section id="page-contrats" class="page-view">
+      <header class="page-header">
+        <div>
+          <h1 class="page-title">Mes contrats</h1>
+          <p class="page-subtitle" id="contrats-count-subtitle">3 contrats au total</p>
+        </div>
+        <button class="btn-primary" id="btn-ajouter-contrat" onclick="openModal('modal-ajouter-contrat')">+ Ajouter un
+          contrat</button>
+      </header>
+
+
+      <!-- KPI Grid -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Actifs</div>
+          <div class="kpi-value" id="kpi-contrats-actifs">2</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Suspendus</div>
+          <div class="kpi-value" id="kpi-contrats-suspendus">1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Garantie totale</div>
+          <div class="kpi-value" id="kpi-contrats-garantie">350,000,000 DT</div>
+        </div>
+      </div>
+
+      <!-- Data Table -->
+      <div class="table-card">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>N CONTRAT</th>
+              <th>CLIENT</th>
+              <th>TYPE</th>
+              <th>GARANTIE MAXIMALE</th>
+              <th>STATUT</th>
+              <th>DERNIERE MODIFICATION</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="contrats-table-body">
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PAGE: MES CLIENTS -->
+    <section id="page-clients" class="page-view">
+      <header class="page-header">
+        <div>
+          <h1 class="page-title">Mes clients</h1>
+          <p class="page-subtitle" id="clients-count-subtitle">Chargement des clients depuis MySQL...</p>
+        </div>
+      </header>
+
+      <!-- KPI Grid -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Clients Totaux</div>
+          <div class="kpi-value" id="kpi-clients-total">0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Villes Couvertes</div>
+          <div class="kpi-value" id="kpi-clients-villes">0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Contrats Rattachés</div>
+          <div class="kpi-value" id="kpi-clients-dossiers">0</div>
+        </div>
+      </div>
+
+      <!-- Data Table -->
+      <div class="table-card">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>N° CLIENT</th>
+              <th>NOM & PRÉNOM</th>
+              <th>CIN / IDENTIFIANT</th>
+              <th>EMAIL</th>
+              <th>TÉLÉPHONE</th>
+              <th>ADRESSE / VILLE</th>
+              <th>DATE CRÉATION</th>
+            </tr>
+          </thead>
+          <tbody id="clients-table-body">
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PAGE 4: HISTORIQUE D'AUDIT -->
+    <section id="page-historique" class="page-view">
+
+      <header class="page-header">
+        <div>
+          <h1 class="page-title">Historique d'audit</h1>
+          <p class="page-subtitle">Suivi chronologique complet des validations, décisions d'agents et notifications
+            inter-services.</p>
+        </div>
+      </header>
+
+      <!-- Stats Bar & KPI audit -->
+      <div class="audit-stats-grid">
+        <div class="stat-card">
+          <div class="stat-card-val" id="audit-stat-total">0</div>
+          <div class="stat-card-lbl">ÉVÉNEMENTS D'AUDIT</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-val" id="audit-stat-validations" style="color:#10b981;">0</div>
+          <div class="stat-card-lbl">VALIDATIONS HITL</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-val" id="audit-stat-alerts" style="color:#f59e0b;">0</div>
+          <div class="stat-card-lbl">ALERTES & ROUTAGES</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-val" id="audit-stat-agents" style="color:#6366f1;">0</div>
+          <div class="stat-card-lbl">EXÉCUTIONS MULTI-AGENTS</div>
+        </div>
+      </div>
+
+      <!-- Filtres et Recherche dans l'Audit -->
+      <div class="search-container" style="margin-bottom: 20px;">
+        <input type="text" id="audit-search-input" class="search-input"
+          placeholder="Filtrer par contrat (CSTR...), gestionnaire, agent ou action..." onkeyup="filterAuditTable()">
+        <select id="audit-filter-step" class="form-select" style="max-width:260px;" onchange="filterAuditTable()">
+          <option value="">Tous les évènements</option>
+          <option value="collector">Collecte SI (CollectorAgent)</option>
+          <option value="risk">Évaluation Risques (RiskAgent)</option>
+          <option value="alert">Alertes & Routage (AlertAgent)</option>
+          <option value="validation">Validation Humaine (HITL)</option>
+          <option value="history">Historique & Timeline SI</option>
+        </select>
+        <button class="btn-primary" style="padding: 12px 18px;" onclick="loadHistoriqueAudit()">🔄 Rafraîchir</button>
+      </div>
+
+      <!-- Table du Journal d'Audit Chronologique -->
+      <div class="table-card">
+        <table class="data-table" id="audit-table">
+          <thead>
+            <tr>
+              <th>HORODATAGE</th>
+              <th>ÉTAPE / AGENT</th>
+              <th>DOSSIER / CONTRAT</th>
+              <th>ACTEUR / CIBLE</th>
+              <th>DÉTAILS DE L'ACTION ET RÉSULTAT MÉTIER</th>
+              <th>STATUT / RISQUE</th>
+            </tr>
+          </thead>
+          <tbody id="audit-table-body">
+            <tr>
+              <td colspan="6" style="text-align:center; padding: 32px; color: #94a3b8;">Chargement du journal d'audit...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- MODAL DECLARER SINISTRE -->
+  <div class="modal-overlay" id="modal-declarer-sinistre">
+    <div class="modal-card" style="max-width: 680px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Déclarer un nouveau sinistre</h3>
+        <button class="btn-close" onclick="closeModal('modal-declarer-sinistre')">&times;</button>
+      </div>
+      <form onsubmit="handleCreateSinistre(event)">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">N° Sinistre (optionnel)</label>
+            <input type="text" id="sinistre-input-id" class="form-input" placeholder="ex: CSIN00015 (généré si vide)">
+          </div>
+          <div class="form-group">
+            <label class="form-label">N° Contrat *</label>
+            <select id="sinistre-input-contrat" class="form-select" onchange="updateSinistreTypeSuggestions()" required>
+              <option value="">-- Sélectionner un contrat --</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">Type de sinistre *</label>
+            <select id="sinistre-input-type" class="form-select" required>
+              <option value="Auto - Carambolage">Auto - Carambolage</option>
+              <option value="Auto - Vol">Auto - Vol</option>
+              <option value="Habitation - Incendie">Habitation - Incendie</option>
+              <option value="Habitation - Inondation">Habitation - Inondation</option>
+              <option value="Vie - Hospitalisation">Vie - Hospitalisation</option>
+              <option value="Sante - Soins">Sante - Soins</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Lieu du sinistre</label>
+            <input type="text" id="sinistre-input-lieu" class="form-input" placeholder="ex: Sfax, Rue de la République">
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">Montant Déclaré (DT) *</label>
+            <input type="number" id="sinistre-input-montant" class="form-input" placeholder="ex: 12000000" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Date Sinistre</label>
+            <input type="date" id="sinistre-input-date-sinistre" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Date Déclaration *</label>
+            <input type="date" id="sinistre-input-date" class="form-input" required>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">Responsabilité</label>
+            <select id="sinistre-input-responsabilite" class="form-select">
+              <option value="indetermine">Indéterminée</option>
+              <option value="assure">Assuré</option>
+              <option value="tiers">Tiers</option>
+              <option value="partage">Partagée</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Statut</label>
+            <select id="sinistre-input-statut" class="form-select">
+              <option value="en_cours">En cours</option>
+              <option value="en_traitement">En traitement</option>
+              <option value="complete">Clôturé / Complété</option>
+              <option value="rejete">Rejeté</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Description des faits</label>
+          <textarea id="sinistre-input-description" class="form-input" rows="2"
+            placeholder="Détails du sinistre, circonstances..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Observations</label>
+          <input type="text" id="sinistre-input-observations" class="form-input"
+            placeholder="Remarques gestionnaire ou expert...">
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" onclick="closeModal('modal-declarer-sinistre')">Annuler</button>
+          <button type="submit" class="btn-primary" id="btn-submit-sinistre">Déclarer le sinistre</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL AJOUTER CONTRAT -->
+  <div class="modal-overlay" id="modal-ajouter-contrat">
+    <div class="modal-card" style="max-width: 720px; max-height: 90vh; overflow-y: auto;">
+      <div class="modal-header">
+        <h3 class="modal-title">Ajouter un nouveau contrat</h3>
+        <button class="btn-close" onclick="closeModal('modal-ajouter-contrat')">&times;</button>
+      </div>
+      <form onsubmit="handleCreateContrat(event)">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">N° Contrat *</label>
+            <input type="text" id="contrat-input-id" class="form-input" placeholder="ex: CSTR00006" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">N° Souscripteur</label>
+            <input type="text" id="contrat-input-souscripteur" class="form-input" placeholder="ex: SUB000006">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Client *</label>
+            <select id="contrat-input-client" class="form-select" required>
+              <option value="">-- Sélectionner un client --</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">Type de contrat *</label>
+            <select id="contrat-input-type" class="form-select" required>
+              <option value="auto">Auto</option>
+              <option value="habitation">Habitation</option>
+              <option value="vie">Vie</option>
+              <option value="sante">Santé</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Garantie Max (DT) *</label>
+            <input type="number" id="contrat-input-garantie" class="form-input" placeholder="ex: 150000000" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Franchise (DT)</label>
+            <input type="number" id="contrat-input-franchise" class="form-input" placeholder="ex: 500">
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">Prime Mensuelle (DT)</label>
+            <input type="number" id="contrat-input-prime-mensuelle" class="form-input" placeholder="ex: 120">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Prime Annuelle (DT)</label>
+            <input type="number" id="contrat-input-prime-annuelle" class="form-input" placeholder="ex: 1440">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Durée (mois)</label>
+            <input type="number" id="contrat-input-duree" class="form-input" placeholder="ex: 12" value="12">
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">Date Début *</label>
+            <input type="date" id="contrat-input-date-debut" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Date Fin *</label>
+            <input type="date" id="contrat-input-date-fin" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Statut</label>
+            <select id="contrat-input-statut" class="form-select">
+              <option value="actif">Actif</option>
+              <option value="suspendu">Suspendu</option>
+              <option value="resilie">Résilié</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">Mode de Paiement</label>
+            <select id="contrat-input-mode-paiement" class="form-select">
+              <option value="Virement">Virement</option>
+              <option value="Carte bancaire">Carte bancaire</option>
+              <option value="Prelevement">Prélèvement</option>
+              <option value="Especes">Espèces</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Fréquence de Paiement</label>
+            <select id="contrat-input-frequence-paiement" class="form-select">
+              <option value="Mensuel">Mensuel</option>
+              <option value="Trimestriel">Trimestriel</option>
+              <option value="Semestriel">Semestriel</option>
+              <option value="Annuel">Annuel</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">Couverture & Garanties</label>
+            <textarea id="contrat-input-couverture" class="form-input" rows="2"
+              placeholder="ex: Incendie, vol, tous risques..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Exclusions</label>
+            <textarea id="contrat-input-exclusions" class="form-input" rows="2"
+              placeholder="ex: Usure normale, guerre..."></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Observations</label>
+          <input type="text" id="contrat-input-observations" class="form-input"
+            placeholder="Observations particulières...">
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" onclick="closeModal('modal-ajouter-contrat')">Annuler</button>
+          <button type="submit" class="btn-primary" id="btn-submit-contrat">Enregistrer le contrat</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- MODAL EDIT SINISTRE/CONTRAT -->
+  <div class="modal-overlay" id="modal-edit-item">
+    <div class="modal-card" style="max-width: 600px; max-height: 85vh; overflow-y: auto;">
+      <div class="modal-header">
+        <h3 class="modal-title" id="edit-modal-title">Modifier l'élément</h3>
+        <button class="btn-close" onclick="closeModal('modal-edit-item')">&times;</button>
+      </div>
+      <form onsubmit="handleUpdateItem(event)">
+        <input type="hidden" id="edit-item-type">
+        <input type="hidden" id="edit-item-id">
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">Statut</label>
+            <select id="edit-input-statut" class="form-select">
+              <option value="actif">Actif</option>
+              <option value="suspendu">Suspendu</option>
+              <option value="resilie">Résilié</option>
+              <option value="en_cours">En cours</option>
+              <option value="en_traitement">En traitement</option>
+              <option value="complete">Clôturé / Complété</option>
+              <option value="rejete">Rejeté</option>
+            </select>
+          </div>
+          <div class="form-group" id="edit-group-valeur">
+            <label class="form-label" id="edit-label-valeur">Montant / Garantie (DT)</label>
+            <input type="number" id="edit-input-valeur" class="form-input">
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;" id="edit-group-extra">
+          <div class="form-group">
+            <label class="form-label" id="edit-label-opt1">Champ Annexe 1</label>
+            <input type="text" id="edit-input-opt1" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="edit-label-opt2">Champ Annexe 2</label>
+            <input type="text" id="edit-input-opt2" class="form-input">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Observations / Remarques</label>
+          <textarea id="edit-input-observations" class="form-input" rows="2"></textarea>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" onclick="closeModal('modal-edit-item')">Annuler</button>
+          <button type="submit" class="btn-primary">Enregistrer les modifications</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- RAG CHAT WIDGET -->
+  <button class="chat-widget-btn" onclick="toggleChatDrawer()">
+    🤖 Assistant IA RAG
+  </button>
+
+  <div class="chat-drawer" id="chat-drawer">
+    <div class="chat-header">
+      <div class="chat-header-title">Assistant RAG Procédures</div>
+      <button class="btn-close" style="color:#ffffff" onclick="toggleChatDrawer()">&times;</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-msg assistant">
+        Bonjour Ahmed ! Je suis l'assistant IA RAG. Posez-moi vos questions sur les procédures d'assurance et de
+        traitement des sinistres.
+      </div>
+    </div>
+    <div class="chat-input-box">
+      <input type="text" id="chat-input-text" placeholder="Posez une question RAG..."
+        onkeypress="handleChatKeyPress(event)">
+      <button onclick="sendChatMessage()">Envoyer</button>
+    </div>
+  </div>
+
+  <!-- Cache-busting: incrémentez ?v=X à chaque déploiement de app.js -->
+  <script src="/static/app.js?v=3"></script>
+</body>
+
+</html>
