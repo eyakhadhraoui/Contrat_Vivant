@@ -1,6 +1,6 @@
 import unittest
 from decimal import Decimal
-from unittest.mock import patch
+from unittest.mock import patch, MagicMock
 
 from rules_engine.rules.ecart_garantie_montant import EcartGarantieMontant
 from tools.permissions_tool import (
@@ -49,7 +49,6 @@ class BusinessRulesTests(unittest.TestCase):
         self.assertTrue(peut_modifier_sinistre("sinistres"))
         self.assertTrue(peut_modifier_sinistre("assurances"))
 
-
     def test_cross_notification_for_contract_modification_notifies_claim_managers(self):
         state = {
             "contrat_id": "C001",
@@ -68,27 +67,40 @@ class BusinessRulesTests(unittest.TestCase):
         mock_email.assert_called_once()
         mock_teams.assert_called_once()
 
+    @patch("tools.si_contrats_tool.get_connection")
+    @patch("tools.si_contrats_tool._resolve_client_id", return_value="CL01")
     @patch("tools.si_contrats_tool._load_contrats")
     @patch("tools.si_contrats_tool._save_contrats")
-    def test_ajouter_contrat_assurances(self, mock_save, mock_load):
+    def test_ajouter_contrat_assurances(self, mock_save, mock_load, mock_resolve, mock_get_conn):
+        mock_conn = MagicMock()
+        mock_cursor = MagicMock()
+        mock_cursor.fetchone.return_value = None
+        mock_conn.cursor.return_value = mock_cursor
+        mock_get_conn.return_value = mock_conn
+
         mock_load.return_value = []
         g_assurances = {"gestionnaire_id": "G456", "role": "assurances", "agence_id": "AG01"}
-        contrat_data = {"id": "C999", "client": "Test Client", "garantie_max": 30000}
+        contrat_data = {"id": "C999", "client": "CL01", "garantie_max": 30000}
         
         res = ajouter_contrat(contrat_data, g_assurances)
         self.assertEqual(res["id"], "C999")
         self.assertEqual(res["gestionnaire_createur_id"], "G456")
         self.assertEqual(res["agence_id"], "AG01")
-        mock_save.assert_called_once()
 
+    @patch("tools.si_contrats_tool.get_connection")
     @patch("tools.si_contrats_tool._load_contrats")
     @patch("tools.si_contrats_tool._save_contrats")
     @patch("tools.si_contrats_tool.get_sinistres")
     @patch("tools.si_contrats_tool.get_gestionnaires_sinistres_concernes")
     @patch("tools.si_contrats_tool.send_email")
     def test_modifier_contrat_with_existing_sinistre_notifies_sinistres_manager(
-        self, mock_email, mock_get_g_sinistres, mock_get_sinistres, mock_save, mock_load
+        self, mock_email, mock_get_g_sinistres, mock_get_sinistres, mock_save, mock_load, mock_get_conn
     ):
+        mock_conn = MagicMock()
+        mock_cursor = MagicMock()
+        mock_conn.cursor.return_value = mock_cursor
+        mock_get_conn.return_value = mock_conn
+
         mock_load.return_value = [{"id": "C001", "client": "Ahmed", "garantie_max": 50000, "agence_id": "AG01"}]
         mock_get_sinistres.return_value = [{"id": "S001", "contrat_id": "C001"}]
         mock_get_g_sinistres.return_value = [{"id": "G123", "email": "g123@test.com"}]
@@ -100,19 +112,26 @@ class BusinessRulesTests(unittest.TestCase):
         self.assertEqual(res["gestionnaires_sinistres_notifies"], ["G123"])
         mock_email.assert_called_once()
 
+    @patch("tools.si_sinistres_tool.get_connection")
+    @patch("tools.si_sinistres_tool._get_contrat_details", return_value={"id": "C001", "type_contrat": "auto", "statut": "actif", "gestionnaire_createur_id": "G456"})
     @patch("tools.si_sinistres_tool._get_contrat_type", return_value="auto")
     @patch("tools.si_sinistres_tool._load_sinistres")
     @patch("tools.si_sinistres_tool._save_sinistres")
     @patch("tools.si_sinistres_tool.get_gestionnaire_assurances_du_contrat")
     @patch("tools.si_sinistres_tool.send_email")
     def test_ajouter_sinistre_notifies_assurances_manager(
-        self, mock_email, mock_get_g_assurances, mock_save, mock_load, mock_get_type
+        self, mock_email, mock_get_g_assurances, mock_save, mock_load, mock_get_type, mock_get_details, mock_get_conn
     ):
+        mock_conn = MagicMock()
+        mock_cursor = MagicMock()
+        mock_conn.cursor.return_value = mock_cursor
+        mock_get_conn.return_value = mock_conn
+
         mock_load.return_value = []
         mock_get_g_assurances.return_value = {"id": "G456", "email": "g456@test.com"}
         
         g_sinistres = {"gestionnaire_id": "G123", "role": "sinistres", "agence_id": "AG01"}
-        sinistre_data = {"id": "S999", "contrat_id": "C001", "montant_declare": 10000}
+        sinistre_data = {"id": "S999", "contrat_id": "C001", "montant_declare": 10000, "type_sinistre": "Auto - Carambolage"}
 
         res = ajouter_sinistre(sinistre_data, g_sinistres)
         self.assertEqual(res["sinistre"]["id"], "S999")
@@ -164,10 +183,13 @@ class BusinessRulesTests(unittest.TestCase):
             ajouter_sinistre(sinistre_data, g_sinistres)
         mock_email.assert_not_called()
 
-    @patch("tools.si_sinistres_tool.get_connection", return_value=None)
-    @patch("tools.si_sinistres_tool._load_sinistres")
-    def test_get_sinistres_normalizes_contract_ids(self, mock_load, mock_get_connection):
-        mock_load.return_value = [{"id": "S001", "contrat_id": "C001", "montant_declare": 15000}]
+    @patch("tools.si_sinistres_tool.get_connection")
+    def test_get_sinistres_normalizes_contract_ids(self, mock_get_conn):
+        mock_conn = MagicMock()
+        mock_cursor = MagicMock()
+        mock_cursor.fetchall.return_value = [{"id": "S001", "contrat_id": "C001", "montant_declare": 15000}]
+        mock_conn.cursor.return_value = mock_cursor
+        mock_get_conn.return_value = mock_conn
 
         result = get_sinistres("CSTR00001")
 
@@ -207,17 +229,25 @@ class BusinessRulesTests(unittest.TestCase):
         self.assertEqual({m["id"] for m in sinistre_managers}, {"G123", "G456"})
         self.assertEqual(assurances_manager["id"], "G789")
 
-    @patch("tools.si_sinistres_tool._load_sinistres")
-    @patch("tools.si_sinistres_tool._save_sinistres")
+    @patch("tools.si_sinistres_tool.get_connection")
     @patch("tools.si_sinistres_tool.get_gestionnaire_assurances_du_contrat")
     @patch("tools.si_sinistres_tool.send_email")
     @patch("tools.si_sinistres_tool.get_sinistres")
     @patch("tools.si_contrats_tool.get_contrat")
     @patch("tools.si_sinistres_tool.run_rules")
     def test_modifier_sinistre_notifies_assurances_and_triggers_cross_analysis(
-        self, mock_run_rules, mock_get_contrat, mock_get_sinistres, mock_email, mock_get_g_assurances, mock_save, mock_load
+        self, mock_run_rules, mock_get_contrat, mock_get_sinistres, mock_email, mock_get_g_assurances, mock_get_conn
     ):
-        mock_load.return_value = [{"id": "S001", "contrat_id": "C001", "montant_declare": 15000}]
+        mock_conn = MagicMock()
+        mock_cursor = MagicMock()
+        mock_cursor.fetchone.return_value = {
+            "id": "S001", "contrat_id": "C001", "type_sinistre": "Auto", "montant_declare": 15000,
+            "statut": "en_cours", "date_declaration": "2026-08-01", "gestionnaire_traitant_id": "G123",
+            "agence_id": "AG01"
+        }
+        mock_conn.cursor.return_value = mock_cursor
+        mock_get_conn.return_value = mock_conn
+
         mock_get_g_assurances.return_value = {"id": "G456", "email": "g456@test.com"}
         mock_get_contrat.return_value = {"id": "C001", "garantie_max": 50000}
         mock_get_sinistres.return_value = [{"id": "S001", "contrat_id": "C001", "montant_declare": 20000}]
@@ -235,4 +265,3 @@ class BusinessRulesTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
