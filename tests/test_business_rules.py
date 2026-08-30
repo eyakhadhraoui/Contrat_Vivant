@@ -245,20 +245,21 @@ class BusinessRulesTests(unittest.TestCase):
             ("statut",), ("date",), ("gestionnaire_traitant_id",), ("agence_id",)
         ]
         mock_cursor.fetchone.return_value = (
-            "S001", "C001", "Auto", 15000, "en_cours", "2026-08-01", "G123", "AG01"
+            "S001", "C001", "Auto", 60000, "en_cours", "2026-08-01", "G123", "AG01"
         )
         mock_conn.cursor.return_value = mock_cursor
         mock_get_conn.return_value = mock_conn
 
         mock_get_g_assurances.return_value = {"id": "G456", "email": "g456@test.com"}
         mock_get_contrat.return_value = {"id": "C001", "garantie_max": 50000}
-        mock_get_sinistres.return_value = [{"id": "S001", "contrat_id": "C001", "montant_declare": 20000}]
+        mock_get_sinistres.return_value = [{"id": "S001", "contrat_id": "C001", "montant_declare": 60000}]
 
         g_sinistres = {"gestionnaire_id": "G123", "role": "sinistres", "agence_id": "AG01"}
-        res = modifier_sinistre("S001", {"montant_declare": 20000}, g_sinistres)
+        res = modifier_sinistre("S001", {"montant_declare": 60000}, g_sinistres)
 
         self.assertTrue(res["cross_analysis_declenchee"])
         self.assertEqual(res["gestionnaire_assurances_notifie"], "G456")
+        self.assertEqual(len(res["anomalies_detectees"]), 1)
         mock_email.assert_called_once()
 
 
