@@ -8,16 +8,23 @@ def get_connection():
 
     # Si on est dans Docker (/app ou variable d'environnement), prioriser 'db', sinon 'localhost'
     in_docker = os.path.exists('/.dockerenv') or os.environ.get('IN_DOCKER') == '1'
-    if in_docker:
+    if os.environ.get('TESTING') == '1':
+        hosts_to_try = [MYSQL_HOST or "localhost"]
+        passwords_to_try = [MYSQL_PASSWORD if MYSQL_PASSWORD is not None else ""]
+    elif in_docker:
         hosts_to_try = [MYSQL_HOST or "db", "db", "localhost"]
+        passwords_to_try = [MYSQL_PASSWORD if MYSQL_PASSWORD is not None else ""]
+        if "" not in passwords_to_try:
+            passwords_to_try.append("")
+        if "rootpassword" not in passwords_to_try:
+            passwords_to_try.append("rootpassword")
     else:
         hosts_to_try = ["localhost", "127.0.0.1", MYSQL_HOST or "db"]
-
-    passwords_to_try = [MYSQL_PASSWORD if MYSQL_PASSWORD is not None else ""]
-    if "" not in passwords_to_try:
-        passwords_to_try.append("")
-    if "rootpassword" not in passwords_to_try:
-        passwords_to_try.append("rootpassword")
+        passwords_to_try = [MYSQL_PASSWORD if MYSQL_PASSWORD is not None else ""]
+        if "" not in passwords_to_try:
+            passwords_to_try.append("")
+        if "rootpassword" not in passwords_to_try:
+            passwords_to_try.append("rootpassword")
 
     last_err = None
     for h in hosts_to_try:
