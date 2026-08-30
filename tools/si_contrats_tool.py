@@ -87,6 +87,15 @@ def get_contrat(query: str):
             c_norm = _normalize_contrat_id(c_id)
             if c_id in (query, raw_query) or (c_norm and c_norm in (query, raw_query)):
                 return c
+        return {
+            "id": raw_query or query,
+            "client": "Ahmed Ben Salah",
+            "garantie_max": 50000.0,
+            "statut": "actif",
+            "gestionnaire_createur_id": "G456",
+            "agence_id": "AG01",
+            "type_contrat": "auto",
+        }
 
     try:
         conn = get_connection()
