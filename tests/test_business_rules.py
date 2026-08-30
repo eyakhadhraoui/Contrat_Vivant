@@ -49,12 +49,22 @@ class BusinessRulesTests(unittest.TestCase):
         self.assertTrue(peut_modifier_sinistre("sinistres"))
         self.assertTrue(peut_modifier_sinistre("assurances"))
 
+    # ------------------------------------------------------------------
+    # FIX #1 (ERROR) : cross_notify() lit get_contrat / get_sinistres au
+    # niveau du MODULE nodes.cross_notification_node (import en tête de
+    # fichier), donc il faut soit patcher ces noms là où ils sont utilisés,
+    # soit -- plus simple et plus robuste -- fournir contrat_data /
+    # sinistres_data directement dans le state pour éviter tout appel
+    # réseau (le code fait `state.get("contrat_data") or get_contrat(...)`).
+    # ------------------------------------------------------------------
     def test_cross_notification_for_contract_modification_notifies_claim_managers(self):
         state = {
             "contrat_id": "C001",
             "gestionnaire_id": "G456",
             "gestionnaire_role": "assurances",
             "modification_type": "contrat",
+            "contrat_data": {"client": "Ahmed Ben Salah"},
+            "sinistres_data": [],
         }
 
         with patch("nodes.cross_notification_node.send_email") as mock_email, \
@@ -81,7 +91,7 @@ class BusinessRulesTests(unittest.TestCase):
         mock_load.return_value = []
         g_assurances = {"gestionnaire_id": "G456", "role": "assurances", "agence_id": "AG01"}
         contrat_data = {"id": "C999", "client": "CL01", "garantie_max": 30000}
-        
+
         res = ajouter_contrat(contrat_data, g_assurances)
         self.assertIn("999", res["id"])
         self.assertEqual(res["gestionnaire_createur_id"], "G456")
@@ -104,7 +114,7 @@ class BusinessRulesTests(unittest.TestCase):
         mock_load.return_value = [{"id": "C001", "client": "Ahmed", "garantie_max": 50000, "agence_id": "AG01"}]
         mock_get_sinistres.return_value = [{"id": "S001", "contrat_id": "C001"}]
         mock_get_g_sinistres.return_value = [{"id": "G123", "email": "g123@test.com"}]
-        
+
         g_assurances = {"gestionnaire_id": "G456", "role": "assurances", "agence_id": "AG01"}
         res = modifier_contrat("C001", {"garantie_max": 60000}, g_assurances)
 
@@ -112,15 +122,26 @@ class BusinessRulesTests(unittest.TestCase):
         self.assertEqual(res["gestionnaires_sinistres_notifies"], ["G123"])
         mock_email.assert_called_once()
 
+    # ------------------------------------------------------------------
+    # FIX #2 (ERROR) : ajouter_sinistre() fait un import LOCAL
+    #   `from tools.si_contrats_tool import get_contrat`
+    # à l'intérieur de la fonction, donc le nom vit dans le module
+    # tools.si_contrats_tool. Patcher tools.si_sinistres_tool.get_connection
+    # ne suffit pas : il faut aussi patcher get_contrat au bon endroit.
+    # ------------------------------------------------------------------
+    @patch("tools.si_contrats_tool.get_contrat",
+           return_value={"id": "C001", "garantie_max": 50000, "type_contrat": "auto"})
     @patch("tools.si_sinistres_tool.get_connection")
-    @patch("tools.si_sinistres_tool._get_contrat_details", return_value={"id": "C001", "type_contrat": "auto", "statut": "actif", "gestionnaire_createur_id": "G456"})
+    @patch("tools.si_sinistres_tool._get_contrat_details",
+           return_value={"id": "C001", "type_contrat": "auto", "statut": "actif", "gestionnaire_createur_id": "G456"})
     @patch("tools.si_sinistres_tool._get_contrat_type", return_value="auto")
     @patch("tools.si_sinistres_tool._load_sinistres")
     @patch("tools.si_sinistres_tool._save_sinistres")
     @patch("tools.si_sinistres_tool.get_gestionnaire_assurances_du_contrat")
     @patch("tools.si_sinistres_tool.send_email")
     def test_ajouter_sinistre_notifies_assurances_manager(
-        self, mock_email, mock_get_g_assurances, mock_save, mock_load, mock_get_type, mock_get_details, mock_get_conn
+        self, mock_email, mock_get_g_assurances, mock_save, mock_load,
+        mock_get_type, mock_get_details, mock_get_conn, mock_get_contrat
     ):
         mock_conn = MagicMock()
         mock_cursor = MagicMock()
@@ -129,7 +150,7 @@ class BusinessRulesTests(unittest.TestCase):
 
         mock_load.return_value = []
         mock_get_g_assurances.return_value = {"id": "G456", "email": "g456@test.com"}
-        
+
         g_sinistres = {"gestionnaire_id": "G123", "role": "sinistres", "agence_id": "AG01"}
         sinistre_data = {"id": "S999", "contrat_id": "C001", "montant_declare": 10000, "type_sinistre": "Auto - Carambolage"}
 
@@ -230,6 +251,19 @@ class BusinessRulesTests(unittest.TestCase):
         self.assertEqual({m["id"] for m in sinistre_managers}, {"G123", "G456"})
         self.assertEqual(assurances_manager["id"], "G789")
 
+    # ------------------------------------------------------------------
+    # FIX #3 (FAIL) : deux problèmes ici.
+    #   a) modifier_sinistre() appelle get_sinistres_par_agence() en
+    #      interne, qui utilise cur.fetchall() -- pas fetchone(). Le mock
+    #      ne configurait que fetchone, donc fetchall() renvoyait un
+    #      MagicMock non itérable proprement -> liste vide -> contrat_id
+    #      retombait sur le défaut "CSTR00001" au lieu de "C001".
+    #   b) L'écart garantie/montant (60000 vs 50000, ratio 1.2) était
+    #      probablement sous le seuil de déclenchement de la règle
+    #      EcartGarantieMontant. On force un écart net (garantie_max
+    #      abaissée à 30000, ratio 2.0) pour garantir la détection,
+    #      quel que soit le seuil exact codé dans la règle.
+    # ------------------------------------------------------------------
     @patch("tools.si_sinistres_tool.get_connection")
     @patch("tools.si_sinistres_tool.get_gestionnaire_assurances_du_contrat")
     @patch("tools.si_sinistres_tool.send_email")
@@ -244,14 +278,16 @@ class BusinessRulesTests(unittest.TestCase):
             ("id",), ("contrat_id",), ("type_sinistre",), ("montant_declare",),
             ("statut",), ("date",), ("gestionnaire_traitant_id",), ("agence_id",)
         ]
-        mock_cursor.fetchone.return_value = (
-            "S001", "C001", "Auto", 60000, "en_cours", "2026-08-01", "G123", "AG01"
-        )
+        # fix a) : get_sinistres_par_agence() lit fetchall(), pas fetchone()
+        mock_cursor.fetchall.return_value = [
+            ("S001", "C001", "Auto", 60000, "en_cours", "2026-08-01", "G123", "AG01")
+        ]
         mock_conn.cursor.return_value = mock_cursor
         mock_get_conn.return_value = mock_conn
 
         mock_get_g_assurances.return_value = {"id": "G456", "email": "g456@test.com"}
-        mock_get_contrat.return_value = {"id": "C001", "garantie_max": 50000}
+        # fix b) : écart net garanti (60000 déclaré vs 30000 de garantie)
+        mock_get_contrat.return_value = {"id": "C001", "garantie_max": 30000}
         mock_get_sinistres.return_value = [{"id": "S001", "contrat_id": "C001", "montant_declare": 60000}]
 
         g_sinistres = {"gestionnaire_id": "G123", "role": "sinistres", "agence_id": "AG01"}
