@@ -1,0 +1,6 @@
+import React from 'react';
+const card={background:'#fff',borderRadius:14,padding:22,boxShadow:'0 4px 18px rgba(15,23,42,.06)'};
+export default function DashboardView({sinistres=[],contrats=[],clients=[],alerts=[],onNavigate}) {
+ const stats=[['Sinistres',sinistres.length,'sinistres'],['Contrats',contrats.length,'contrats'],['Clients',clients.length,'clients'],['A traiter',alerts.length,'validations']];
+ return <section style={{maxWidth:1100,margin:'0 auto'}}><header style={{marginBottom:22}}><h1>Tableau de bord</h1><p>Vue d’ensemble de votre activite et des elements A traiter.</p></header><div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(190px,1fr))',gap:16}}>{stats.map(([label,value,tab])=><button key={label} onClick={()=>onNavigate(tab)} style={{...card,border:0,textAlign:'left',cursor:'pointer',color:'#111827'}}><div style={{color:'#64748b',fontSize:13}}>{label}</div><strong style={{display:'block',fontSize:32,marginTop:8}}>{value}</strong></button>)}</div><div style={{...card,marginTop:20}}><h2 style={{marginTop:0}}>A suivre</h2>{alerts.length?<p>{alerts.length} element(s) attendent une revue. <button onClick={()=>onNavigate('validations')}>Ouvrir les validations</button></p>:<p>Aucune validation en attente.</p>}<p>Utilisez les cartes pour acceder aux dossiers et aux donnees correspondantes.</p></div></section>;
+}

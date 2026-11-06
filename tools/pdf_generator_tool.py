@@ -348,6 +348,153 @@ def generate_audit_report_pdf(logs: list, agence_id: str = None) -> bytes:
     return buffer.getvalue()
 
 
+def generate_avenant_pdf(contrat_data: dict, validation_info: dict = None) -> bytes:
+    """Génère un projet d'avenant, sans présumer d'une validation ou d'une signature."""
+    buffer = io.BytesIO()
+    doc = SimpleDocTemplate(
+        buffer,
+        pagesize=A4,
+        leftMargin=1.8 * cm,
+        rightMargin=1.8 * cm,
+        topMargin=2.2 * cm,
+        bottomMargin=2.2 * cm,
+    )
+
+    styles = getSampleStyleSheet()
+
+    title_style = ParagraphStyle(
+        "AvenantTitle",
+        parent=styles["Normal"],
+        fontName="Helvetica-Bold",
+        fontSize=18,
+        leading=22,
+        textColor=colors.HexColor("#0f172a"),
+        spaceAfter=4,
+    )
+
+    subtitle_style = ParagraphStyle(
+        "AvenantSubtitle",
+        parent=styles["Normal"],
+        fontName="Helvetica-Bold",
+        fontSize=11,
+        leading=14,
+        textColor=colors.HexColor("#059669"),
+        spaceAfter=15,
+    )
+
+    h2_style = ParagraphStyle(
+        "SectionH2",
+        parent=styles["Normal"],
+        fontName="Helvetica-Bold",
+        fontSize=12,
+        leading=16,
+        textColor=colors.HexColor("#1e293b"),
+        spaceBefore=10,
+        spaceAfter=6,
+    )
+
+    body_style = ParagraphStyle(
+        "BodyText",
+        parent=styles["Normal"],
+        fontName="Helvetica",
+        fontSize=9.5,
+        leading=14,
+        textColor=colors.HexColor("#334155"),
+        spaceAfter=6,
+    )
+
+    cell_bold = ParagraphStyle("CellBold", parent=styles["Normal"], fontName="Helvetica-Bold", fontSize=9, textColor=colors.HexColor("#0f172a"))
+    cell_norm = ParagraphStyle("CellNorm", parent=styles["Normal"], fontName="Helvetica", fontSize=9, textColor=colors.HexColor("#334155"))
+
+    elements = []
+    val_info = validation_info or {}
+    cid = contrat_data.get("id", "CSTR00001")
+    avenant_num = f"AVN-{datetime.now().strftime('%Y')}-{cid}"
+    client_name = contrat_data.get("client") or contrat_data.get("client_id") or "Client Assuré"
+    c_type = str(contrat_data.get("type_contrat") or contrat_data.get("type") or "Auto").upper()
+
+    # En-tête : un PDF généré seul ne constitue pas une validation.
+    elements.append(Paragraph(f"PROJET D'AVENANT AU CONTRAT D'ASSURANCE \u2014 {c_type}", title_style))
+    elements.append(Paragraph(f"Réf. Avenant : <b>{avenant_num}</b> | Contrat N° : <b>{cid}</b> | <b>PROJET NON SIGNÉ</b>", subtitle_style))
+    elements.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor("#059669"), spaceBefore=0, spaceAfter=12))
+
+    # Contexte
+    elements.append(Paragraph("<b>1. OBJET DU PROJET</b>", h2_style))
+    elements.append(Paragraph(
+        f"Ce document est un projet préparé pour l'assuré <b>{client_name}</b>. "
+        "Les modifications proposées restent à confirmer par les parties et le gestionnaire habilité.",
+        body_style
+    ))
+    elements.append(Spacer(1, 6))
+
+    # Tableau des conditions du SI et des propositions
+    elements.append(Paragraph("<b>2. NOUVELLES CONDITIONS ET DISPOSITIONS PARTICULIÈRES</b>", h2_style))
+    
+    garantie_val = f"{float(contrat_data.get('garantie_max', 0)):,.2f} DT"
+    franchise_val = f"{float(contrat_data.get('franchise', 0)):,.2f} DT"
+    prime_m_val = f"{float(contrat_data.get('prime_mensuelle', 0)):,.2f} DT"
+    statut_val = str(contrat_data.get("statut") or "Non renseigné").upper()
+    action_reco = val_info.get("recommendation") or "Aucune recommandation de validation fournie."
+
+    avenant_table_data = [
+        [Paragraph("<b>Paramètre Contractuel</b>", cell_bold), Paragraph("<b>Valeur / Dispositions Applicables</b>", cell_bold)],
+        [Paragraph("Titulaire du contrat", cell_norm), Paragraph(f"<b>{client_name}</b>", cell_norm)],
+        [Paragraph("Formule souscrite", cell_norm), Paragraph(f"{c_type}", cell_norm)],
+        [Paragraph("Statut du contrat (donnée SI)", cell_norm), Paragraph(f"<b>{statut_val}</b>", cell_norm)],
+        [Paragraph("Plafond de Garantie Maximale", cell_norm), Paragraph(f"<b>{garantie_val}</b>", cell_norm)],
+        [Paragraph("Franchise applicable", cell_norm), Paragraph(f"{franchise_val}", cell_norm)],
+        [Paragraph("Prime Mensuelle", cell_norm), Paragraph(f"{prime_m_val}", cell_norm)],
+        [Paragraph("Agence de rattachement", cell_norm), Paragraph(f"{contrat_data.get('agence_nom') or contrat_data.get('agence_id') or 'Agence Tunis Centre'}", cell_norm)],
+        [Paragraph("Observation / proposition", cell_norm), Paragraph(f"<i>{action_reco}</i>", cell_norm)],
+    ]
+
+    t_avenant = Table(avenant_table_data, colWidths=[6.5 * cm, 10.9 * cm])
+    t_avenant.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor("#f0fdf4")),
+        ('GRID', (0, 0), (-1, -1), 0.5, colors.HexColor("#cbd5e1")),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+        ('PADDING', (0, 0), (-1, -1), 6),
+    ]))
+    elements.append(t_avenant)
+    elements.append(Spacer(1, 14))
+
+    # Mention de projet : aucune prise d'effet automatique n'est affirmée.
+    elements.append(Paragraph("<b>3. VALIDATION ET PRISE D'EFFET</b>", h2_style))
+    elements.append(Paragraph(
+        "La génération de ce projet ne vaut ni approbation, ni signature, ni certification. "
+        "Le statut de validation et la date de prise d'effet doivent être confirmés dans le journal d'audit "
+        "et selon les signatures requises avant toute mise en application.",
+        body_style
+    ))
+    elements.append(Spacer(1, 14))
+
+    # Zones de signature clairement non validées par défaut.
+    gest_nom = val_info.get("gestionnaire_nom") or contrat_data.get("gestionnaire_nom") or "Non renseigné"
+    date_generation = datetime.now().strftime("%d/%m/%Y %H:%M")
+
+    sig_table_data = [
+        [Paragraph("<b>Pour l'Assuré</b>", cell_norm), Paragraph("<b>Pour la Compagnie d'Assurance</b>", cell_norm)],
+        [
+            Paragraph(f"Assuré : <b>{client_name}</b><br/>Signature requise : <b>à recueillir</b>", cell_norm),
+            Paragraph(f"Document généré par : <b>{gest_nom}</b><br/>Statut : <b>PROJET — validation et signature non confirmées</b><br/>Généré le : {date_generation}", cell_norm)
+        ]
+    ]
+    t_sig = Table(sig_table_data, colWidths=[8.7 * cm, 8.7 * cm])
+    t_sig.setStyle(TableStyle([
+        ('GRID', (0, 0), (-1, -1), 0.5, colors.HexColor("#cbd5e1")),
+        ('BACKGROUND', (0, 0), (-1, -1), colors.HexColor("#f8fafc")),
+        ('PADDING', (0, 0), (-1, -1), 8),
+    ]))
+    elements.append(t_sig)
+
+    doc.build(
+        elements,
+        onFirstPage=lambda c, d: draw_pdf_header_footer(c, d, f"AVENANT CONTRACTUEL — {avenant_num}"),
+        onLaterPages=lambda c, d: draw_pdf_header_footer(c, d, f"AVENANT CONTRACTUEL — {avenant_num}")
+    )
+    return buffer.getvalue()
+
+
 def Number(val):
     try:
         return float(val or 0)

@@ -3718,5 +3718,2603 @@
     "validation_status": "en_attente_validation",
     "valide_par_gestionnaire_id": "G123",
     "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR78199",
+    "alert": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "event_type": "sinistre",
+      "urgency_level": "faible",
+      "urgency_score": 20.8,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 30.0,
+          "weight_pct": 20,
+          "contribution": 6.0,
+          "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR78199 — Souheil Khadhraoui\nScore de risque : 20.8/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Patterns suspects (6.0 pts) — Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 20.8,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 30.0,
+            "weight_pct": 20,
+            "contribution": 6.0,
+            "detail": "Patterns suspects : sinistre_apres_avenant — fraude a verifier (sans accusation)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "sinistre_apres_avenant"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR57463",
+    "alert": {
+      "contrat_id": "CSTR57463",
+      "client": "Karem Mansour",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 14.0,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 10.0,
+          "weight_pct": 25,
+          "contribution": 2.5,
+          "detail": "Montants ou plafond indisponibles — score neutre."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR57463 — Karem Mansour\nScore de risque : 14.0/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 0\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\n  3. Montant vs plafond (2.5 pts) — Montants ou plafond indisponibles — score neutre.\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 14.0,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 10.0,
+            "weight_pct": 25,
+            "contribution": 2.5,
+            "detail": "Montants ou plafond indisponibles — score neutre."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "0 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G790",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR57463",
+    "alert": {
+      "contrat_id": "CSTR57463",
+      "client": "Karem Mansour",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 14.0,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 10.0,
+          "weight_pct": 25,
+          "contribution": 2.5,
+          "detail": "Montants ou plafond indisponibles — score neutre."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR57463 — Karem Mansour\nScore de risque : 14.0/100 | Urgence : FAIBLE | Confiance : moyenne\nSinistres analyses : 0\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\n  3. Montant vs plafond (2.5 pts) — Montants ou plafond indisponibles — score neutre.\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 14.0,
+        "urgency_level": "faible",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 10.0,
+            "weight_pct": 25,
+            "contribution": 2.5,
+            "detail": "Montants ou plafond indisponibles — score neutre."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "0 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G790",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "moyen",
+      "urgency_score": 52.8,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 100.0,
+          "weight_pct": 20,
+          "contribution": 20.0,
+          "detail": "Sinistres rapproches (10 jours entre deux declarations) — signal fort."
+        },
+        {
+          "key": "recurrence",
+          "label": "Recurrence",
+          "subscore": 77.0,
+          "weight_pct": 20,
+          "contribution": 15.4,
+          "detail": "2 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence."
+        },
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "delai",
+          "message": "Sinistres rapproches (10 jours entre deux declarations) — signal fort.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "recurrence",
+          "message": "2 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence.",
+          "severity": "moyen"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "reviser_contrat",
+      "recommendation_label": "Reviser le contrat",
+      "explication_llm": "Dossier CSTR00001 — Sonia Ben Ayed\nScore de risque : 52.8/100 | Urgence : MOYEN | Confiance : moyenne\nSinistres analyses : 2\nFacteurs principaux :\n  1. Delai inter-sinistres (20.0 pts) — Sinistres rapproches (10 jours entre deux declarations) — signal fort.\n  2. Recurrence (15.4 pts) — 2 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence.\n  3. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Reviser le contrat — Envisager revision contractuelle : franchise, surprime ou exclusion specifique. Documenter la decision gestionnaire.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 52.8,
+        "urgency_level": "moyen",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 100.0,
+            "weight_pct": 20,
+            "contribution": 20.0,
+            "detail": "Sinistres rapproches (10 jours entre deux declarations) — signal fort."
+          },
+          {
+            "key": "recurrence",
+            "label": "Recurrence",
+            "subscore": 77.0,
+            "weight_pct": 20,
+            "contribution": 15.4,
+            "detail": "2 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence."
+          },
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          }
+        ],
+        "recommendation": {
+          "action": "reviser_contrat",
+          "label": "Reviser le contrat",
+          "detail": "Envisager revision contractuelle : franchise, surprime ou exclusion specifique. Documenter la decision gestionnaire."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "2 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "circonstances_similaires"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "moyen",
+      "urgency_score": 52.8,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 100.0,
+          "weight_pct": 20,
+          "contribution": 20.0,
+          "detail": "Sinistres rapproches (10 jours entre deux declarations) — signal fort."
+        },
+        {
+          "key": "recurrence",
+          "label": "Recurrence",
+          "subscore": 77.0,
+          "weight_pct": 20,
+          "contribution": 15.4,
+          "detail": "2 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence."
+        },
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "delai",
+          "message": "Sinistres rapproches (10 jours entre deux declarations) — signal fort.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "recurrence",
+          "message": "2 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence.",
+          "severity": "moyen"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "reviser_contrat",
+      "recommendation_label": "Reviser le contrat",
+      "explication_llm": "Dossier CSTR00001 — Sonia Ben Ayed\nScore de risque : 52.8/100 | Urgence : MOYEN | Confiance : moyenne\nSinistres analyses : 2\nFacteurs principaux :\n  1. Delai inter-sinistres (20.0 pts) — Sinistres rapproches (10 jours entre deux declarations) — signal fort.\n  2. Recurrence (15.4 pts) — 2 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence.\n  3. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Reviser le contrat — Envisager revision contractuelle : franchise, surprime ou exclusion specifique. Documenter la decision gestionnaire.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 52.8,
+        "urgency_level": "moyen",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 100.0,
+            "weight_pct": 20,
+            "contribution": 20.0,
+            "detail": "Sinistres rapproches (10 jours entre deux declarations) — signal fort."
+          },
+          {
+            "key": "recurrence",
+            "label": "Recurrence",
+            "subscore": 77.0,
+            "weight_pct": 20,
+            "contribution": 15.4,
+            "detail": "2 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence."
+          },
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          }
+        ],
+        "recommendation": {
+          "action": "reviser_contrat",
+          "label": "Reviser le contrat",
+          "detail": "Envisager revision contractuelle : franchise, surprime ou exclusion specifique. Documenter la decision gestionnaire."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "2 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "circonstances_similaires"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "eleve",
+      "urgency_score": 67.4,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 100.0,
+          "weight_pct": 20,
+          "contribution": 20.0,
+          "detail": "Sinistres rapproches (10 jours entre deux declarations) — signal fort."
+        },
+        {
+          "key": "recurrence",
+          "label": "Recurrence",
+          "subscore": 99.0,
+          "weight_pct": 20,
+          "contribution": 19.8,
+          "detail": "3 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 85.0,
+          "weight_pct": 20,
+          "contribution": 17.0,
+          "detail": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "delai",
+          "message": "Sinistres rapproches (10 jours entre deux declarations) — signal fort.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "recurrence",
+          "message": "3 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "pattern_suspect",
+          "message": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation).",
+          "severity": "eleve"
+        },
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "escalader_anti_fraude",
+      "recommendation_label": "Escalader vers l'unite anti-fraude",
+      "explication_llm": "Dossier CSTR00001 — Sonia Ben Ayed\nScore de risque : 67.4/100 | Urgence : ELEVE | Confiance : moyenne\nSinistres analyses : 3\nFacteurs principaux :\n  1. Delai inter-sinistres (20.0 pts) — Sinistres rapproches (10 jours entre deux declarations) — signal fort.\n  2. Recurrence (19.8 pts) — 3 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence.\n  3. Patterns suspects (17.0 pts) — Patterns suspects : circonstances_similaires, sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Escalader vers l'unite anti-fraude — Signaux de risque eleves. Transmission au referent anti-fraude et controle renforce des pieces justificatives.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 67.4,
+        "urgency_level": "eleve",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 100.0,
+            "weight_pct": 20,
+            "contribution": 20.0,
+            "detail": "Sinistres rapproches (10 jours entre deux declarations) — signal fort."
+          },
+          {
+            "key": "recurrence",
+            "label": "Recurrence",
+            "subscore": 99.0,
+            "weight_pct": 20,
+            "contribution": 19.8,
+            "detail": "3 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 85.0,
+            "weight_pct": 20,
+            "contribution": 17.0,
+            "detail": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation)."
+          }
+        ],
+        "recommendation": {
+          "action": "escalader_anti_fraude",
+          "label": "Escalader vers l'unite anti-fraude",
+          "detail": "Signaux de risque eleves. Transmission au referent anti-fraude et controle renforce des pieces justificatives."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "3 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "circonstances_similaires",
+          "sinistre_apres_avenant",
+          "frequence_elevee"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "eleve",
+      "urgency_score": 67.4,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 100.0,
+          "weight_pct": 20,
+          "contribution": 20.0,
+          "detail": "Sinistres rapproches (10 jours entre deux declarations) — signal fort."
+        },
+        {
+          "key": "recurrence",
+          "label": "Recurrence",
+          "subscore": 99.0,
+          "weight_pct": 20,
+          "contribution": 19.8,
+          "detail": "3 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 85.0,
+          "weight_pct": 20,
+          "contribution": 17.0,
+          "detail": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "delai",
+          "message": "Sinistres rapproches (10 jours entre deux declarations) — signal fort.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "recurrence",
+          "message": "3 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "pattern_suspect",
+          "message": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation).",
+          "severity": "eleve"
+        },
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "escalader_anti_fraude",
+      "recommendation_label": "Escalader vers l'unite anti-fraude",
+      "explication_llm": "Dossier CSTR00001 — Sonia Ben Ayed\nScore de risque : 67.4/100 | Urgence : ELEVE | Confiance : moyenne\nSinistres analyses : 3\nFacteurs principaux :\n  1. Delai inter-sinistres (20.0 pts) — Sinistres rapproches (10 jours entre deux declarations) — signal fort.\n  2. Recurrence (19.8 pts) — 3 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence.\n  3. Patterns suspects (17.0 pts) — Patterns suspects : circonstances_similaires, sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Escalader vers l'unite anti-fraude — Signaux de risque eleves. Transmission au referent anti-fraude et controle renforce des pieces justificatives.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 67.4,
+        "urgency_level": "eleve",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 100.0,
+            "weight_pct": 20,
+            "contribution": 20.0,
+            "detail": "Sinistres rapproches (10 jours entre deux declarations) — signal fort."
+          },
+          {
+            "key": "recurrence",
+            "label": "Recurrence",
+            "subscore": 99.0,
+            "weight_pct": 20,
+            "contribution": 19.8,
+            "detail": "3 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 85.0,
+            "weight_pct": 20,
+            "contribution": 17.0,
+            "detail": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation)."
+          }
+        ],
+        "recommendation": {
+          "action": "escalader_anti_fraude",
+          "label": "Escalader vers l'unite anti-fraude",
+          "detail": "Signaux de risque eleves. Transmission au referent anti-fraude et controle renforce des pieces justificatives."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "3 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "circonstances_similaires",
+          "sinistre_apres_avenant",
+          "frequence_elevee"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "faible",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : historique_client_global",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : faible\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : historique_client_global\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "faible",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : historique_client_global",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "json_fallback",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "faible",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : historique_client_global",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : faible\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : historique_client_global\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "faible",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : historique_client_global",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "json_fallback",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "faible",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : historique_client_global",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : faible\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : historique_client_global\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "faible",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : historique_client_global",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "json_fallback",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "faible",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : historique_client_global",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : faible\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : historique_client_global\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "faible",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : historique_client_global",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "json_fallback",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "faible",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : historique_client_global",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : faible\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : historique_client_global\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "faible",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : historique_client_global",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "json_fallback",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "faible",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : historique_client_global",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : faible\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : historique_client_global\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "faible",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : historique_client_global",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "json_fallback",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "faible",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : historique_client_global",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : faible\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : historique_client_global\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "faible",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : historique_client_global",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "json_fallback",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "faible",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : historique_client_global",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : faible\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : historique_client_global\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "faible",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : historique_client_global",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "json_fallback",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "faible",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : historique_client_global",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : faible\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : historique_client_global\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "faible",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : historique_client_global",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "json_fallback",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Dupont Jean",
+      "event_type": "contrat",
+      "urgency_level": "faible",
+      "urgency_score": 19.3,
+      "confidence": "faible",
+      "top_factors": [
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        },
+        {
+          "key": "montant_plafond",
+          "label": "Montant vs plafond",
+          "subscore": 19.2,
+          "weight_pct": 25,
+          "contribution": 4.8,
+          "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+        },
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 20.0,
+          "weight_pct": 20,
+          "contribution": 4.0,
+          "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+        }
+      ],
+      "anomalies": [],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : historique_client_global",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "surveiller",
+      "recommendation_label": "Surveiller",
+      "explication_llm": "Dossier CSTR00001 — Dupont Jean\nScore de risque : 19.3/100 | Urgence : FAIBLE | Confiance : faible\nSinistres analyses : 1\nFacteurs principaux :\n  1. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\n  2. Montant vs plafond (4.8 pts) — Montant cumule 12,000 DT vs plafond 50,000 DT (24%).\n  3. Delai inter-sinistres (4.0 pts) — Delai inter-sinistres non applicable (moins de 2 sinistres).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : historique_client_global\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Surveiller — Revue planifiee a 90 jours. Aucune action immediate requise.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 19.3,
+        "urgency_level": "faible",
+        "confidence": "faible",
+        "top_factors": [
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          },
+          {
+            "key": "montant_plafond",
+            "label": "Montant vs plafond",
+            "subscore": 19.2,
+            "weight_pct": 25,
+            "contribution": 4.8,
+            "detail": "Montant cumule 12,000 DT vs plafond 50,000 DT (24%)."
+          },
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 20.0,
+            "weight_pct": 20,
+            "contribution": 4.0,
+            "detail": "Delai inter-sinistres non applicable (moins de 2 sinistres)."
+          }
+        ],
+        "recommendation": {
+          "action": "surveiller",
+          "label": "Surveiller",
+          "detail": "Revue planifiee a 90 jours. Aucune action immediate requise."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : historique_client_global",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "1 enregistrement(s)",
+          "benchmark": "json_fallback",
+          "client_history": "json_fallback"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "GEST01",
+    "valide_par_role": "assurances"
+  },
+  {
+    "contrat_id": "CSTR78199",
+    "alert": {
+      "contrat_id": "CSTR78199",
+      "client": "Souheil Khadhraoui",
+      "event_type": "risque",
+      "urgency_level": "moyen",
+      "urgency_score": 39.5,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "recurrence",
+          "label": "Recurrence",
+          "subscore": 77.0,
+          "weight_pct": 20,
+          "contribution": 15.4,
+          "detail": "2 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 65.0,
+          "weight_pct": 20,
+          "contribution": 13.0,
+          "detail": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant — fraude a verifier (sans accusation)."
+        },
+        {
+          "key": "anciennete",
+          "label": "Anciennete contrat",
+          "subscore": 50.0,
+          "weight_pct": 15,
+          "contribution": 7.5,
+          "detail": "Donnee manquante : date_souscription — score prudent applique."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "recurrence",
+          "message": "2 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence.",
+          "severity": "moyen"
+        },
+        {
+          "rule": "pattern_suspect",
+          "message": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant — fraude a verifier (sans accusation).",
+          "severity": "moyen"
+        },
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "reviser_contrat",
+      "recommendation_label": "Reviser le contrat",
+      "explication_llm": "Dossier CSTR78199 — Souheil Khadhraoui\nScore de risque : 39.5/100 | Urgence : MOYEN | Confiance : moyenne\nSinistres analyses : 2\nFacteurs principaux :\n  1. Recurrence (15.4 pts) — 2 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence.\n  2. Patterns suspects (13.0 pts) — Patterns suspects : circonstances_similaires, sinistre_apres_avenant — fraude a verifier (sans accusation).\n  3. Anciennete contrat (7.5 pts) — Donnee manquante : date_souscription — score prudent applique.\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Reviser le contrat — Envisager revision contractuelle : franchise, surprime ou exclusion specifique. Documenter la decision gestionnaire.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 39.5,
+        "urgency_level": "moyen",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "recurrence",
+            "label": "Recurrence",
+            "subscore": 77.0,
+            "weight_pct": 20,
+            "contribution": 15.4,
+            "detail": "2 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 65.0,
+            "weight_pct": 20,
+            "contribution": 13.0,
+            "detail": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant — fraude a verifier (sans accusation)."
+          },
+          {
+            "key": "anciennete",
+            "label": "Anciennete contrat",
+            "subscore": 50.0,
+            "weight_pct": 15,
+            "contribution": 7.5,
+            "detail": "Donnee manquante : date_souscription — score prudent applique."
+          }
+        ],
+        "recommendation": {
+          "action": "reviser_contrat",
+          "label": "Reviser le contrat",
+          "detail": "Envisager revision contractuelle : franchise, surprime ou exclusion specifique. Documenter la decision gestionnaire."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "2 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "circonstances_similaires",
+          "sinistre_apres_avenant"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "eleve",
+      "urgency_score": 67.4,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 100.0,
+          "weight_pct": 20,
+          "contribution": 20.0,
+          "detail": "Sinistres rapproches (10 jours entre deux declarations) — signal fort."
+        },
+        {
+          "key": "recurrence",
+          "label": "Recurrence",
+          "subscore": 99.0,
+          "weight_pct": 20,
+          "contribution": 19.8,
+          "detail": "3 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 85.0,
+          "weight_pct": 20,
+          "contribution": 17.0,
+          "detail": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "delai",
+          "message": "Sinistres rapproches (10 jours entre deux declarations) — signal fort.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "recurrence",
+          "message": "3 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "pattern_suspect",
+          "message": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation).",
+          "severity": "eleve"
+        },
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "escalader_anti_fraude",
+      "recommendation_label": "Escalader vers l'unite anti-fraude",
+      "explication_llm": "Dossier CSTR00001 — Sonia Ben Ayed\nScore de risque : 67.4/100 | Urgence : ELEVE | Confiance : moyenne\nSinistres analyses : 3\nFacteurs principaux :\n  1. Delai inter-sinistres (20.0 pts) — Sinistres rapproches (10 jours entre deux declarations) — signal fort.\n  2. Recurrence (19.8 pts) — 3 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence.\n  3. Patterns suspects (17.0 pts) — Patterns suspects : circonstances_similaires, sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Escalader vers l'unite anti-fraude — Signaux de risque eleves. Transmission au referent anti-fraude et controle renforce des pieces justificatives.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 67.4,
+        "urgency_level": "eleve",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 100.0,
+            "weight_pct": 20,
+            "contribution": 20.0,
+            "detail": "Sinistres rapproches (10 jours entre deux declarations) — signal fort."
+          },
+          {
+            "key": "recurrence",
+            "label": "Recurrence",
+            "subscore": 99.0,
+            "weight_pct": 20,
+            "contribution": 19.8,
+            "detail": "3 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 85.0,
+            "weight_pct": 20,
+            "contribution": 17.0,
+            "detail": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation)."
+          }
+        ],
+        "recommendation": {
+          "action": "escalader_anti_fraude",
+          "label": "Escalader vers l'unite anti-fraude",
+          "detail": "Signaux de risque eleves. Transmission au referent anti-fraude et controle renforce des pieces justificatives."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "3 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "circonstances_similaires",
+          "sinistre_apres_avenant",
+          "frequence_elevee"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
+  },
+  {
+    "contrat_id": "CSTR00001",
+    "alert": {
+      "contrat_id": "CSTR00001",
+      "client": "Sonia Ben Ayed",
+      "event_type": "risque",
+      "urgency_level": "eleve",
+      "urgency_score": 67.4,
+      "confidence": "moyenne",
+      "top_factors": [
+        {
+          "key": "delai",
+          "label": "Delai inter-sinistres",
+          "subscore": 100.0,
+          "weight_pct": 20,
+          "contribution": 20.0,
+          "detail": "Sinistres rapproches (10 jours entre deux declarations) — signal fort."
+        },
+        {
+          "key": "recurrence",
+          "label": "Recurrence",
+          "subscore": 99.0,
+          "weight_pct": 20,
+          "contribution": 19.8,
+          "detail": "3 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence."
+        },
+        {
+          "key": "pattern_suspect",
+          "label": "Patterns suspects",
+          "subscore": 85.0,
+          "weight_pct": 20,
+          "contribution": 17.0,
+          "detail": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation)."
+        }
+      ],
+      "anomalies": [
+        {
+          "rule": "delai",
+          "message": "Sinistres rapproches (10 jours entre deux declarations) — signal fort.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "recurrence",
+          "message": "3 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence.",
+          "severity": "eleve"
+        },
+        {
+          "rule": "pattern_suspect",
+          "message": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation).",
+          "severity": "eleve"
+        },
+        {
+          "rule": "pattern_post_avenant",
+          "message": "Sinistre declare peu apres modification contractuelle — a verifier.",
+          "severity": "eleve"
+        }
+      ],
+      "missing_data": [
+        "donnee manquante : date_souscription",
+        "donnee manquante : ratio_primes_sinistres"
+      ],
+      "recommendation_action": "escalader_anti_fraude",
+      "recommendation_label": "Escalader vers l'unite anti-fraude",
+      "explication_llm": "Dossier CSTR00001 — Sonia Ben Ayed\nScore de risque : 67.4/100 | Urgence : ELEVE | Confiance : moyenne\nSinistres analyses : 3\nFacteurs principaux :\n  1. Delai inter-sinistres (20.0 pts) — Sinistres rapproches (10 jours entre deux declarations) — signal fort.\n  2. Recurrence (19.8 pts) — 3 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence.\n  3. Patterns suspects (17.0 pts) — Patterns suspects : circonstances_similaires, sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation).\nLimites de l'analyse :\n  • donnee manquante : date_souscription\n  • donnee manquante : ratio_primes_sinistres\nRecommandation : Escalader vers l'unite anti-fraude — Signaux de risque eleves. Transmission au referent anti-fraude et controle renforce des pieces justificatives.\nAnalyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine.",
+      "alert_card": {
+        "score": 67.4,
+        "urgency_level": "eleve",
+        "confidence": "moyenne",
+        "top_factors": [
+          {
+            "key": "delai",
+            "label": "Delai inter-sinistres",
+            "subscore": 100.0,
+            "weight_pct": 20,
+            "contribution": 20.0,
+            "detail": "Sinistres rapproches (10 jours entre deux declarations) — signal fort."
+          },
+          {
+            "key": "recurrence",
+            "label": "Recurrence",
+            "subscore": 99.0,
+            "weight_pct": 20,
+            "contribution": 19.8,
+            "detail": "3 sinistres avec la meme cause (auto - carambolage) — signal fort de recurrence."
+          },
+          {
+            "key": "pattern_suspect",
+            "label": "Patterns suspects",
+            "subscore": 85.0,
+            "weight_pct": 20,
+            "contribution": 17.0,
+            "detail": "Patterns suspects : circonstances_similaires, sinistre_apres_avenant, frequence_elevee — fraude a verifier (sans accusation)."
+          }
+        ],
+        "recommendation": {
+          "action": "escalader_anti_fraude",
+          "label": "Escalader vers l'unite anti-fraude",
+          "detail": "Signaux de risque eleves. Transmission au referent anti-fraude et controle renforce des pieces justificatives."
+        },
+        "missing_data": [
+          "donnee manquante : date_souscription",
+          "donnee manquante : ratio_primes_sinistres"
+        ],
+        "data_sources": {
+          "contrat": "mysql",
+          "sinistres": "3 enregistrement(s)",
+          "benchmark": "mysql",
+          "client_history": "mysql"
+        },
+        "gestionnaire_cible": "sinistres",
+        "flags": [
+          "circonstances_similaires",
+          "sinistre_apres_avenant",
+          "frequence_elevee"
+        ],
+        "disclaimer": "Analyse automatique — correlation != causalite. Fraude signalee comme \"a verifier\", jamais affirmee. Decision finale humaine."
+      }
+    },
+    "validation_status": "en_attente_validation",
+    "valide_par_gestionnaire_id": "G123",
+    "valide_par_role": "sinistres"
   }
 ]

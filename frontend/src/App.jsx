@@ -7,10 +7,18 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 
 import AnalyseDossierView from './pages/AnalyseDossierView';
+import MapView from './pages/MapView';
 import SinistresView from './pages/SinistresView';
 import ContratsView from './pages/ContratsView';
 import ClientsView from './pages/ClientsView';
 import HistoriqueView from './pages/HistoriqueView';
+import DocumentsView from './pages/DocumentsView';
+import DashboardView from './pages/DashboardView';
+import ValidationsView from './pages/ValidationsView';
+import SettingsView from './pages/SettingsView';
+import CourriersView from './pages/CourriersView';
+import PrioriteRisqueView from './pages/PrioriteRisqueView';
+import ComintyAnalysisView from './pages/ComintyAnalysisView';
 
 import ChatAssistant from './components/ChatAssistant';
 
@@ -28,12 +36,16 @@ function MainDashboard() {
 
   const { user } = useAuth();
 
-  const [activeTab, setActiveTab] = useState('analyse');
+  const [activeTab, setActiveTab] = useState('risque');
 
   const [sinistres, setSinistres] = useState([]);
   const [contrats, setContrats] = useState([]);
   const [clients, setClients] = useState([]);
   const [alerts, setAlerts] = useState([]);
+  const [preferences, setPreferences] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('appPreferences') || '{"emailAlerts":true,"compactView":false}'); }
+    catch { return { emailAlerts: true, compactView: false }; }
+  });
 
   const [toastMsg, setToastMsg] = useState('');
   const [loading, setLoading] = useState(true);
@@ -104,7 +116,7 @@ function MainDashboard() {
       <main
         className="main-content"
         style={{
-          padding: '24px 32px'
+          padding: preferences.compactView ? '14px 18px' : '24px 32px'
         }}
       >
 
@@ -112,13 +124,14 @@ function MainDashboard() {
 
         <div
           style={{
-            backgroundColor: '#1e1b4b',
-            color: '#fff',
+            backgroundColor: '#fff4e5',
+            color: '#6b3d16',
             borderRadius: '12px',
             padding: '14px 20px',
             marginBottom: '20px',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-            display: 'flex',
+            border: '1px solid #f4d8b5',
+            boxShadow: '0 2px 5px rgba(0,0,0,0.03)',
+            display: preferences.emailAlerts ? 'flex' : 'none',
             alignItems: 'center',
             justifyContent: 'space-between'
           }}
@@ -142,7 +155,7 @@ function MainDashboard() {
                 style={{
                   fontSize: '13px',
                   fontWeight: 700,
-                  color: '#fbbf24'
+                  color: '#8b4a0c'
                 }}
               >
                 ALERTE SYSTEME — Session Active (
@@ -155,7 +168,7 @@ function MainDashboard() {
               <div
                 style={{
                   fontSize: '12px',
-                  color: '#cbd5e1',
+                  color: '#825d3a',
                   marginTop: '2px'
                 }}
               >
@@ -173,7 +186,7 @@ function MainDashboard() {
           <button
             onClick={() => setActiveTab('historique')}
             style={{
-              backgroundColor: '#e54838',
+              backgroundColor: '#0c093a',
               color: '#fff',
               border: 'none',
               borderRadius: '8px',
@@ -230,6 +243,17 @@ function MainDashboard() {
         )}
 
 
+        {activeTab === 'map' && (
+          <MapView
+            sinistres={sinistres}
+            contrats={contrats}
+            onSelectContratForAnalyse={(contratId) => {
+              setActiveTab('analyse');
+            }}
+          />
+        )}
+
+
         {activeTab === 'sinistres' && (
           <SinistresView
             sinistres={sinistres}
@@ -269,11 +293,23 @@ function MainDashboard() {
         )}
 
 
-        {/* HISTORIQUE */}
+        {activeTab === 'documents' && <DocumentsView />}
 
-        {activeTab === 'historique' && (
-          <HistoriqueView />
+        {activeTab === 'dashboard' && (
+          <DashboardView sinistres={sinistres} contrats={contrats} clients={clients} alerts={alerts} onNavigate={setActiveTab} />
         )}
+
+        {activeTab === 'validations' && <ValidationsView onRefresh={() => loadData()} />}
+
+        {/* HISTORIQUE */}
+        {activeTab === 'historique' && <HistoriqueView />}
+
+        {activeTab === 'settings' && <SettingsView onPreferencesChange={setPreferences} />}
+
+        {activeTab === 'courriers' && <CourriersView contrats={contrats} sinistres={sinistres} />}
+
+        {activeTab === 'risque' && <PrioriteRisqueView />}
+        {activeTab === 'cominty' && <ComintyAnalysisView />}
 
       </main>
 

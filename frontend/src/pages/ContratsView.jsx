@@ -244,8 +244,8 @@ export default function ContratsView({ contrats, clients, onRefresh }) {
                 </td>
               </tr>
             ) : (
-              contrats.map((c) => (
-                <tr key={c.id}>
+              contrats.map((c, index) => (
+                <tr key={`${c.id}-${index}`}>
                   <td className="cell-bold">{c.id}</td>
                   <td className="cell-bold">{c.client || c.client_nom || c.client_id || 'Client Assuré'}</td>
                   <td>{c.agence_nom || c.agence_id || 'Agence Tunis Centre'}</td>

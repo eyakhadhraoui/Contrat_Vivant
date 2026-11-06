@@ -46,6 +46,17 @@ export const authAPI = {
     if (!res.ok) throw new Error(data.detail || 'Échec d\'inscription');
     return data;
   },
+
+  async googleAuth(payload) {
+    const res = await fetch('/api/auth/google', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.detail || 'Échec de l\'authentification Google');
+    return data;
+  },
 };
 
 export const agencesAPI = {
@@ -96,18 +107,35 @@ export const sinistresAPI = {
     }
     return await res.json();
   },
-  async downloadPDF(id) {
+  async extractConstat(file) {
+    const formData = new FormData();
+    formData.append('file', file);
     const headers = getAuthHeaders();
-    const res = await fetch(`/api/pdf/sinistre/${id}`, { headers });
-    if (!res.ok) throw new Error('Impossible de générer le PDF du sinistre');
-    const blob = await res.blob();
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `Rapport_Sinistre_${id}.pdf`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
+    const res = await fetch('/api/ocr/constat', {
+      method: 'POST',
+      headers,
+      body: formData,
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.detail || 'Échec de l\'extraction du constat amiable');
+    }
+    return await res.json();
+  },
+  async analyzeDevis(file) {
+    const formData = new FormData();
+    formData.append('file', file);
+    const headers = getAuthHeaders();
+    const res = await fetch('/api/devis/analyser', {
+      method: 'POST',
+      headers,
+      body: formData,
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.detail || 'Échec de l\'analyse du devis de réparation');
+    }
+    return await res.json();
   },
 };
 
@@ -159,6 +187,19 @@ export const contratsAPI = {
     const a = document.createElement('a');
     a.href = url;
     a.download = `Attestation_Contrat_${id}.pdf`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  },
+  async downloadAvenantPDF(id) {
+    const headers = getAuthHeaders();
+    const res = await fetch(`/api/pdf/avenant/${id}`, { headers });
+    if (!res.ok) throw new Error('Impossible de générer l\'avenant PDF');
+    const blob = await res.blob();
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `Avenant_${id}.pdf`;
     document.body.appendChild(a);
     a.click();
     a.remove();
@@ -267,6 +308,18 @@ export const alertsAPI = {
   },
 };
 
+export const riskAPI = {
+  async getPriorities() {
+    const res = await apiFetch('/api/risk/priorities');
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.detail || 'Erreur lors du calcul des priorites de risque');
+    }
+    const data = await res.json();
+    return data.dossiers || [];
+  },
+};
+
 export const ragAPI = {
   async getDocuments() {
     const res = await apiFetch('/api/rag/documents');
@@ -306,6 +359,20 @@ export const ragAPI = {
     if (!res.ok) {
       const err = await res.json();
       throw new Error(err.detail || 'Erreur lors de la suppression du document');
+    }
+    return await res.json();
+  },
+};
+
+export const courrierAPI = {
+  async generate(payload) {
+    const res = await apiFetch('/api/courriers/generer', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.detail || 'Impossible de generer le courrier');
     }
     return await res.json();
   },
@@ -355,6 +422,17 @@ export const analysisAPI = {
     if (!res.ok) {
       const err = await res.json();
       throw new Error(err.detail || 'Erreur lors de l\'analyse du dossier');
+    }
+    return await res.json();
+  },
+  async saveManagerNote(contratId, noteText) {
+    const res = await apiFetch(`/api/contrats/${contratId}/notes`, {
+      method: 'POST',
+      body: JSON.stringify({ note_texte: noteText }),
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.detail || 'Erreur lors de la sauvegarde de la note vocale');
     }
     return await res.json();
   },

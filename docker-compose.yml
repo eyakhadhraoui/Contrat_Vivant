@@ -9,10 +9,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-rootpassword}
       MYSQL_DATABASE: ${MYSQL_DATABASE:-assurance_db}
-      MYSQL_USER: ${MYSQL_USER:-assurance_user}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-assurance_pass}
     ports:
-      - "${MYSQL_PORT:-3306}:3306"
+      - "${MYSQL_PORT:-3307}:3306"
     volumes:
       - mysql_data:/var/lib/mysql
       - ./docker/mysql-init:/docker-entrypoint-initdb.d:ro
@@ -43,6 +41,12 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY:-}
       - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
       - TAVILY_API_KEY=${TAVILY_API_KEY:-}
+      - COMINTY_API_KEY=${COMINTY_API_KEY:-}
+      - COMINTY_USER_ID=${COMINTY_USER_ID:-}
+      - COMINTY_AGENT_EXTRACTION_ID=${COMINTY_AGENT_EXTRACTION_ID:-}
+      - COMINTY_AGENT_ANOMALIES_ID=${COMINTY_AGENT_ANOMALIES_ID:-}
+      - COMINTY_AGENT_RISK_ID=${COMINTY_AGENT_RISK_ID:-}
+      - COMINTY_AGENT_REPORT_ID=${COMINTY_AGENT_REPORT_ID:-}
       - EMAIL_SENDER=${EMAIL_SENDER:-}
       - EMAIL_PASSWORD=${EMAIL_PASSWORD:-}
       - JWT_SECRET=${JWT_SECRET:-secret_assurance_key_2026}
@@ -52,6 +56,7 @@ services:
     volumes:
       - ./logs:/app/logs
       - ./data:/app/data
+      - ./docker/entrypoint.sh:/app/docker/entrypoint.sh:ro
     depends_on:
       db:
         condition: service_healthy
@@ -74,10 +79,29 @@ services:
     networks:
       - assurance-network
 
+  # -------------------------------------------------------------
+  # Monitoring Prometheus
+  # -------------------------------------------------------------
+  prometheus:
+    image: prom/prometheus:v2.47.0
+    container_name: assurance-prometheus
+    restart: unless-stopped
+    volumes:
+      - ./docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+    depends_on:
+      - backend
+    networks:
+      - assurance-network
+
 networks:
   assurance-network:
     driver: bridge
 
 volumes:
   mysql_data:
+    driver: local
+  prometheus_data:
     driver: local

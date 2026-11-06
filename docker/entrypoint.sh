@@ -8,7 +8,7 @@ if [ -n "$MYSQL_HOST" ] && [ "$MYSQL_HOST" != "localhost" ]; then
     echo "⏳ Attente de la disponibilité de MySQL sur ${MYSQL_HOST}:${MYSQL_PORT:-3306}..."
     max_retries=30
     counter=0
-    until mysqladmin ping -h "$MYSQL_HOST" -P "${MYSQL_PORT:-3306}" -u "$MYSQL_USER" --password="$MYSQL_PASSWORD" --silent 2>/dev/null; do
+    until python -c "import socket; s = socket.socket(); s.settimeout(1); s.connect(('${MYSQL_HOST}', int('${MYSQL_PORT:-3306}'))); s.close()" 2>/dev/null; do
         counter=$((counter + 1))
         if [ $counter -gt $max_retries ]; then
             echo "⚠️ Avertissement: MySQL n'a pas répondu à temps, poursuite du démarrage..."

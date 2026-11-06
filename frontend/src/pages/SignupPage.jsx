@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { agencesAPI } from '../services/api';
+import GoogleAuthModal from '../components/GoogleAuthModal';
 
 export default function SignupPage({ onNavigateToLogin }) {
-  const { signup } = useAuth();
+  const { signup, loginWithGoogle } = useAuth();
   const [agences, setAgences] = useState([]);
   const [formData, setFormData] = useState({
     nom: '',
@@ -19,6 +20,11 @@ export default function SignupPage({ onNavigateToLogin }) {
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
   const [loading, setLoading] = useState(false);
+
+  // Google OAuth state
+  const [isGoogleModalOpen, setIsGoogleModalOpen] = useState(false);
+  const [googleLoading, setGoogleLoading] = useState(false);
+  const [googleError, setGoogleError] = useState('');
 
   useEffect(() => {
     async function loadAgences() {
@@ -39,6 +45,19 @@ export default function SignupPage({ onNavigateToLogin }) {
     const { id, value } = e.target;
     const fieldName = id.replace('signup-', '');
     setFormData((prev) => ({ ...prev, [fieldName]: value }));
+  };
+
+  const handleGoogleAccountSelected = async (accountData) => {
+    setGoogleError('');
+    setGoogleLoading(true);
+    try {
+      await loginWithGoogle(accountData);
+      setIsGoogleModalOpen(false);
+    } catch (err) {
+      setGoogleError(err.message || 'Échec de l\'authentification avec Google.');
+    } finally {
+      setGoogleLoading(false);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -84,6 +103,11 @@ export default function SignupPage({ onNavigateToLogin }) {
           {/* Panneau Gauche */}
           <div className="login-left-panel">
             <div className="left-header">
+              {/* Logo Vermeg Officiel */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '2px', marginBottom: '8px' }}>
+                <span style={{ color: '#e54838', fontWeight: 900, fontSize: '32px', lineHeight: '1', display: 'inline-block', transform: 'skewX(-10deg)', textShadow: '0 0 14px rgba(229, 72, 56, 0.6)' }}>/</span>
+                <span style={{ color: '#ffffff', fontWeight: 800, fontSize: '26px', letterSpacing: '-0.5px', fontFamily: "'Inter', 'Segoe UI', sans-serif" }}>vermeg</span>
+              </div>
               <div className="brand-title">
                 <span className="brand-contrat">Contrat</span>
                 <span className="brand-vivant">Vivant</span>
@@ -131,8 +155,8 @@ export default function SignupPage({ onNavigateToLogin }) {
           </div>
 
           {/* Panneau Droit */}
-          <div className="login-right-panel" style={{ padding: '40px 44px' }}>
-            <div className="login-form-header" style={{ marginBottom: '20px' }}>
+          <div className="login-right-panel" style={{ padding: '34px 44px' }}>
+            <div className="login-form-header" style={{ marginBottom: '14px' }}>
               <div className="icon-badge">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -143,8 +167,52 @@ export default function SignupPage({ onNavigateToLogin }) {
               </div>
               <div className="header-text">
                 <h2>Créer un compte gestionnaire</h2>
-                <p>Renseignez vos informations pour accéder au portail</p>
+                <p>Inscription rapide ou via compte Google</p>
               </div>
+            </div>
+
+            {/* Bouton d'authentification Google */}
+            <button
+              type="button"
+              className="google-signin-btn"
+              style={{
+                width: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '12px',
+                padding: '11px 16px',
+                backgroundColor: '#ffffff',
+                color: '#1e293b',
+                border: '1.5px solid #e2e8f0',
+                borderRadius: '12px',
+                fontSize: '14px',
+                fontWeight: 600,
+                cursor: 'pointer',
+                boxShadow: '0 2px 6px rgba(0, 0, 0, 0.04)',
+                transition: 'all 0.2s ease',
+                marginBottom: '12px',
+              }}
+              onClick={() => {
+                setGoogleError('');
+                setIsGoogleModalOpen(true);
+              }}
+              disabled={loading || googleLoading}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24">
+                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.34 24 12 24z"/>
+                <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+              </svg>
+              <span>Continuer avec Google</span>
+            </button>
+
+            {/* Séparateur élégant */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', margin: '8px 0 14px 0' }}>
+              <span style={{ flex: 1, height: '1px', backgroundColor: '#e2e8f0' }}></span>
+              <span style={{ fontSize: '11px', color: '#94a3b8', fontWeight: 700, letterSpacing: '0.8px' }}>OU FORMULAIRE CLASSIQUE</span>
+              <span style={{ flex: 1, height: '1px', backgroundColor: '#e2e8f0' }}></span>
             </div>
 
             <form onSubmit={handleSubmit} className="auth-form" style={{ gap: '14px' }}>
@@ -292,6 +360,15 @@ export default function SignupPage({ onNavigateToLogin }) {
 
         </div>
       </div>
+
+      {/* Modal SSO Google */}
+      <GoogleAuthModal
+        isOpen={isGoogleModalOpen}
+        onClose={() => setIsGoogleModalOpen(false)}
+        onSelectAccount={handleGoogleAccountSelected}
+        loading={googleLoading}
+        error={googleError}
+      />
     </div>
   );
 }

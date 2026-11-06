@@ -1,0 +1,38 @@
+flowchart TB
+    subgraph FE["FRONTEND - React 19 (SPA)"]
+        P1[Analyse du dossier]
+        P2[Contrats / Sinistres]
+        P3[Clients + OCR]
+        P4[Assistant Chat RAG]
+        P5[Cartographie / Historique]
+    end
+
+    subgraph BE["BACKEND - FastAPI"]
+        API[API REST + Auth JWT]
+
+        subgraph WF["ORCHESTRATION - LangGraph"]
+            COL[CollectorAgent]
+            RISK[RiskAnalysisAgent]
+            ALERT[AlertNotificationAgent]
+            HITL[Validation Humaine HITL]
+            HIST[History Update]
+        end
+
+        subgraph BIZ["COUCHES METIER"]
+            RE[("Rules Engine determine")]
+            LLM[("Modeles LLM Gemini / Ollama")]
+            RAG[("RAG FAISS + embeddings")]
+            TOOLS[Tools SI contrats, sinistres, OCR, notif]
+        end
+    end
+
+    DB[("MySQL 8.0")]
+    EXT[Email / Teams / Prometheus]
+
+    FE <--> API
+    API --> WF
+    COL --> RISK --> ALERT --> HITL --> HIST
+    WF --> BIZ
+    BIZ --> DB
+    TOOLS --> EXT
+    HIST --> DB

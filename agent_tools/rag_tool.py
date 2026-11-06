@@ -2,6 +2,9 @@ import os
 import io
 import json
 import logging
+import re
+import unicodedata
+import numpy as np
 from datetime import datetime
 from database.db_connection import get_connection, ensure_rag_and_chat_tables
 
@@ -16,6 +19,8 @@ _chunks_data = None
 _DOCS_DIR = 'data/rag_documents'
 _dynamic_chunks_file = 'data/rag_documents/dynamic_chunks.json'
 _dynamic_chunks = []
+_dynamic_index = None
+_dynamic_index_size = -1
 
 
 def _load_dynamic_chunks():
@@ -75,11 +80,55 @@ def _save_dynamic_chunks():
     """Sauvegarde les chunks sur le disque persistant."""
     global _dynamic_chunks
     os.makedirs(_DOCS_DIR, exist_ok=True)
+    _invalidate_dynamic_index()
     try:
         with open(_dynamic_chunks_file, 'w', encoding='utf-8') as f:
             json.dump(_dynamic_chunks, f, ensure_ascii=False, indent=2)
     except Exception as e:
         logger.error(f"Erreur sauvegarde dynamic chunks: {e}")
+
+
+def _invalidate_dynamic_index():
+    """Force la reconstruction de l'index vectoriel des documents importés."""
+    global _dynamic_index, _dynamic_index_size
+    _dynamic_index = None
+    _dynamic_index_size = -1
+
+
+def _normalize(text: str) -> str:
+    text = unicodedata.normalize('NFKD', str(text or '').lower())
+    text = ''.join(c for c in text if not unicodedata.combining(c))
+    return re.sub(r'[^a-z0-9]+', ' ', text).strip()
+
+
+def _tokens(text: str) -> list[str]:
+    # Stop words légers : on garde les termes métier courts (ex. RC, PDF).
+    ignored = {'avec', 'dans', 'pour', 'vous', 'quel', 'quelle', 'quels', 'quelles',
+               'comment', 'est', 'sont', 'une', 'des', 'les', 'que', 'qui', 'sur'}
+    return [w for w in _normalize(text).split() if len(w) > 1 and w not in ignored]
+
+
+def _get_dynamic_index(model):
+    """Construit à la demande un index cosine pour les documents importés."""
+    global _dynamic_index, _dynamic_index_size
+    if not _dynamic_chunks:
+        return None
+    if _dynamic_index is not None and _dynamic_index_size == len(_dynamic_chunks):
+        return _dynamic_index
+    try:
+        import faiss
+        vectors = model.encode(
+            [c.get('texte', '') for c in _dynamic_chunks],
+            convert_to_numpy=True, normalize_embeddings=True, show_progress_bar=False
+        ).astype('float32')
+        index = faiss.IndexFlatIP(vectors.shape[1])
+        index.add(vectors)
+        _dynamic_index = index
+        _dynamic_index_size = len(_dynamic_chunks)
+        return index
+    except Exception as exc:
+        logger.warning('Index vectoriel des documents importés indisponible: %s', exc)
+        return None
 
 
 def _split_text_into_chunks(texte: str, max_words: int = 150, overlap: int = 30) -> list:
@@ -320,62 +369,95 @@ def delete_document(doc_id_or_filename) -> bool:
 
 
 def search_procedures(query: str, top_k: int = 4) -> tuple[str, list]:
-    """
-    Recherche les sections les plus pertinentes dans tous les documents RAG enregistrés.
-    Retourne (texte_contexte_formatte, liste_des_sources).
-    """
+    """Recherche hybride lexicale et vectorielle dans les documents index?s."""
     if not query or not query.strip():
         return "", []
+    try:
+        top_k = max(1, min(int(top_k), 20))
+    except (TypeError, ValueError):
+        top_k = 4
 
-    resultats = []
-    sources = []
-    q_words = [w.lower() for w in query.split() if len(w) > 2]
+    candidates = [
+        {"texte": c.get("texte", ""), "source": c.get("filename", "Document")}
+        for c in _dynamic_chunks if c.get("texte")
+    ]
+    model, base_index, base_chunks = _get_rag_resources()
+    if base_index is not None and base_chunks:
+        candidates.extend(
+            {"texte": c.get("texte", ""), "source": c.get("source", "Base documentaire")}
+            for c in base_chunks if c.get("texte")
+        )
+    if not candidates:
+        return "", []
 
-    # 1. Score de pertinence sur les chunks dynamiques ingérés
-    scored_chunks = []
-    for chunk in _dynamic_chunks:
-        txt = chunk.get('texte', '')
-        txt_lower = txt.lower()
-        filename = chunk.get('filename', 'Document')
+    query_terms = set(_tokens(query))
+    if not query_terms:
+        return "", []
+    docs = [_tokens(c["texte"]) for c in candidates]
+    doc_freq = {}
+    for terms in docs:
+        for term in set(terms):
+            doc_freq[term] = doc_freq.get(term, 0) + 1
+    avg_len = max(1.0, sum(map(len, docs)) / len(docs))
+    normalized_query = _normalize(query)
+    ranked = []
+    for i, (candidate, terms) in enumerate(zip(candidates, docs)):
+        frequencies = {}
+        for term in terms:
+            frequencies[term] = frequencies.get(term, 0) + 1
+        score = 0.0
+        for term in query_terms:
+            tf = frequencies.get(term, 0)
+            if tf:
+                df = doc_freq[term]
+                idf = np.log(1 + (len(docs) - df + 0.5) / (df + 0.5))
+                score += idf * (tf * 2.2) / (tf + 1.2 * (0.25 + 0.75 * len(terms) / avg_len))
+        if normalized_query in _normalize(candidate["texte"]):
+            score += 2.0
+        ranked.append([score, i])
 
-        score = 0
-        for w in q_words:
-            if w in txt_lower:
-                score += 2
-        # Bonus si correspondance exacte de phrase
-        if query.lower() in txt_lower:
-            score += 5
-
-        if score > 0 or not q_words:
-            scored_chunks.append((score, txt, filename))
-
-    scored_chunks.sort(key=lambda x: x[0], reverse=True)
-
-    for _, txt, fname in scored_chunks[:top_k]:
-        resultats.append(txt)
-        if fname not in sources:
-            sources.append(fname)
-
-    # 2. Recherche vectorielle FAISS complémentaire
-    model, index, chunks_data = _get_rag_resources()
-    if model and index and chunks_data:
+    # Ajoute un signal s?mantique aux deux index, sans comparer leurs distances
+    # avec le score lexical, qui utilise une autre ?chelle.
+    if model is not None:
         try:
-            vector = model.encode([query])
-            distances, indices = index.search(vector, k=min(top_k, len(chunks_data)))
-            for idx in indices[0]:
-                if idx < len(chunks_data):
-                    chunk = chunks_data[idx]
-                    t = chunk.get('texte', '')
-                    src = chunk.get('source', 'Base FAISS')
-                    if t and t not in resultats:
-                        resultats.append(t)
-                        if src not in sources:
-                            sources.append(src)
-        except Exception as e:
-            logger.warning(f"Erreur recherche FAISS: {e}")
+            # L'index de référence existant utilise IndexFlatL2 et des vecteurs
+            # non normalisés; le vecteur brut garde sa métrique compatible.
+            qvec = model.encode([query], convert_to_numpy=True).astype("float32")
+            by_text = {c["texte"]: i for i, c in enumerate(candidates)}
+            if base_index is not None and base_chunks:
+                _, indices = base_index.search(qvec, min(len(base_chunks), max(top_k * 4, 8)))
+                for rank, idx in enumerate(indices[0]):
+                    if 0 <= idx < len(base_chunks):
+                        ci = by_text.get(base_chunks[idx].get("texte", ""))
+                        if ci is not None:
+                            ranked[ci][0] += 1.5 / (rank + 1)
+            dynamic_index = _get_dynamic_index(model)
+            if dynamic_index is not None:
+                _, indices = dynamic_index.search(qvec, min(len(_dynamic_chunks), max(top_k * 4, 8)))
+                for rank, idx in enumerate(indices[0]):
+                    if 0 <= idx < len(_dynamic_chunks):
+                        ci = by_text.get(_dynamic_chunks[idx].get("texte", ""))
+                        if ci is not None:
+                            ranked[ci][0] += 1.5 / (rank + 1)
+        except Exception as exc:
+            logger.warning("Recherche vectorielle indisponible: %s", exc)
 
-    context_str = '\n\n---\n\n'.join(resultats) if resultats else 'Aucune procédure correspondante trouvée.'
-    return context_str, sources
+    ranked.sort(key=lambda item: item[0], reverse=True)
+    selected, seen = [], set()
+    for score, idx in ranked:
+        if score <= 0:
+            continue
+        candidate = candidates[idx]
+        if candidate["texte"] in seen:
+            continue
+        seen.add(candidate["texte"])
+        selected.append(candidate)
+        if len(selected) >= top_k:
+            break
+    context = "\n\n---\n\n".join(
+        f"[Source : {item['source']}]\n{item['texte']}" for item in selected
+    )
+    return context, list(dict.fromkeys(item["source"] for item in selected))
 
 
 # Initialisation au chargement du module

@@ -1,0 +1,8 @@
+flowchart LR
+    START([contrat_id]) --> C[CollectorAgent<br/>collecte SI + auth]
+    C --> R[RiskAnalysisAgent<br/>regles + LLM + score 0-100]
+    R --> A[AlertNotificationAgent<br/>synthese + routage + notif]
+    A --> H{HITL<br/>gestionnaire}
+    H -->|Valider / Ajuster| U[History Update<br/>ecriture SI]
+    H -->|Rejeter| END([fin])
+    U --> END

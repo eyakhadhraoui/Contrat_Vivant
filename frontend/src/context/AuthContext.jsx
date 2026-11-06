@@ -59,6 +59,25 @@ export const AuthProvider = ({ children }) => {
     return data;
   };
 
+  const loginWithGoogle = async (googlePayload) => {
+    const data = await authAPI.googleAuth(googlePayload);
+    if (data.token) {
+      const payload = parseJwt(data.token);
+      const userInfo = {
+        username: data.gestionnaire?.username || payload.username,
+        role: data.gestionnaire?.role || payload.role || 'assurances',
+        agence_id: data.gestionnaire?.agence_id || payload.agence_id || 'AG01',
+        email: data.gestionnaire?.email || payload.email,
+        picture_url: data.gestionnaire?.picture_url || payload.picture_url,
+      };
+      localStorage.setItem('authToken', data.token);
+      localStorage.setItem('authUser', JSON.stringify(userInfo));
+      setToken(data.token);
+      setUser(userInfo);
+    }
+    return data;
+  };
+
   const logout = () => {
     localStorage.removeItem('authToken');
     localStorage.removeItem('authUser');
@@ -76,6 +95,7 @@ export const AuthProvider = ({ children }) => {
         user,
         login,
         signup,
+        loginWithGoogle,
         logout,
         isAuthenticated: !!token,
         isAssurances,

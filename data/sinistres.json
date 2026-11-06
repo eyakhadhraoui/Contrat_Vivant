@@ -2,7 +2,7 @@
   {
     "id": "S001",
     "contrat_id": "C001",
-    "montant_declare": 32000,
+    "montant_declare": 60000,
     "date": "2026-07-01",
     "statut": "en_cours",
     "gestionnaire_traitant_id": "G123",

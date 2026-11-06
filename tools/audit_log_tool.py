@@ -20,8 +20,29 @@ def log_decision(step: str, data: dict, gestionnaire_id: str = None):
         conn = get_connection()
         if conn:
             cur = conn.cursor()
-            sql = "INSERT INTO audit_log (step, data, gestionnaire_id, timestamp) VALUES (%s, %s, %s, %s)"
-            cur.execute(sql, (step, json.dumps(data, ensure_ascii=False), entry["gestionnaire_id"], timestamp_str))
+            event_type = data.get("event_type") or data.get("type") or step or "general"
+            actor = entry["gestionnaire_id"] or data.get("actor") or "System"
+            
+            # Tente de rendre les colonnes non-nulles tolérantes
+            sql_insert_full = "INSERT INTO audit_log (step, data, gestionnaire_id, timestamp, event_type, actor) VALUES (%s, %s, %s, %s, %s, %s)"
+            try:
+                cur.execute(sql_insert_full, (step, json.dumps(data, ensure_ascii=False), entry["gestionnaire_id"], timestamp_str, event_type, actor))
+            except Exception as db_err:
+                err_text = str(db_err)
+                for c_fix in ["event_type VARCHAR(100) DEFAULT 'general'", "actor VARCHAR(100) DEFAULT 'System'", "step VARCHAR(100) DEFAULT 'general'", "gestionnaire_id VARCHAR(50) DEFAULT 'G123'"]:
+                    try:
+                        cur.execute(f"ALTER TABLE audit_log MODIFY COLUMN {c_fix}")
+                    except Exception:
+                        pass
+                    try:
+                        cur.execute(f"ALTER TABLE audit_log ADD COLUMN {c_fix}")
+                    except Exception:
+                        pass
+                try:
+                    cur.execute(sql_insert_full, (step, json.dumps(data, ensure_ascii=False), entry["gestionnaire_id"], timestamp_str, event_type, actor))
+                except Exception:
+                    sql_legacy = "INSERT INTO audit_log (step, data, gestionnaire_id, timestamp) VALUES (%s, %s, %s, %s)"
+                    cur.execute(sql_legacy, (step, json.dumps(data, ensure_ascii=False), entry["gestionnaire_id"], timestamp_str))
             conn.commit()
             cur.close()
             conn.close()
